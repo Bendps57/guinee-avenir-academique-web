@@ -1,5 +1,4 @@
 
-import { Book, BookOpen, GraduationCap, University } from "lucide-react";
 import React from "react";
 
 export interface ProgramType {
@@ -8,7 +7,7 @@ export interface ProgramType {
   level: string;
   duration: string;
   description: string;
-  icon?: React.ReactNode;
+  iconName?: string;
 }
 
 export const licensePrograms: ProgramType[] = [
@@ -18,7 +17,7 @@ export const licensePrograms: ProgramType[] = [
     level: "Licence",
     duration: "3 ans",
     description: "Formation complète en gestion, comptabilité, marketing et ressources humaines. Prépare à des postes de responsabilité dans tous types d'organisations.",
-    icon: <Book className="h-5 w-5 text-university-blue" />
+    iconName: "Book"
   },
   {
     id: "licence-eco-gestion",
@@ -26,7 +25,7 @@ export const licensePrograms: ProgramType[] = [
     level: "Licence",
     duration: "3 ans",
     description: "Double compétence en économie et gestion permettant d'appréhender les mécanismes économiques et les stratégies des entreprises.",
-    icon: <Book className="h-5 w-5 text-university-blue" />
+    iconName: "Book"
   },
   {
     id: "licence-marketing",
@@ -34,7 +33,7 @@ export const licensePrograms: ProgramType[] = [
     level: "Licence",
     duration: "3 ans",
     description: "Formation aux techniques modernes de marketing, de communication et de développement commercial dans un environnement digitalisé.",
-    icon: <Book className="h-5 w-5 text-university-blue" />
+    iconName: "Book"
   },
   {
     id: "licence-socio",
@@ -42,7 +41,7 @@ export const licensePrograms: ProgramType[] = [
     level: "Licence",
     duration: "3 ans",
     description: "Étude des faits sociaux, de la structure sociale et des dynamiques relationnelles pour comprendre les comportements collectifs.",
-    icon: <Book className="h-5 w-5 text-university-blue" />
+    iconName: "Book"
   },
   {
     id: "licence-banque",
@@ -50,7 +49,7 @@ export const licensePrograms: ProgramType[] = [
     level: "Licence",
     duration: "3 ans",
     description: "Formation spécialisée dans les métiers de la finance, de la banque et de l'assurance avec maîtrise des outils d'analyse financière.",
-    icon: <Book className="h-5 w-5 text-university-blue" />
+    iconName: "Book"
   },
   {
     id: "licence-gestion-projet",
@@ -58,7 +57,7 @@ export const licensePrograms: ProgramType[] = [
     level: "Licence",
     duration: "3 ans",
     description: "Formation aux méthodologies de gestion de projets, aux outils de pilotage et au management d'équipes pluridisciplinaires.",
-    icon: <Book className="h-5 w-5 text-university-blue" />
+    iconName: "Book"
   }
 ];
 
@@ -69,7 +68,7 @@ export const masterPrograms: ProgramType[] = [
     level: "Master",
     duration: "2 ans",
     description: "Formation avancée en stratégie d'entreprise, leadership et prise de décision pour les futurs dirigeants et cadres supérieurs.",
-    icon: <GraduationCap className="h-5 w-5 text-university-blue" />
+    iconName: "GraduationCap"
   },
   {
     id: "master-finance",
@@ -77,7 +76,7 @@ export const masterPrograms: ProgramType[] = [
     level: "Master",
     duration: "2 ans",
     description: "Maîtrise des outils d'analyse financière, de la gestion comptable avancée et des stratégies d'investissement.",
-    icon: <GraduationCap className="h-5 w-5 text-university-blue" />
+    iconName: "GraduationCap"
   },
   {
     id: "master-marketing",
@@ -85,7 +84,7 @@ export const masterPrograms: ProgramType[] = [
     level: "Master",
     duration: "2 ans",
     description: "Formation aux stratégies marketing avancées, à la communication multicanale et aux techniques de marketing digital.",
-    icon: <GraduationCap className="h-5 w-5 text-university-blue" />
+    iconName: "GraduationCap"
   },
   {
     id: "master-economie",
@@ -93,7 +92,7 @@ export const masterPrograms: ProgramType[] = [
     level: "Master",
     duration: "2 ans",
     description: "Analyse économique approfondie, modélisation économétrique et compréhension des enjeux macroéconomiques actuels.",
-    icon: <GraduationCap className="h-5 w-5 text-university-blue" />
+    iconName: "GraduationCap"
   },
   {
     id: "master-droit",
@@ -101,7 +100,7 @@ export const masterPrograms: ProgramType[] = [
     level: "Master",
     duration: "2 ans",
     description: "Formation approfondie en droit commercial, droit des sociétés et réglementation des affaires internationales.",
-    icon: <GraduationCap className="h-5 w-5 text-university-blue" />
+    iconName: "GraduationCap"
   }
 ];
 
@@ -112,7 +111,7 @@ export const certificationPrograms: ProgramType[] = [
     level: "Certification",
     duration: "6 mois",
     description: "Développement des compétences de leadership, gestion d'équipe et conduite du changement pour cadres et dirigeants.",
-    icon: <BookOpen className="h-5 w-5 text-university-blue" />
+    iconName: "BookOpen"
   },
   {
     id: "cert-marketing",
@@ -120,7 +119,7 @@ export const certificationPrograms: ProgramType[] = [
     level: "Certification",
     duration: "4 mois",
     description: "Formation aux outils et stratégies de marketing numérique, réseaux sociaux et référencement.",
-    icon: <BookOpen className="h-5 w-5 text-university-blue" />
+    iconName: "BookOpen"
   },
   {
     id: "cert-gestion-projet",
@@ -128,7 +127,7 @@ export const certificationPrograms: ProgramType[] = [
     level: "Certification",
     duration: "3 mois",
     description: "Méthodologies de gestion de projet (PRINCE2, PMI), outils de planification et suivi de projet.",
-    icon: <BookOpen className="h-5 w-5 text-university-blue" />
+    iconName: "BookOpen"
   },
   {
     id: "cert-finance",
@@ -136,7 +135,7 @@ export const certificationPrograms: ProgramType[] = [
     level: "Certification",
     duration: "4 mois",
     description: "Techniques d'analyse financière, évaluation d'entreprise et gestion de portefeuille d'investissement.",
-    icon: <BookOpen className="h-5 w-5 text-university-blue" />
+    iconName: "BookOpen"
   }
 ];
 
@@ -147,7 +146,7 @@ export const doctoratPrograms: ProgramType[] = [
     level: "Doctorat",
     duration: "3 ans",
     description: "Programme doctoral de recherche en management, stratégie d'entreprise et théories des organisations.",
-    icon: <University className="h-5 w-5 text-university-blue" />
+    iconName: "University"
   },
   {
     id: "doctorat-economie",
@@ -155,7 +154,7 @@ export const doctoratPrograms: ProgramType[] = [
     level: "Doctorat",
     duration: "3 ans",
     description: "Recherche avancée en économie théorique et appliquée, modélisation économétrique et analyse de politiques.",
-    icon: <University className="h-5 w-5 text-university-blue" />
+    iconName: "University"
   },
   {
     id: "doctorat-socio",
@@ -163,6 +162,6 @@ export const doctoratPrograms: ProgramType[] = [
     level: "Doctorat",
     duration: "3 ans",
     description: "Recherche approfondie sur les dynamiques sociales, l'analyse des comportements collectifs et les transformations sociétales.",
-    icon: <University className="h-5 w-5 text-university-blue" />
+    iconName: "University"
   }
 ];

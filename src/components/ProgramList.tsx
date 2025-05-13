@@ -17,7 +17,7 @@ const ProgramList = ({ programs }: ProgramListProps) => {
           level={program.level}
           duration={program.duration}
           description={program.description}
-          icon={program.icon}
+          iconName={program.iconName}
         />
       ))}
     </div>

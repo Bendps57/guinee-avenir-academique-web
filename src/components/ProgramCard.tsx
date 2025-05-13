@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Book } from "lucide-react";
+import { Book, BookOpen, GraduationCap, University } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface ProgramCardProps {
@@ -10,15 +10,30 @@ interface ProgramCardProps {
   level: string;
   duration: string;
   description: string;
-  icon?: React.ReactNode;
+  iconName?: string;
 }
 
-const ProgramCard = ({ id, title, level, duration, description, icon }: ProgramCardProps) => {
+const ProgramCard = ({ id, title, level, duration, description, iconName }: ProgramCardProps) => {
+  const renderIcon = () => {
+    switch (iconName) {
+      case "Book":
+        return <Book className="h-5 w-5 text-university-blue" />;
+      case "BookOpen":
+        return <BookOpen className="h-5 w-5 text-university-blue" />;
+      case "GraduationCap":
+        return <GraduationCap className="h-5 w-5 text-university-blue" />;
+      case "University":
+        return <University className="h-5 w-5 text-university-blue" />;
+      default:
+        return <Book className="h-5 w-5 text-university-blue" />;
+    }
+  };
+
   return (
     <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-lg border-t-4 border-t-university-gold">
       <CardHeader>
         <div className="flex items-center gap-2 mb-2">
-          {icon || <Book className="h-5 w-5 text-university-blue" />}
+          {renderIcon()}
           <span className="text-sm font-medium text-university-blue">{level}</span>
         </div>
         <CardTitle className="text-xl md:text-2xl">{title}</CardTitle>
