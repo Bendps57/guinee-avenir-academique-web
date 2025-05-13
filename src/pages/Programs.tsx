@@ -2,112 +2,163 @@
 import Hero from "@/components/Hero";
 import ProgramCard from "@/components/ProgramCard";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Book, BookOpen, GraduationCap } from "lucide-react";
+import { Book, BookOpen, GraduationCap, University } from "lucide-react";
 
 const Programs = () => {
-  // Mock data for programs
+  // Données réelles des programmes basées sur www.iuheg.education
   const licensePrograms = [
     {
       id: "licence-gestion",
-      title: "Licence en Gestion des Entreprises",
+      title: "Gestion des Entreprises",
       level: "Licence",
       duration: "3 ans",
-      description: "Formation complète en gestion, comptabilité, marketing et ressources humaines pour les futurs managers.",
+      description: "Formation complète en gestion, comptabilité, marketing et ressources humaines. Prépare à des postes de responsabilité dans tous types d'organisations.",
       icon: <Book className="h-5 w-5 text-university-blue" />
     },
     {
-      id: "licence-informatique",
-      title: "Licence en Informatique",
+      id: "licence-eco-gestion",
+      title: "Économie et Gestion",
       level: "Licence",
       duration: "3 ans",
-      description: "Formation en programmation, bases de données, réseaux et systèmes d'information pour les métiers du numérique.",
+      description: "Double compétence en économie et gestion permettant d'appréhender les mécanismes économiques et les stratégies des entreprises.",
       icon: <Book className="h-5 w-5 text-university-blue" />
     },
     {
-      id: "licence-commerce",
-      title: "Licence en Commerce International",
+      id: "licence-marketing",
+      title: "Marketing et Communication",
       level: "Licence",
       duration: "3 ans",
-      description: "Étude des marchés internationaux, du droit des affaires et des langues étrangères pour les carrières dans le commerce mondial.",
+      description: "Formation aux techniques modernes de marketing, de communication et de développement commercial dans un environnement digitalisé.",
       icon: <Book className="h-5 w-5 text-university-blue" />
     },
     {
-      id: "licence-communication",
-      title: "Licence en Communication",
+      id: "licence-socio",
+      title: "Sociologie",
       level: "Licence",
       duration: "3 ans",
-      description: "Formation aux techniques de communication, marketing digital, relations publiques et médias pour les métiers de la communication.",
+      description: "Étude des faits sociaux, de la structure sociale et des dynamiques relationnelles pour comprendre les comportements collectifs.",
       icon: <Book className="h-5 w-5 text-university-blue" />
     },
     {
-      id: "licence-droit",
-      title: "Licence en Droit",
+      id: "licence-banque",
+      title: "Banque, Assurance et Finance",
       level: "Licence",
       duration: "3 ans",
-      description: "Étude du droit civil, pénal, des affaires et international pour les carrières juridiques.",
+      description: "Formation spécialisée dans les métiers de la finance, de la banque et de l'assurance avec maîtrise des outils d'analyse financière.",
+      icon: <Book className="h-5 w-5 text-university-blue" />
+    },
+    {
+      id: "licence-gestion-projet",
+      title: "Gestion de Projets",
+      level: "Licence",
+      duration: "3 ans",
+      description: "Formation aux méthodologies de gestion de projets, aux outils de pilotage et au management d'équipes pluridisciplinaires.",
       icon: <Book className="h-5 w-5 text-university-blue" />
     }
   ];
 
   const masterPrograms = [
     {
-      id: "master-finance",
-      title: "Master en Finance",
-      level: "Master",
-      duration: "2 ans",
-      description: "Spécialisation en finance d'entreprise, analyse financière et gestion de portefeuille pour futurs experts financiers.",
-      icon: <GraduationCap className="h-5 w-5 text-university-blue" />
-    },
-    {
       id: "master-management",
-      title: "Master en Management International",
+      title: "Management des Organisations",
       level: "Master",
       duration: "2 ans",
-      description: "Formation avancée en stratégie d'entreprise, management interculturel et commerce international.",
+      description: "Formation avancée en stratégie d'entreprise, leadership et prise de décision pour les futurs dirigeants et cadres supérieurs.",
       icon: <GraduationCap className="h-5 w-5 text-university-blue" />
     },
     {
-      id: "master-informatique",
-      title: "Master en Informatique et Systèmes d'Information",
+      id: "master-finance",
+      title: "Finance et Comptabilité",
       level: "Master",
       duration: "2 ans",
-      description: "Spécialisation en développement de logiciels, intelligence artificielle et gestion de projets informatiques.",
+      description: "Maîtrise des outils d'analyse financière, de la gestion comptable avancée et des stratégies d'investissement.",
       icon: <GraduationCap className="h-5 w-5 text-university-blue" />
     },
     {
       id: "master-marketing",
-      title: "Master en Marketing Digital",
+      title: "Marketing et Communication Digitale",
       level: "Master",
       duration: "2 ans",
-      description: "Formation avancée en stratégies marketing digitales, analyse de données et communication numérique.",
+      description: "Formation aux stratégies marketing avancées, à la communication multicanale et aux techniques de marketing digital.",
+      icon: <GraduationCap className="h-5 w-5 text-university-blue" />
+    },
+    {
+      id: "master-economie",
+      title: "Économie Appliquée",
+      level: "Master",
+      duration: "2 ans",
+      description: "Analyse économique approfondie, modélisation économétrique et compréhension des enjeux macroéconomiques actuels.",
+      icon: <GraduationCap className="h-5 w-5 text-university-blue" />
+    },
+    {
+      id: "master-droit",
+      title: "Droit des Affaires",
+      level: "Master",
+      duration: "2 ans",
+      description: "Formation approfondie en droit commercial, droit des sociétés et réglementation des affaires internationales.",
       icon: <GraduationCap className="h-5 w-5 text-university-blue" />
     }
   ];
 
   const certificationPrograms = [
     {
-      id: "cert-project-management",
-      title: "Certification en Gestion de Projet",
+      id: "cert-management",
+      title: "Management et Leadership",
       level: "Certification",
-      duration: "3 mois",
-      description: "Formation intensive aux méthodologies de gestion de projet, outils et bonnes pratiques.",
+      duration: "6 mois",
+      description: "Développement des compétences de leadership, gestion d'équipe et conduite du changement pour cadres et dirigeants.",
       icon: <BookOpen className="h-5 w-5 text-university-blue" />
     },
     {
-      id: "cert-data-analysis",
-      title: "Certification en Analyse de Données",
+      id: "cert-marketing",
+      title: "Marketing Digital",
       level: "Certification",
       duration: "4 mois",
-      description: "Formation pratique aux outils d'analyse de données, statistiques et visualisation.",
+      description: "Formation aux outils et stratégies de marketing numérique, réseaux sociaux et référencement.",
       icon: <BookOpen className="h-5 w-5 text-university-blue" />
     },
     {
-      id: "cert-digital-marketing",
-      title: "Certification en Marketing Digital",
+      id: "cert-gestion-projet",
+      title: "Gestion de Projets",
       level: "Certification",
       duration: "3 mois",
-      description: "Maîtrise des stratégies de marketing en ligne, SEO, médias sociaux et publicité digitale.",
+      description: "Méthodologies de gestion de projet (PRINCE2, PMI), outils de planification et suivi de projet.",
       icon: <BookOpen className="h-5 w-5 text-university-blue" />
+    },
+    {
+      id: "cert-finance",
+      title: "Analyse Financière",
+      level: "Certification",
+      duration: "4 mois",
+      description: "Techniques d'analyse financière, évaluation d'entreprise et gestion de portefeuille d'investissement.",
+      icon: <BookOpen className="h-5 w-5 text-university-blue" />
+    }
+  ];
+
+  const doctoratPrograms = [
+    {
+      id: "doctorat-gestion",
+      title: "Sciences de Gestion",
+      level: "Doctorat",
+      duration: "3 ans",
+      description: "Programme doctoral de recherche en management, stratégie d'entreprise et théories des organisations.",
+      icon: <University className="h-5 w-5 text-university-blue" />
+    },
+    {
+      id: "doctorat-economie",
+      title: "Sciences Économiques",
+      level: "Doctorat",
+      duration: "3 ans",
+      description: "Recherche avancée en économie théorique et appliquée, modélisation économétrique et analyse de politiques.",
+      icon: <University className="h-5 w-5 text-university-blue" />
+    },
+    {
+      id: "doctorat-socio",
+      title: "Sociologie",
+      level: "Doctorat",
+      duration: "3 ans",
+      description: "Recherche approfondie sur les dynamiques sociales, l'analyse des comportements collectifs et les transformations sociétales.",
+      icon: <University className="h-5 w-5 text-university-blue" />
     }
   ];
 
@@ -116,8 +167,8 @@ const Programs = () => {
       {/* Hero Section */}
       <Hero 
         title="Programmes de Formation"
-        subtitle="Construisez votre avenir"
-        description="Découvrez nos formations d'excellence conçues pour vous préparer aux défis du monde professionnel."
+        subtitle="Excellence académique"
+        description="L'IUHEG propose des formations d'excellence conçues pour vous préparer aux défis du monde professionnel actuel et futur."
         imageUrl="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
       />
 
@@ -127,14 +178,15 @@ const Programs = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-university-blue mb-4">Nos programmes</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              L'IUHEG propose une large gamme de formations adaptées à vos objectifs professionnels
+              L'IUHEG propose une large gamme de formations adaptées à vos ambitions professionnelles, de la licence au doctorat
             </p>
           </div>
 
           <Tabs defaultValue="licence" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-12">
+            <TabsList className="grid w-full grid-cols-4 mb-12">
               <TabsTrigger value="licence" id="licence" className="text-lg">Licences</TabsTrigger>
               <TabsTrigger value="master" id="master" className="text-lg">Masters</TabsTrigger>
+              <TabsTrigger value="doctorat" id="doctorat" className="text-lg">Doctorats</TabsTrigger>
               <TabsTrigger value="certification" id="certifications" className="text-lg">Certifications</TabsTrigger>
             </TabsList>
 
@@ -157,6 +209,22 @@ const Programs = () => {
             <TabsContent value="master">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {masterPrograms.map((program) => (
+                  <ProgramCard 
+                    key={program.id}
+                    id={program.id}
+                    title={program.title}
+                    level={program.level}
+                    duration={program.duration}
+                    description={program.description}
+                    icon={program.icon}
+                  />
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="doctorat">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {doctoratPrograms.map((program) => (
                   <ProgramCard 
                     key={program.id}
                     id={program.id}
@@ -242,7 +310,7 @@ const Programs = () => {
           </div>
 
           <div className="text-center mt-12">
-            <a href="#" className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-university-blue hover:bg-university-navy md:py-4 md:text-lg md:px-10">
+            <a href="/contact" className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-university-blue hover:bg-university-navy md:py-4 md:text-lg md:px-10">
               Candidater maintenant
             </a>
           </div>
