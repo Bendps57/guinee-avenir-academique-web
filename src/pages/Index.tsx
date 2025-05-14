@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Hero from "@/components/Hero";
@@ -16,7 +15,7 @@ const Index = () => {
       level: "Licence",
       duration: "3 ans",
       description: "Formation complète en gestion, comptabilité, marketing et ressources humaines pour les futurs managers.",
-      icon: <Book className="h-5 w-5 text-university-blue" />
+      iconName: "Book"
     },
     {
       id: "licence-informatique",
@@ -24,7 +23,7 @@ const Index = () => {
       level: "Licence",
       duration: "3 ans",
       description: "Formation en programmation, bases de données, réseaux et systèmes d'information pour les métiers du numérique.",
-      icon: <Book className="h-5 w-5 text-university-blue" />
+      iconName: "Book"
     },
     {
       id: "master-finance",
@@ -32,7 +31,7 @@ const Index = () => {
       level: "Master",
       duration: "2 ans",
       description: "Spécialisation en finance d'entreprise, analyse financière et gestion de portefeuille pour futurs experts financiers.",
-      icon: <GraduationCap className="h-5 w-5 text-university-blue" />
+      iconName: "GraduationCap"
     }
   ];
 
@@ -151,7 +150,7 @@ const Index = () => {
                 level={program.level}
                 duration={program.duration}
                 description={program.description}
-                icon={program.icon}
+                iconName={program.iconName}
               />
             ))}
           </div>
