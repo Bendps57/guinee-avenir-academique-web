@@ -10,6 +10,8 @@ import About from "./pages/About";
 import International from "./pages/International";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Preinscription from "./pages/Preinscription";
+import Connexion from "./pages/Connexion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Chatbot from "./components/Chatbot";
@@ -30,6 +32,8 @@ const App = () => (
             <Route path="/a-propos" element={<About />} />
             <Route path="/international" element={<International />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/preinscription" element={<Preinscription />} />
+            <Route path="/connexion" element={<Connexion />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

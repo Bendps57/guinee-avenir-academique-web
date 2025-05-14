@@ -13,14 +13,16 @@ type Message = {
 
 const defaultResponses: Record<string, string> = {
   default: "Bonjour ! Comment puis-je vous aider concernant l'IUHEG ?",
-  greeting: "Bonjour ! Je suis l'assistant virtuel de l'IUHEG. Comment puis-je vous aider aujourd'hui ?",
+  greeting: "Bonjour 👋, je suis l'assistant virtuel de l'IUHEG. Comment puis-je vous aider aujourd'hui ?",
   admission: "Pour les admissions, vous pouvez soumettre votre candidature en ligne sur notre site ou visiter notre campus. Les documents requis incluent vos relevés de notes, pièce d'identité et formulaire d'inscription complété. Pour plus d'informations, contactez le bureau des admissions au +224 12 345 6789.",
   programs: "L'IUHEG propose plusieurs programmes de niveau Licence et Master dans des domaines comme la gestion, l'informatique, le droit, et l'ingénierie. Chaque programme est conçu pour répondre aux besoins du marché du travail guinéen et international.",
   fees: "Les frais de scolarité varient selon le programme choisi. Pour une estimation précise, veuillez contacter notre service financier ou consulter notre brochure tarifaire sur le site web.",
   international: "L'IUHEG a des partenariats avec plusieurs universités en France, au Canada et aux États-Unis. Nous offrons des programmes d'échange et des opportunités de stages internationaux pour nos étudiants.",
   accommodation: "L'université propose un service d'aide au logement pour les étudiants. Nous avons des partenariats avec plusieurs résidences près du campus.",
   facilities: "Notre campus offre des salles de classe modernes, une bibliothèque, des laboratoires informatiques, des installations sportives et une cafétéria.",
-  help: "Je peux vous renseigner sur les programmes, les admissions, les frais de scolarité, nos partenaires internationaux et la vie sur le campus. Comment puis-je vous aider ?"
+  help: "Je peux vous renseigner sur les programmes, les admissions, les frais de scolarité, nos partenaires internationaux et la vie sur le campus. Comment puis-je vous aider ?",
+  preinscription: "Vous pouvez vous préinscrire directement sur notre site web. Cliquez sur le bouton 'Préinscription en ligne' en haut de la page d'accueil ou rendez-vous sur la page 'Préinscription'. Il vous suffit de remplir le formulaire et nous vous contacterons rapidement ! 📝",
+  contact: "Vous pouvez nous contacter via notre formulaire sur la page Contact, par téléphone au +224 12 345 6789 ou par email à contact@iuheg.education. Notre équipe se fera un plaisir de répondre à vos questions ! 📞"
 };
 
 const Chatbot = () => {
@@ -35,7 +37,7 @@ const Chatbot = () => {
     
     if (/bonjour|salut|hello|hi/i.test(lowerCaseMessage)) {
       return defaultResponses.greeting;
-    } else if (/admission|inscrire|candidature|s'inscrire|comment s'inscrire/i.test(lowerCaseMessage)) {
+    } else if (/admission|inscrire|candidature|s'inscrire|comment s'inscrire|préinscription|preinscription/i.test(lowerCaseMessage)) {
       return defaultResponses.admission;
     } else if (/programme|formation|cours|étude|licence|master/i.test(lowerCaseMessage)) {
       return defaultResponses.programs;
@@ -49,9 +51,13 @@ const Chatbot = () => {
       return defaultResponses.facilities;
     } else if (/aide|help|assister|question/i.test(lowerCaseMessage)) {
       return defaultResponses.help;
+    } else if (/préinscription|preinscription|inscription|s'inscrire|comment s'inscrire/i.test(lowerCaseMessage)) {
+      return defaultResponses.preinscription;
+    } else if (/contact|joindre|email|téléphone|appeler/i.test(lowerCaseMessage)) {
+      return defaultResponses.contact;
     }
     
-    return "Je n'ai pas toutes les informations à ce sujet. Pour des renseignements plus précis, veuillez contacter notre équipe au +224 12 345 6789 ou par email à contact@iuheg.education.";
+    return "Je n'ai pas toutes les informations à ce sujet. Pour des renseignements plus précis, veuillez contacter notre équipe au +224 12 345 6789 ou par email à contact@iuheg.education. Puis-je vous aider avec autre chose ? 😊";
   };
 
   const handleSendMessage = (e?: React.FormEvent) => {
@@ -90,7 +96,7 @@ const Chatbot = () => {
         <div className="fixed bottom-6 right-6 z-50 max-w-md w-full sm:w-96">
           <Card className="border-university-blue shadow-xl">
             <CardHeader className="bg-university-blue text-white py-3 px-4 flex flex-row justify-between items-center">
-              <CardTitle className="text-lg font-medium">Assistant IUHEG</CardTitle>
+              <CardTitle className="text-lg font-medium">Assistant IUHEG 👋</CardTitle>
               <Button
                 variant="ghost"
                 size="icon"

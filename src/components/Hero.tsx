@@ -7,8 +7,16 @@ interface HeroProps {
   description?: string;
   imageUrl?: string;
   cta?: {
-    primary?: { text: string; link: string };
-    secondary?: { text: string; link: string };
+    primary?: { 
+      text: string; 
+      link: string;
+      icon?: React.ReactNode;
+    };
+    secondary?: { 
+      text: string; 
+      link: string;
+      icon?: React.ReactNode;
+    };
   };
 }
 
@@ -50,7 +58,10 @@ const Hero = ({
                   asChild
                   className="bg-university-gold hover:bg-amber-500 text-university-blue font-semibold px-8 py-6 text-lg"
                 >
-                  <a href={cta.primary.link}>{cta.primary.text}</a>
+                  <a href={cta.primary.link} className="flex items-center gap-2">
+                    {cta.primary.text}
+                    {cta.primary.icon}
+                  </a>
                 </Button>
               )}
               
@@ -60,7 +71,10 @@ const Hero = ({
                   variant="outline" 
                   className="bg-transparent border-white hover:bg-white/10 text-white px-8 py-6 text-lg"
                 >
-                  <a href={cta.secondary.link}>{cta.secondary.text}</a>
+                  <a href={cta.secondary.link} className="flex items-center gap-2">
+                    {cta.secondary.text}
+                    {cta.secondary.icon}
+                  </a>
                 </Button>
               )}
             </div>

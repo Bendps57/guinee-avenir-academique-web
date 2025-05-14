@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Hero from "@/components/Hero";
 import ProgramCard from "@/components/ProgramCard";
 import TeamMember from "@/components/TeamMember";
-import { Book, GraduationCap, Globe, MessageSquare, University } from "lucide-react";
+import { ArrowRight, Book, GraduationCap, Globe, LogIn, Mail, MessageSquare, University } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -63,8 +63,16 @@ const Index = () => {
           description="L'Institut Universitaire des Hautes Études de Guinée forme les leaders de demain dans un environnement stimulant et international."
           imageUrl="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
           cta={{
-            primary: { text: "Nos formations", link: "/formations" },
-            secondary: { text: "En savoir plus", link: "/a-propos" }
+            primary: { 
+              text: "Préinscription en ligne", 
+              link: "/preinscription",
+              icon: <ArrowRight />
+            },
+            secondary: { 
+              text: "Demander des informations", 
+              link: "/contact",
+              icon: <Mail />
+            }
           }}
         />
       </div>
@@ -157,7 +165,10 @@ const Index = () => {
           
           <div className="text-center mt-12">
             <Button asChild className="bg-university-blue hover:bg-university-navy">
-              <Link to="/formations">Voir toutes nos formations</Link>
+              <Link to="/formations" className="flex items-center gap-2">
+                Découvrez nos formations
+                <Book className="h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -252,11 +263,25 @@ const Index = () => {
                   Entamez votre parcours académique dans notre université et découvrez un monde d'opportunités pour votre avenir professionnel.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button className="bg-university-gold hover:bg-amber-500 text-university-blue font-medium">
-                    Candidater maintenant
+                  <Button asChild className="bg-university-gold hover:bg-amber-500 text-university-blue font-medium">
+                    <Link to="/preinscription" className="flex items-center gap-2">
+                      Préinscrivez-vous maintenant
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
                   </Button>
-                  <Button variant="outline" className="bg-transparent border-white hover:bg-white/10 text-white">
-                    Nous contacter
+                  <Button asChild variant="outline" className="bg-transparent border-white hover:bg-white/10 text-white">
+                    <Link to="/contact" className="flex items-center gap-2">
+                      Nous contacter
+                      <Mail className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+                <div className="mt-6">
+                  <Button asChild variant="ghost" className="text-white hover:bg-white/10 pl-1">
+                    <Link to="/connexion" className="flex items-center gap-2">
+                      <LogIn className="h-4 w-4" />
+                      Accéder à mon espace étudiant
+                    </Link>
                   </Button>
                 </div>
               </div>
