@@ -28,7 +28,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <span className="text-2xl font-bold text-university-blue">IUHEG</span>
+            <img 
+              src="https://i.imgur.com/eIx2JbG.jpeg" 
+              alt="IUHEG Logo" 
+              className="h-16 w-auto"
+            />
             <div className="hidden md:flex flex-col">
               <span className="text-sm font-medium">Institut Universitaire</span>
               <span className="text-xs text-gray-500">Hautes Études de Guinée</span>
