@@ -3,17 +3,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { certificationPrograms, doctoratPrograms, licensePrograms, masterPrograms } from "@/data/programsData";
 import ProgramList from "./ProgramList";
 
-const ProgramTabs = () => {
-  return (
-    <section className="py-16" id="programmes">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-university-blue mb-4">Nos programmes</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            L'IUHEG propose une large gamme de formations adaptées à vos ambitions professionnelles, de la licence au doctorat
-          </p>
-        </div>
+interface ProgramTabsProps {
+  viewMode: "grid" | "list";
+}
 
+const ProgramTabs = ({ viewMode }: ProgramTabsProps) => {
+  return (
+    <section className="py-8" id="programmes">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Tabs defaultValue="licence" className="w-full">
           <TabsList className="grid w-full grid-cols-4 mb-12">
             <TabsTrigger value="licence" id="licence" className="text-lg">Licences</TabsTrigger>
@@ -23,19 +20,19 @@ const ProgramTabs = () => {
           </TabsList>
 
           <TabsContent value="licence">
-            <ProgramList programs={licensePrograms} />
+            <ProgramList programs={licensePrograms} viewMode={viewMode} />
           </TabsContent>
 
           <TabsContent value="master">
-            <ProgramList programs={masterPrograms} />
+            <ProgramList programs={masterPrograms} viewMode={viewMode} />
           </TabsContent>
 
           <TabsContent value="doctorat">
-            <ProgramList programs={doctoratPrograms} />
+            <ProgramList programs={doctoratPrograms} viewMode={viewMode} />
           </TabsContent>
 
           <TabsContent value="certification">
-            <ProgramList programs={certificationPrograms} />
+            <ProgramList programs={certificationPrograms} viewMode={viewMode} />
           </TabsContent>
         </Tabs>
       </div>

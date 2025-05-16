@@ -11,9 +11,24 @@ interface ProgramCardProps {
   duration: string;
   description: string;
   iconName?: string;
+  modules?: string[];
+  objectives?: string[];
+  careers?: string[];
+  admissionRequirements?: string;
 }
 
-const ProgramCard = ({ id, title, level, duration, description, iconName }: ProgramCardProps) => {
+const ProgramCard = ({ 
+  id, 
+  title, 
+  level, 
+  duration, 
+  description, 
+  iconName, 
+  modules, 
+  objectives, 
+  careers, 
+  admissionRequirements 
+}: ProgramCardProps) => {
   const renderIcon = () => {
     switch (iconName) {
       case "Book":
@@ -42,7 +57,25 @@ const ProgramCard = ({ id, title, level, duration, description, iconName }: Prog
         </CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-gray-600">{description}</p>
+        <p className="text-gray-600 mb-4">{description}</p>
+        
+        {modules && modules.length > 0 && (
+          <div className="mb-4">
+            <h4 className="text-sm font-semibold mb-2">Quelques modules</h4>
+            <div className="flex flex-wrap gap-2">
+              {modules.slice(0, 3).map((module, index) => (
+                <span key={index} className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                  {module}
+                </span>
+              ))}
+              {modules.length > 3 && (
+                <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                  +{modules.length - 3}
+                </span>
+              )}
+            </div>
+          </div>
+        )}
       </CardContent>
       <CardFooter>
         <Button asChild className="w-full bg-university-blue hover:bg-university-navy">
