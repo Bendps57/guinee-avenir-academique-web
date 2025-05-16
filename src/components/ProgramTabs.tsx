@@ -1,9 +1,8 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
-  certificationPrograms, 
-  doctoratPrograms, 
   licensePrograms, 
+  doctoratPrograms, 
   masterPrograms,
   btsPrograms,
   bachelorPlusFourPrograms
@@ -49,7 +48,7 @@ const ProgramTabs = ({ viewMode }: ProgramTabsProps) => {
           </TabsContent>
 
           <TabsContent value="certification">
-            <ProgramList programs={certificationPrograms} viewMode={viewMode} />
+            <ProgramList programs={[]} viewMode={viewMode} />
           </TabsContent>
         </Tabs>
       </div>
