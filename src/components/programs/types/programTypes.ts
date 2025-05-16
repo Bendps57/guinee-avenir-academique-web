@@ -1,5 +1,4 @@
 
-
 export interface CourseItem {
   name: string;
   credits: number;
@@ -44,4 +43,3 @@ export interface ProgramContentProps {
   ctaTitle: string;
   ctaDescription: string;
 }
-

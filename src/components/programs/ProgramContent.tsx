@@ -9,73 +9,7 @@ import ProgramSeminars from "./ProgramSeminars";
 import CareerAndEducation from "./CareerAndEducation";
 import AdmissionRequirements from "./AdmissionRequirements";
 import CallToAction from "./CallToAction";
-
-interface ProgramContentProps {
-  // Hero
-  title: string;
-  subtitle: string;
-  description: string;
-  imageUrl: string;
-  
-  // Introduction
-  introductionParagraphs: string[];
-  
-  // Skills
-  skills: string[];
-  
-  // Curriculum
-  curriculum: {
-    year1: {
-      description: string;
-      teachingHours: number;
-      personalWorkHours: number;
-      courses: {
-        course1: { name: string; credits: number };
-        course2: { name: string; credits: number };
-      }[];
-    };
-    year2: {
-      description: string;
-      teachingHours: number;
-      personalWorkHours: number;
-      courses: {
-        course1: { name: string; credits: number };
-        course2: { name: string; credits: number };
-      }[];
-    };
-    year3: {
-      description: string;
-      teachingHours: number;
-      personalWorkHours: number;
-      courses: {
-        course1: { name: string; credits: number };
-        course2: { name: string; credits: number };
-      }[];
-    };
-  };
-  
-  // Faculty and Internship
-  facultyText: string;
-  internshipText: string;
-  
-  // Seminars
-  seminars: string[];
-  seminarsDescription: string;
-  
-  // Career and Education
-  careers: string[];
-  educationDescription: string;
-  educationOptions: string[];
-  
-  // Admission Requirements
-  licence1Requirements: string[];
-  licence2Text: string;
-  licence3Text: string;
-  
-  // Call to Action
-  ctaTitle: string;
-  ctaDescription: string;
-}
+import { ProgramContentProps } from "./types/programTypes";
 
 const ProgramContent = ({
   // Hero

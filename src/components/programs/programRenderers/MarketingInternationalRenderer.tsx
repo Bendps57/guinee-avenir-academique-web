@@ -72,7 +72,7 @@ const MarketingInternationalRenderer = () => {
       
       facultyText={facultyText}
       
-      internshipText="La formation en gestion transport et logistique est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions informatiques pour résoudre des problématiques spécifiques de l'entreprise."
+      internshipText="La formation en marketing et commerce international est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions marketing pour résoudre des problématiques spécifiques de l'entreprise."
       
       seminars={seminars}
       
