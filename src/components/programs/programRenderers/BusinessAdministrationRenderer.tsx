@@ -1,8 +1,13 @@
 
 import React from "react";
 import ProgramContent from "../ProgramContent";
+import { generateCommonEconomicsFirstYearCurriculum, generateCommonEconomicsSecondYearCurriculum, generateCommonStandardTexts } from "../utils/programDataUtils";
 
 const BusinessAdministrationRenderer = () => {
+  const firstYear = generateCommonEconomicsFirstYearCurriculum();
+  const secondYear = generateCommonEconomicsSecondYearCurriculum();
+  const { facultyText, licence1Requirements, licence2Text, licence3Text, ctaTitle } = generateCommonStandardTexts();
+
   return (
     <ProgramContent
       title="Business Administration"
@@ -28,28 +33,12 @@ const BusinessAdministrationRenderer = () => {
       
       curriculum={{
         year1: {
-          description: "Au cours de la première année, l'objectif est de poser des bases solides en gestion d'entreprise. Les étudiants acquièrent une compréhension des principes fondamentaux du marketing, de la comptabilité, de la finance, de la gestion des ressources humaines et de la gestion d'entreprise en général. Les stages en entreprise offrent une expérience pratique précieuse et permettent aux étudiants d'appliquer leurs connaissances dans un contexte professionnel. Ces semestres préparent les étudiants à des cours plus avancés et à des rôles plus spécialisés dans le domaine de la Business Administration.",
-          teachingHours: 305,
-          personalWorkHours: 105,
-          courses: [
-            { course1: { name: "Economie Générale", credits: 6 }, course2: { name: "Finances Publiques", credits: 6 } },
-            { course1: { name: "Microéconomie", credits: 6 }, course2: { name: "Méthodes Statistiques", credits: 6 } },
-            { course1: { name: "Microéconomie", credits: 6 }, course2: { name: "Macroéconomie", credits: 6 } },
-            { course1: { name: "Géographie Economique", credits: 6 }, course2: { name: "Droit Civil et administratif", credits: 6 } },
-            { course1: { name: "Mathématiques", credits: 6 }, course2: { name: "Histoire des faits et de la pensée économiques", credits: 6 } }
-          ]
+          ...firstYear,
+          description: "Au cours de la première année, l'objectif est de poser des bases solides en gestion d'entreprise. Les étudiants acquièrent une compréhension des principes fondamentaux du marketing, de la comptabilité, de la finance, de la gestion des ressources humaines et de la gestion d'entreprise en général. Les stages en entreprise offrent une expérience pratique précieuse et permettent aux étudiants d'appliquer leurs connaissances dans un contexte professionnel. Ces semestres préparent les étudiants à des cours plus avancés et à des rôles plus spécialisés dans le domaine de la Business Administration."
         },
         year2: {
-          description: "Au cours de la deuxième année, le programme vise à préparer les étudiants à des rôles plus avancés en gestion d'entreprise. Vous développerez des compétences plus avancées en marketing, en comptabilité de gestion, en finance d'entreprise, en gestion des opérations, en gestion de projet, en gestion des ressources humaines, et en stratégie d'entreprise. Ces compétences sont essentielles pour des postes de gestionnaire, de consultant en gestion, d'analyste d'entreprise, ou pour la poursuite d'études supérieures en Business Administration. Ces semestres vous permettront d'acquérir une compréhension plus approfondie des concepts et des pratiques liés à la gestion d'entreprise.",
-          teachingHours: 345,
-          personalWorkHours: 105,
-          courses: [
-            { course1: { name: "Théorie et Politique Monétaire", credits: 6 }, course2: { name: "Comptabilité Nationale", credits: 6 } },
-            { course1: { name: "Informatique et Système d'Information", credits: 6 }, course2: { name: "Sociologie Générale", credits: 6 } },
-            { course1: { name: "Programmation Linéaire", credits: 6 }, course2: { name: "Fiscalité générale 1 ou Economie Publique", credits: 6 } },
-            { course1: { name: "Comptabilité Analytique d'Exploitation", credits: 6 }, course2: { name: "Eléments d'économie contemporaine ou Environnement économique et marchés financiers", credits: 6 } },
-            { course1: { name: "Analyse et Evaluation Economique des Projets", credits: 6 }, course2: { name: "Méthodologie de la Recherche ou Economie du travail", credits: 6 } }
-          ]
+          ...secondYear,
+          description: "Au cours de la deuxième année, le programme vise à préparer les étudiants à des rôles plus avancés en gestion d'entreprise. Vous développerez des compétences plus avancées en marketing, en comptabilité de gestion, en finance d'entreprise, en gestion des opérations, en gestion de projet, en gestion des ressources humaines, et en stratégie d'entreprise. Ces compétences sont essentielles pour des postes de gestionnaire, de consultant en gestion, d'analyste d'entreprise, ou pour la poursuite d'études supérieures en Business Administration. Ces semestres vous permettront d'acquérir une compréhension plus approfondie des concepts et des pratiques liés à la gestion d'entreprise."
         },
         year3: {
           description: "La dernière année vous permet de vous spécialiser davantage en Business Administration et de préparer votre transition vers le monde professionnel. Vous développerez une compréhension plus approfondie des aspects avancés du marketing, de la finance, de la stratégie d'entreprise, de la gestion internationale, et de la gestion des ressources humaines. Les projets de fin d'études et les stages en entreprise fournissent une expérience pratique significative, tout en vous permettant de démontrer votre expertise. Ces semestres vous préparent également à poursuivre des études supérieures en gestion d'entreprise, en MBA (Master of Business Administration) ou dans d'autres domaines connexes.",
@@ -65,7 +54,7 @@ const BusinessAdministrationRenderer = () => {
         }
       }}
       
-      facultyText="Nos enseignants, qu'ils soient africains ou européens, sont sélectionnés parmi les experts les plus qualifiés de leur domaine. Notre programme de formation, bien qu'il vous permette de comprendre en profondeur les aspects théoriques sous-jacents aux techniques de gestion de données, est principalement axé sur la pratique, garantissant ainsi une employabilité accrue."
+      facultyText={facultyText}
       
       internshipText="La formation en gestion transport et logistique est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions informatiques pour résoudre des problématiques spécifiques de l'entreprise."
       
@@ -100,16 +89,11 @@ const BusinessAdministrationRenderer = () => {
         "Doctorat en Administration des Affaires (DBA)"
       ]}
       
-      licence1Requirements={[
-        "Avoir obtenu le diplôme du baccalauréat.",
-        "Avoir une aisance en mathématiques."
-      ]}
+      licence1Requirements={licence1Requirements}
+      licence2Text={licence2Text}
+      licence3Text={licence3Text}
       
-      licence2Text="Il convient de valider les semestres 1 et 2 de la première année, de posséder des connaissances solides en économie et d'être diplômé d'une école ou d'une université respectant le système LMD."
-      
-      licence3Text="Il est requis d'être en possession d'un diplôme de niveau Bac+2 en sciences ou d'un équivalent. Il est également nécessaire de valider l'ensemble des crédits de la première et de la deuxième année. En outre, il est impératif d'être issu d'une école ou d'une université respectant le système LMD."
-      
-      ctaTitle="Prêt à vous lancer dans l'aventure ?"
+      ctaTitle={ctaTitle}
       ctaDescription="Rejoignez notre programme de Business Administration et développez les compétences nécessaires pour réussir dans le monde des affaires."
     />
   );

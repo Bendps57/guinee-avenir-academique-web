@@ -1,8 +1,13 @@
 
 import React from "react";
 import ProgramContent from "../ProgramContent";
+import { generateCommonStandardTexts } from "../utils/programDataUtils";
+import { getMarketingSeminars } from "../utils/seminarUtils";
 
 const MarketingInternationalRenderer = () => {
+  const { facultyText, licence1Requirements, licence2Text, licence3Text, ctaTitle } = generateCommonStandardTexts();
+  const { seminars, seminarsDescription } = getMarketingSeminars();
+
   return (
     <ProgramContent
       title="Marketing et Commerce International"
@@ -63,22 +68,13 @@ const MarketingInternationalRenderer = () => {
         }
       }}
       
-      facultyText="Nos enseignants, qu'ils soient africains ou européens, sont sélectionnés parmi les experts les plus qualifiés de leur domaine. Notre programme de formation, bien qu'il vous permette de comprendre en profondeur les aspects théoriques sous-jacents aux techniques de gestion de données, est principalement axé sur la pratique, garantissant ainsi une employabilité accrue."
+      facultyText={facultyText}
       
       internshipText="La formation en gestion transport et logistique est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions informatiques pour résoudre des problématiques spécifiques de l'entreprise."
       
-      seminars={[
-        "Négociation Internationale",
-        "Gestion de la Chaîne d'Approvisionnement Internationale",
-        "Marketing Numérique International",
-        "Stratégies Marketing Internationales",
-        "Étude de Cas en Commerce International",
-        "Gestion de Projets Internationaux",
-        "Responsabilité Sociale des Entreprises dans un Contexte International",
-        "Langues Étrangères en Affaires Internationales"
-      ]}
+      seminars={seminars}
       
-      seminarsDescription="Les séminaires sont souvent interactifs, avec des discussions, des exercices pratiques, des études de cas et des projets. Ils visent à préparer les étudiants à des rôles plus spécialisés dans le marketing international et le commerce international, ainsi qu'à les tenir informés des dernières tendances et des meilleures pratiques du secteur. Les séminaires offrent également l'occasion de travailler sur des projets concrets et de mettre en application les compétences acquises dans un contexte professionnel."
+      seminarsDescription={seminarsDescription}
       
       careers={[
         "Responsable Marketing International",
@@ -101,16 +97,11 @@ const MarketingInternationalRenderer = () => {
         "Certifications Professionnelles"
       ]}
       
-      licence1Requirements={[
-        "Avoir obtenu le diplôme du baccalauréat.",
-        "Avoir une aisance en mathématiques."
-      ]}
+      licence1Requirements={licence1Requirements}
+      licence2Text={licence2Text}
+      licence3Text={licence3Text}
       
-      licence2Text="Il convient de valider les semestres 1 et 2 de la première année, de posséder des connaissances solides en économie et d'être diplômé d'une école ou d'une université respectant le système LMD."
-      
-      licence3Text="Il est requis d'être en possession d'un diplôme de niveau Bac+2 en sciences ou d'un équivalent. Il est également nécessaire de valider l'ensemble des crédits de la première et de la deuxième année. En outre, il est impératif d'être issu d'une école ou d'une université respectant le système LMD."
-      
-      ctaTitle="Prêt à vous lancer dans l'aventure ?"
+      ctaTitle={ctaTitle}
       ctaDescription="Rejoignez notre programme de Marketing et Commerce International et développez les compétences nécessaires pour réussir dans le monde des affaires globalisé."
     />
   );
