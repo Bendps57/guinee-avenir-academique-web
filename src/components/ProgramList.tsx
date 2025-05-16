@@ -2,6 +2,7 @@
 import ProgramCard from "@/components/ProgramCard";
 import ProgramRow from "@/components/ProgramRow";
 import { ProgramType } from "@/data/programsData";
+import { useEffect, useState } from "react";
 
 interface ProgramListProps {
   programs: ProgramType[];

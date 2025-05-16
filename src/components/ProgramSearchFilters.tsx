@@ -2,12 +2,12 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { LayoutGrid, List, Search } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface ProgramSearchFiltersProps {
   onViewChange: (view: "grid" | "list") => void;
   activeView: "grid" | "list";
-  onSearch?: (query: string) => void;
+  onSearch: (query: string) => void;
 }
 
 const ProgramSearchFilters = ({ onViewChange, activeView, onSearch }: ProgramSearchFiltersProps) => {
@@ -16,9 +16,7 @@ const ProgramSearchFilters = ({ onViewChange, activeView, onSearch }: ProgramSea
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
     setSearchQuery(query);
-    if (onSearch) {
-      onSearch(query);
-    }
+    onSearch(query);
   };
 
   return (
