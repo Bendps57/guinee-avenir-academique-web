@@ -1,40 +1,4 @@
 
-export const getEconomicsCareers = () => {
-  return [
-    "Banque et Finance",
-    "Gouvernement et Politiques Publiques",
-    "Entreprise",
-    "Organisations Internationales",
-    "Enseignement et Recherche",
-    "Journalisme Économique"
-  ];
-};
-
-export const getBusinessCareers = () => {
-  return [
-    "Gestionnaire",
-    "Analyste financier",
-    "Spécialiste en marketing",
-    "Consultant en gestion",
-    "Entrepreneur",
-    "Analyste des données",
-    "Gestionnaire des ressources humaines"
-  ];
-};
-
-export const getLogisticsCareers = () => {
-  return [
-    "Responsable Logistique",
-    "Gestionnaire de Chaîne d'Approvisionnement",
-    "Responsable de Transport",
-    "Analyste en Logistique",
-    "Gestionnaire de Stocks",
-    "Consultant en Logistique",
-    "Spécialiste de la Chaîne d'Approvisionnement International",
-    "Gestionnaire de Projet Logistique"
-  ];
-};
-
 export const getMarketingCareers = () => {
   return [
     "Responsable Marketing International",
@@ -46,26 +10,28 @@ export const getMarketingCareers = () => {
   ];
 };
 
-export const getBankingCareers = () => {
+export const getLogisticsCareers = () => {
   return [
-    "Gestionnaire de Banque",
-    "Analyste financier",
-    "Conseiller Bancaire",
-    "Spécialiste en Crédit",
-    "Gestionnaire de Portefeuille",
-    "Agent d'Assurance",
-    "Analyste de Risques"
+    "Responsable logistique",
+    "Coordinateur transport",
+    "Supply chain manager",
+    "Gestionnaire d'entrepôt",
+    "Analyste logistique",
+    "Consultant en supply chain",
+    "Responsable des approvisionnements",
+    "Planificateur de flux logistiques"
   ];
 };
 
-export const getAccountingCareers = () => {
+export const getBankingCareers = () => {
   return [
-    "Comptable",
-    "Auditeur",
-    "Contrôleur de Gestion",
-    "Conseiller Fiscal",
-    "Expert-Comptable",
-    "Directeur Financier",
-    "Responsable Administratif et Financier"
+    "Chargé de clientèle bancaire",
+    "Analyste financier",
+    "Gestionnaire de patrimoine",
+    "Conseiller en assurances",
+    "Contrôleur des risques",
+    "Gestionnaire de back-office bancaire",
+    "Courtier en valeurs mobilières",
+    "Responsable conformité"
   ];
 };

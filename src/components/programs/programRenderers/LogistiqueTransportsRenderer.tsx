@@ -2,95 +2,109 @@
 import React from "react";
 import ProgramContent from "../ProgramContent";
 import { generateCommonStandardTexts } from "../utils/programDataUtils";
-import { getLogisticsSeminars } from "../utils/seminarUtils";
-import { getLogisticsCareers } from "../utils/careerUtils";
 
 const LogistiqueTransportsRenderer = () => {
   const { facultyText, licence1Requirements, licence2Text, licence3Text, ctaTitle } = generateCommonStandardTexts();
-  const { seminars, seminarsDescription } = getLogisticsSeminars();
-  const careers = getLogisticsCareers();
 
   return (
     <ProgramContent
-      title="Logistique et Transports (Supply Chain)"
+      title="Logistique et Transport (Supply Chain)"
       subtitle="Licence en Sciences Économiques"
-      description="Formation d'excellence pour maîtriser la gestion des chaînes logistiques et du transport"
-      imageUrl="https://images.unsplash.com/photo-1493946740644-2d8a1f1a6aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+      description="Formation d'excellence pour maîtriser les principes de la gestion logistique et des transports à l'échelle mondiale"
+      imageUrl="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
       
       introductionParagraphs={[
-        "Depuis son ouverture en 2008, l'Institut Universitaire des Hautes Études de Guinée (IUHEG) forme des étudiants passionnés. La gestion logistique et le transport jouent un rôle essentiel dans de nombreuses industries, notamment la distribution, la fabrication, le commerce de détail, la santé, et bien d'autres. Les diplômés de ce domaine sont en demande pour assurer le bon déroulement des opérations et garantir la livraison efficace de biens et de services.",
-        "Une licence en transport et logistique prépare les étudiants à des carrières dans des domaines tels que la gestion de la chaîne d'approvisionnement, la logistique, la gestion des opérations de transport, la gestion des entrepôts, la gestion des stocks, la planification des transports et bien d'autres. Elle constitue également une base solide pour des études supérieures en logistique ou dans des domaines connexes."
+        "Depuis son ouverture en 2008, l'Institut Universitaire des Hautes Études de Guinée (IUHEG) forme des étudiants passionnés. La licence en Logistique et Transport prépare les diplômés à exceller dans la gestion des chaînes d'approvisionnement, l'optimisation des réseaux de transport et la planification logistique.",
+        "Ce programme offre aux étudiants une solide compréhension des principes fondamentaux de la logistique, des techniques de gestion des transports, des stratégies d'optimisation de la chaîne d'approvisionnement et des compétences nécessaires pour réussir dans un environnement mondial complexe. Il prépare les étudiants à évoluer dans un secteur en constante évolution où l'expertise en logistique et transport est de plus en plus recherchée."
       ]}
       
       skills={[
-        "Planification et coordination des opérations logistiques",
-        "Gestion de la chaîne d'approvisionnement",
-        "Gestion des opérations de transport",
-        "Gestion des stocks et de la demande",
-        "Utilisation de la technologie de l'information en logistique",
-        "Gestion de la qualité et de la performance",
-        "Conformité réglementaire en matière de transport",
-        "Analyse des coûts et de l'efficacité des opérations logistiques"
+        "Maîtrise des principes de gestion de la chaîne d'approvisionnement",
+        "Compétences en planification et coordination logistique",
+        "Connaissance des réglementations nationales et internationales du transport",
+        "Capacité à optimiser les réseaux de distribution",
+        "Aptitude à gérer des entrepôts et des flottes de véhicules",
+        "Compréhension des technologies de suivi et de traçabilité",
+        "Compétences en analyse des données logistiques et prise de décision"
       ]}
       
       curriculum={{
         year1: {
-          description: "Au cours de la première année, l'objectif est de poser des bases solides en logistique, en gestion des transports et en gestion de la chaîne d'approvisionnement. Les étudiants acquièrent une compréhension des principes fondamentaux, des compétences mathématiques et statistiques, et des bases de la technologie en logistique. Ils commencent également à explorer des aspects liés au commerce international et à la gestion des opérations internationales. Ces semestres jettent les bases nécessaires pour la suite du programme, qui inclura des cours plus avancés, des stages en entreprise et des projets de recherche.",
-          teachingHours: 375,
-          personalWorkHours: 60,
+          description: "La première année pose les bases solides en logistique et transport. Les étudiants acquièrent une compréhension des principes fondamentaux de la chaîne d'approvisionnement, du transport multimodal, de la gestion des stocks et des aspects juridiques du transport de marchandises. Les compétences en planification logistique et en analyse des données sont également développées. Ces semestres préparent les étudiants à des cours plus avancés et à des stages en entreprise dans les années suivantes, où ils appliqueront leurs connaissances dans un contexte professionnel réel.",
+          teachingHours: 385,
+          personalWorkHours: 50,
           courses: [
-            { course1: { name: "Microéconomie", credits: 6 }, course2: { name: "Macroéconomie", credits: 6 } },
-            { course1: { name: "Mathématiques", credits: 6 }, course2: { name: "Statistiques descriptive", credits: 6 } },
-            { course1: { name: "Contexte éco & social", credits: 6 }, course2: { name: "Hist. Faits éco. & soc", credits: 6 } },
-            { course1: { name: "Economie générale", credits: 6 }, course2: { name: "Comptabilité des Sociétés Commerciales", credits: 6 } },
-            { course1: { name: "Comptabilité générale", credits: 6 }, course2: { name: "Droit civil et administratif", credits: 6 } }
+            { course1: { name: "Introduction à la logistique", credits: 6 }, course2: { name: "Principes du transport", credits: 6 } },
+            { course1: { name: "Mathématiques appliquées", credits: 6 }, course2: { name: "Statistiques pour la logistique", credits: 6 } },
+            { course1: { name: "Économie des transports", credits: 6 }, course2: { name: "Droit du transport", credits: 6 } },
+            { course1: { name: "Gestion des stocks", credits: 6 }, course2: { name: "Informatique logistique", credits: 6 } },
+            { course1: { name: "Anglais des affaires", credits: 6 }, course2: { name: "Management des organisations", credits: 6 } }
           ]
         },
         year2: {
-          description: "Au cours de la deuxième année, le programme vise à approfondir les compétences en gestion des transports, en gestion de la chaîne d'approvisionnement et en logistique. Les étudiants abordent des sujets plus avancés, notamment la durabilité, la qualité, l'automatisation, l'analyse de données et la gestion internationale. Les stages en entreprise offrent une expérience pratique dans le domaine, tandis que les projets de recherche développent des compétences de recherche avancée. Ces semestres préparent les étudiants à des carrières dans des domaines tels que la gestion logistique, la planification des transports, la gestion de la chaîne d'approvisionnement, la gestion des stocks et bien d'autres.",
-          teachingHours: 420,
-          personalWorkHours: 30,
+          description: "La deuxième année approfondit la compréhension des étudiants des aspects avancés de la logistique et du transport. Les compétences en optimisation des réseaux logistiques, en gestion des entrepôts, en transport international et en management de la qualité sont renforcées. Les stages en entreprise offrent une expérience pratique précieuse, tandis que les projets d'optimisation logistique permettent d'appliquer les compétences dans des contextes réels. Ces semestres préparent les étudiants à des rôles plus spécialisés dans la logistique et le transport, ainsi qu'à des carrières dans des entreprises de transport, des prestataires logistiques et des départements supply chain d'entreprises industrielles ou commerciales.",
+          teachingHours: 410,
+          personalWorkHours: 40,
           courses: [
-            { course1: { name: "Recherche opérationnelle", credits: 6 }, course2: { name: "Entrepreneurship", credits: 6 } },
-            { course1: { name: "Comptabilité analytique d'exploitation", credits: 6 }, course2: { name: "Gestion et analyse financière", credits: 6 } },
-            { course1: { name: "Droit des affaires", credits: 6 }, course2: { name: "Economie et Commerce International", credits: 6 } },
-            { course1: { name: "Gestion des opérations", credits: 6 }, course2: { name: "Introduction à la gestion des ressources humaines", credits: 6 } },
-            { course1: { name: "Marketing", credits: 6 }, course2: { name: "Management", credits: 6 } }
+            { course1: { name: "Gestion des entrepôts", credits: 6 }, course2: { name: "Transport international", credits: 6 } },
+            { course1: { name: "Supply Chain Management", credits: 6 }, course2: { name: "Douane et commerce international", credits: 6 } },
+            { course1: { name: "Management de la qualité", credits: 6 }, course2: { name: "Système d'information logistique", credits: 6 } },
+            { course1: { name: "Gestion de projet logistique", credits: 6 }, course2: { name: "Achats et approvisionnements", credits: 6 } },
+            { course1: { name: "Marketing des services logistiques", credits: 6 }, course2: { name: "Logistique durable", credits: 6 } }
           ]
         },
         year3: {
-          description: "La dernière année est conçue pour approfondir votre expertise dans le domaine de la logistique et du transport, et pour vous préparer à votre carrière professionnelle. La spécialisation vous permet de vous concentrer sur un domaine spécifique de la logistique qui correspond à vos intérêts et à vos objectifs de carrière. Les stages en entreprise vous donnent une expérience pratique et vous aident à établir des contacts professionnels. Les projets de fin d'études démontrent votre capacité à appliquer vos compétences et à résoudre des problèmes logistiques réels. En fin de compte, ces semestres vous préparent à entrer sur le marché du travail en tant que professionnel de la logistique et du transport.",
-          teachingHours: 450,
-          personalWorkHours: 0,
+          description: "La dernière année permet aux étudiants de se spécialiser davantage dans un domaine particulier de la logistique et du transport. Le stage en entreprise permet de mettre en pratique les connaissances acquises, d'acquérir de l'expérience professionnelle et de développer un réseau professionnel. Le projet de fin d'études démontre la maîtrise des concepts et des compétences en logistique et transport. Ces semestres préparent les étudiants à entrer sur le marché du travail en tant que professionnels de la logistique, du transport, de la gestion de la chaîne d'approvisionnement ou dans d'autres domaines connexes. Les diplômés pourront occuper des postes de responsable logistique, de coordinateur de transport, de gestionnaire de flotte, d'analyste de la chaîne d'approvisionnement, et bien plus encore.",
+          teachingHours: 425,
+          personalWorkHours: 25,
           courses: [
-            { course1: { name: "Logistique générale", credits: 6 }, course2: { name: "Droit des transports", credits: 6 } },
-            { course1: { name: "Gestion de chaîne d'approvisionnements", credits: 6 }, course2: { name: "Douane et transit", credits: 6 } },
-            { course1: { name: "Gestion d'entrepôts et de plateformes", credits: 6 }, course2: { name: "Transports routiers et ferroviaires de personnes et marchandises", credits: 6 } },
-            { course1: { name: "Hygiène, Santé, Sécurité et Environnement", credits: 6 }, course2: { name: "Transports maritime, fluvial et opérations portuaires", credits: 6 } },
-            { course1: { name: "Gestion de la Production et de la Qualité", credits: 6 }, course2: { name: "Transports aériens de marchandises, de passagers et opérations aéroportuaires", credits: 6 } }
+            { course1: { name: "Stratégie logistique", credits: 6 }, course2: { name: "Management des opérations", credits: 6 } },
+            { course1: { name: "Optimisation des réseaux de distribution", credits: 6 }, course2: { name: "Gestion des risques logistiques", credits: 6 } },
+            { course1: { name: "Logistique internationale", credits: 6 }, course2: { name: "Transport multimodal avancé", credits: 6 } },
+            { course1: { name: "Digitalisation de la chaîne logistique", credits: 6 }, course2: { name: "Lean management en logistique", credits: 6 } },
+            { course1: { name: "Performance logistique", credits: 6 }, course2: { name: "Projet professionnel", credits: 6 } }
           ]
         }
       }}
       
       facultyText={facultyText}
       
-      internshipText="La formation en gestion transport et logistique est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions informatiques pour résoudre des problématiques spécifiques de l'entreprise."
+      internshipText="La formation en logistique et transport est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions logistiques pour résoudre des problématiques spécifiques de l'entreprise."
       
-      seminars={seminars}
+      seminars={[
+        "Optimisation des chaînes d'approvisionnement",
+        "Nouvelles technologies en logistique",
+        "Logistique urbaine et derniers kilomètres",
+        "Transport international et intermodalité",
+        "Green logistics et développement durable",
+        "Gestion des entrepôts et plateformes logistiques",
+        "Blockchain et traçabilité dans la supply chain",
+        "Risk management en logistique"
+      ]}
       
-      seminarsDescription={seminarsDescription}
+      seminarsDescription="Les séminaires sont conçus pour être interactifs et pratiques, avec des discussions animées, des études de cas concrets et des projets collaboratifs. Ils préparent les étudiants à relever les défis spécifiques du secteur de la logistique et des transports, tout en les tenant informés des dernières innovations et tendances du marché. Ces sessions permettent également aux étudiants de développer leur réseau professionnel et d'acquérir une expérience pratique précieuse."
       
-      careers={careers}
+      careers={[
+        "Responsable logistique",
+        "Coordinateur transport",
+        "Supply chain manager",
+        "Gestionnaire d'entrepôt",
+        "Analyste logistique",
+        "Consultant en supply chain",
+        "Responsable des approvisionnements",
+        "Planificateur de flux logistiques"
+      ]}
       
-      educationDescription="Après l'obtention d'une licence en gestion logistique et transport, vous avez plusieurs options pour poursuivre vos études et approfondir vos compétences dans ce domaine."
+      educationDescription="Après l'obtention de la licence en Logistique et Transport, plusieurs options s'offrent aux diplômés pour poursuivre leurs études et se spécialiser davantage selon leurs ambitions professionnelles."
       
       educationOptions={[
-        "Master en Gestion Logistique et Transport",
-        "Master en Administration des Affaires (MBA)",
-        "Master en Ingénierie des Transports",
-        "Master en Gestion de la Chaîne d'Approvisionnement",
-        "Doctorat en Logistique et Transport",
-        "Certifications Professionnelles : Formation Continue et Cours en Ligne"
+        "Master en Supply Chain Management",
+        "Master en Logistique Internationale",
+        "Master en Transport et Mobilité",
+        "Master en Management des Opérations",
+        "MBA spécialisé en Logistique",
+        "Mastère spécialisé en Achats Internationaux",
+        "Doctorat en Logistique et Gestion des Opérations"
       ]}
       
       licence1Requirements={licence1Requirements}
@@ -98,7 +112,7 @@ const LogistiqueTransportsRenderer = () => {
       licence3Text={licence3Text}
       
       ctaTitle={ctaTitle}
-      ctaDescription="Rejoignez notre programme de Logistique et Transports et développez les compétences nécessaires pour exceller dans la gestion des chaînes d'approvisionnement mondiales."
+      ctaDescription="Rejoignez notre programme de Logistique et Transport et développez les compétences essentielles pour exceller dans la gestion moderne des chaînes d'approvisionnement."
     />
   );
 };

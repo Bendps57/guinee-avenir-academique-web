@@ -2,13 +2,9 @@
 import React from "react";
 import ProgramContent from "../ProgramContent";
 import { generateCommonStandardTexts } from "../utils/programDataUtils";
-import { getMarketingSeminars } from "../utils/seminarUtils";
-import { getMarketingCareers } from "../utils/careerUtils";
 
 const MarketingInternationalRenderer = () => {
   const { facultyText, licence1Requirements, licence2Text, licence3Text, ctaTitle } = generateCommonStandardTexts();
-  const { seminars, seminarsDescription } = getMarketingSeminars();
-  const careers = getMarketingCareers();
 
   return (
     <ProgramContent
@@ -74,11 +70,27 @@ const MarketingInternationalRenderer = () => {
       
       internshipText="La formation en marketing et commerce international est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions marketing pour résoudre des problématiques spécifiques de l'entreprise."
       
-      seminars={seminars}
+      seminars={[
+        "Négociation Internationale",
+        "Gestion de la Chaîne d'Approvisionnement Internationale",
+        "Marketing Numérique International",
+        "Stratégies Marketing Internationales",
+        "Étude de Cas en Commerce International",
+        "Gestion de Projets Internationaux",
+        "Responsabilité Sociale des Entreprises dans un Contexte International",
+        "Langues Étrangères en Affaires Internationales"
+      ]}
       
-      seminarsDescription={seminarsDescription}
+      seminarsDescription="Les séminaires sont souvent interactifs, avec des discussions, des exercices pratiques, des études de cas et des projets. Ils visent à préparer les étudiants à des rôles plus spécialisés dans le marketing international et le commerce international, ainsi qu'à les tenir informés des dernières tendances et des meilleures pratiques du secteur. Les séminaires offrent également l'occasion de travailler sur des projets concrets et de mettre en application les compétences acquises dans un contexte professionnel."
       
-      careers={careers}
+      careers={[
+        "Responsable Marketing International",
+        "Responsable des Ventes Internationales",
+        "Gestionnaire de la Chaîne d'Approvisionnement Internationale",
+        "Analyste en Commerce International",
+        "Consultant en Marketing International",
+        "Gestionnaire de Produit International"
+      ]}
       
       educationDescription="Après avoir obtenu une licence en marketing et commerce international, vous avez plusieurs options pour la poursuite de vos études, en fonction de vos objectifs de carrière et de vos intérêts."
       

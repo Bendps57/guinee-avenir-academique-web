@@ -1,116 +1,119 @@
 
 import React from "react";
 import ProgramContent from "../ProgramContent";
+import { generateCommonStandardTexts } from "../utils/programDataUtils";
 
 const BanqueFinancesRenderer = () => {
+  const { facultyText, licence1Requirements, licence2Text, licence3Text, ctaTitle } = generateCommonStandardTexts();
+
   return (
     <ProgramContent
-      title="Banque Finances / Banque Assurances"
+      title="Banque, Finances et Assurances"
       subtitle="Licence en Sciences Économiques"
-      description="Formation d'excellence pour comprendre les mécanismes bancaires et financiers"
-      imageUrl="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+      description="Formation d'excellence pour maîtriser les principes fondamentaux de la finance, de la banque et des assurances"
+      imageUrl="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
       
       introductionParagraphs={[
-        "Depuis son ouverture en 2008, l'Institut Universitaire des Hautes Études de Guinée (IUHEG) forme des étudiants passionnés. Une licence en banque et finance est un programme d'études supérieures axé sur les domaines de la banque, de la finance et des services financiers. Ce programme vise à former les étudiants aux principes fondamentaux de la finance, de l'investissement, de la gestion bancaire, de l'analyse financière et d'autres aspects liés à la gestion de l'argent et des ressources financières.",
-        "Les diplômés d'une licence en banque et finance sont préparés à travailler dans des banques, des sociétés de gestion d'actifs, des institutions financières, des sociétés d'investissement, des cabinets d'audit, des entreprises multinationales, ou à poursuivre des études supérieures en finance, en économie ou en gestion. Ce programme offre une base solide pour les carrières liées à la gestion de l'argent et des ressources financières."
+        "Depuis son ouverture en 2008, l'Institut Universitaire des Hautes Études de Guinée (IUHEG) forme des étudiants passionnés. La licence en Banque, Finances et Assurances prépare les diplômés à travailler dans le secteur financier en pleine évolution, dans les institutions bancaires, les compagnies d'assurances et diverses organisations financières.",
+        "Ce programme offre aux étudiants une solide compréhension des mécanismes financiers, des produits bancaires, des techniques d'analyse financière et des principes d'assurance. Il forme des professionnels capables d'évaluer les risques, de gérer des portefeuilles d'investissement et de conseiller les clients sur leurs stratégies financières dans un environnement économique mondial en constante évolution."
       ]}
       
       skills={[
-        "Gestion et leadership",
-        "Compréhension des concepts financiers",
-        "Compétences en marketing et en vente",
-        "Gestion des ressources humaines",
-        "Analyse des données et prise de décision",
-        "Compréhension de la législation et de la réglementation des affaires",
-        "Compétences en communication et en négociation",
-        "Planification stratégique et résolution de problèmes"
+        "Analyse et interprétation des données financières",
+        "Compréhension des marchés financiers et de leurs mécanismes",
+        "Maîtrise des produits bancaires et d'assurance",
+        "Évaluation et gestion des risques financiers",
+        "Connaissance des réglementations bancaires et financières",
+        "Conseil en stratégie financière et patrimoniale",
+        "Gestion de portefeuille et analyse d'investissement",
+        "Compétences en négociation et relation client"
       ]}
       
       curriculum={{
         year1: {
-          description: "Au cours de la première année, l'objectif est de poser des bases solides en gestion d'entreprise. Les étudiants acquièrent une compréhension des principes fondamentaux du marketing, de la comptabilité, de la finance, de la gestion des ressources humaines et de la gestion d'entreprise en général. Les stages en entreprise offrent une expérience pratique précieuse et permettent aux étudiants d'appliquer leurs connaissances dans un contexte professionnel. Ces semestres préparent les étudiants à des cours plus avancés et à des rôles plus spécialisés dans le domaine de la Business Administration.",
-          teachingHours: 305,
-          personalWorkHours: 105,
+          description: "Au cours de la première année, l'objectif est de poser des bases solides en finance et en économie. Les étudiants acquièrent une compréhension des principes fondamentaux de la comptabilité, de l'économie, des mathématiques financières et du droit bancaire. Les compétences en analyse financière et en compréhension des marchés sont également développées. Ces semestres préparent les étudiants à des cours plus avancés et à des stages dans le secteur financier, où ils pourront appliquer leurs connaissances dans un contexte professionnel.",
+          teachingHours: 390,
+          personalWorkHours: 45,
           courses: [
-            { course1: { name: "Economie Générale", credits: 6 }, course2: { name: "Finances Publiques", credits: 6 } },
-            { course1: { name: "Microéconomie", credits: 6 }, course2: { name: "Méthodes Statistiques", credits: 6 } },
+            { course1: { name: "Introduction à la finance", credits: 6 }, course2: { name: "Économie monétaire", credits: 6 } },
+            { course1: { name: "Comptabilité générale", credits: 6 }, course2: { name: "Mathématiques financières", credits: 6 } },
             { course1: { name: "Microéconomie", credits: 6 }, course2: { name: "Macroéconomie", credits: 6 } },
-            { course1: { name: "Géographie Economique", credits: 6 }, course2: { name: "Droit Civil et administratif", credits: 6 } },
-            { course1: { name: "Mathématiques", credits: 6 }, course2: { name: "Histoire des faits et de la pensée économiques", credits: 6 } }
+            { course1: { name: "Droit des affaires", credits: 6 }, course2: { name: "Introduction aux produits bancaires", credits: 6 } },
+            { course1: { name: "Statistiques appliquées", credits: 6 }, course2: { name: "Anglais financier", credits: 6 } }
           ]
         },
         year2: {
-          description: "Au cours de la deuxième année, le programme vise à préparer les étudiants à des rôles plus avancés en gestion d'entreprise. Vous développerez des compétences plus avancées en marketing, en comptabilité de gestion, en finance d'entreprise, en gestion des opérations, en gestion de projet, en gestion des ressources humaines, et en stratégie d'entreprise. Ces compétences sont essentielles pour des postes de gestionnaire, de consultant en gestion, d'analyste d'entreprise, ou pour la poursuite d'études supérieures en Business Administration. Ces semestres vous permettront d'acquérir une compréhension plus approfondie des concepts et des pratiques liés à la gestion d'entreprise.",
-          teachingHours: 345,
-          personalWorkHours: 105,
+          description: "Au cours de la deuxième année, le programme vise à approfondir la compréhension des étudiants des aspects avancés de la finance et des opérations bancaires. Les compétences en analyse financière, en gestion des risques, en marchés financiers et en droit bancaire sont renforcées. Les stages en institution financière offrent une expérience pratique précieuse, tandis que les projets d'analyse financière permettent d'appliquer les compétences dans des contextes réels. Ces semestres préparent les étudiants à des rôles plus spécialisés dans la finance, la banque et l'assurance, ainsi qu'à des carrières dans des établissements bancaires, des sociétés d'assurance, des cabinets de conseil financier et d'autres organisations du secteur financier.",
+          teachingHours: 405,
+          personalWorkHours: 35,
           courses: [
-            { course1: { name: "Théorie et Politique Monétaire", credits: 6 }, course2: { name: "Comptabilité Nationale", credits: 6 } },
-            { course1: { name: "Informatique et Système d'Information", credits: 6 }, course2: { name: "Sociologie Générale", credits: 6 } },
-            { course1: { name: "Programmation Linéaire", credits: 6 }, course2: { name: "Fiscalité générale 1 ou Economie Publique", credits: 6 } },
-            { course1: { name: "Comptabilité Analytique d'Exploitation", credits: 6 }, course2: { name: "Eléments d'économie contemporaine ou Environnement économique et marchés financiers", credits: 6 } },
-            { course1: { name: "Analyse et Evaluation Economique des Projets", credits: 6 }, course2: { name: "Méthodologie de la Recherche ou Economie du travail", credits: 6 } }
+            { course1: { name: "Finance d'entreprise", credits: 6 }, course2: { name: "Gestion bancaire", credits: 6 } },
+            { course1: { name: "Marchés financiers", credits: 6 }, course2: { name: "Droit bancaire et financier", credits: 6 } },
+            { course1: { name: "Assurance et gestion des risques", credits: 6 }, course2: { name: "Comptabilité bancaire", credits: 6 } },
+            { course1: { name: "Fiscalité des produits financiers", credits: 6 }, course2: { name: "Analyse financière", credits: 6 } },
+            { course1: { name: "Économie internationale", credits: 6 }, course2: { name: "Marketing bancaire", credits: 6 } }
           ]
         },
         year3: {
-          description: "La dernière année vous permet de vous spécialiser davantage en Business Administration et de préparer votre transition vers le monde professionnel. Vous développerez une compréhension plus approfondie des aspects avancés du marketing, de la finance, de la stratégie d'entreprise, de la gestion internationale, et de la gestion des ressources humaines. Les projets de fin d'études et les stages en entreprise fournissent une expérience pratique significative, tout en vous permettant de démontrer votre expertise. Ces semestres vous préparent également à poursuivre des études supérieures en gestion d'entreprise, en MBA (Master of Business Administration) ou dans d'autres domaines connexes.",
-          teachingHours: 360,
-          personalWorkHours: 90,
+          description: "La dernière année permet aux étudiants de se spécialiser davantage dans des domaines spécifiques de la finance, de la banque ou de l'assurance. Le stage en entreprise permet de mettre en pratique les connaissances acquises, d'acquérir de l'expérience professionnelle et de développer un réseau dans le secteur financier. Le projet de fin d'études démontre la maîtrise des concepts et des compétences financières. Ces semestres préparent les étudiants à entrer sur le marché du travail en tant que professionnels de la finance, de la banque ou de l'assurance. Les diplômés pourront occuper des postes de chargé de clientèle, d'analyste financier, de gestionnaire de patrimoine, de conseiller en assurance, et bien plus encore.",
+          teachingHours: 420,
+          personalWorkHours: 30,
           courses: [
-            { course1: { name: "Marketing", credits: 6 }, course2: { name: "Comptabilité des Sociétés", credits: 6 } },
-            { course1: { name: "Contrôle de gestion", credits: 6 }, course2: { name: "Fiscalité d'Entreprise", credits: 6 } },
-            { course1: { name: "Droit des Affaires", credits: 6 }, course2: { name: "Economie des ressources humaines ou Economie Financière", credits: 6 } },
-            { course1: { name: "Gestion et Analyse Financière", credits: 6 }, course2: { name: "Econométrie ou Recherche Opérationnelle", credits: 6 } },
-            { course1: { name: "Comptabilité Analytique d'Exploitation", credits: 6 }, course2: { name: "Gestion des opérations ou Analyse des valeurs mobilières", credits: 6 } }
+            { course1: { name: "Gestion de portefeuille", credits: 6 }, course2: { name: "Finance internationale", credits: 6 } },
+            { course1: { name: "Techniques bancaires avancées", credits: 6 }, course2: { name: "Produits dérivés et structurés", credits: 6 } },
+            { course1: { name: "Gestion patrimoniale", credits: 6 }, course2: { name: "Réglementation bancaire et financière", credits: 6 } },
+            { course1: { name: "Finance comportementale", credits: 6 }, course2: { name: "Évaluation des entreprises", credits: 6 } },
+            { course1: { name: "Techniques actuarielles", credits: 6 }, course2: { name: "Financement de projet", credits: 6 } }
           ]
         }
       }}
       
-      facultyText="Nos enseignants, qu'ils soient africains ou européens, sont sélectionnés parmi les experts les plus qualifiés de leur domaine. Notre programme de formation, bien qu'il vous permette de comprendre en profondeur les aspects théoriques sous-jacents aux techniques de gestion de données, est principalement axé sur la pratique, garantissant ainsi une employabilité accrue."
+      facultyText={facultyText}
       
-      internshipText="La formation en gestion transport et logistique est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions informatiques pour résoudre des problématiques spécifiques de l'entreprise."
+      internshipText="La formation en Banque, Finance et Assurances est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans les institutions financières, mais également la mise en pratique des connaissances théoriques pour analyser et résoudre des problématiques financières réelles."
       
       seminars={[
-        "Leadership et Gestion de l'Équipe",
-        "Marketing Stratégique",
-        "Gestion Stratégique",
-        "Gestion de Projet",
-        "Négociation d'Affaires",
-        "Entrepreneuriat et Création d'Entreprise",
-        "Éthique des Affaires et Responsabilité Sociale des Entreprises (RSE)"
+        "Innovation financière et fintech",
+        "Éthique et conformité dans le secteur financier",
+        "Finance durable et investissement responsable",
+        "Gestion de crise financière",
+        "Analyse technique des marchés financiers",
+        "Fusions et acquisitions",
+        "Intelligence artificielle dans la finance",
+        "Réglementation bancaire internationale"
       ]}
       
-      seminarsDescription="Les séminaires sont souvent interactifs, avec des discussions, des exercices pratiques, des études de cas et des projets. Ils visent à préparer les étudiants à des rôles plus spécialisés dans le marketing international et le commerce international, ainsi qu'à les tenir informés des dernières tendances et des meilleures pratiques du secteur. Les séminaires offrent également l'occasion de travailler sur des projets concrets et de mettre en application les compétences acquises dans un contexte professionnel."
+      seminarsDescription="Les séminaires spécialisés complètent la formation théorique en offrant aux étudiants une perspective pratique sur les enjeux actuels du secteur financier. Animés par des professionnels reconnus, ces sessions interactives permettent d'approfondir des sujets spécifiques, d'analyser des cas réels et de développer une compréhension fine des tendances et innovations qui façonnent l'avenir de la finance, de la banque et des assurances."
       
       careers={[
-        "Gestionnaire",
+        "Chargé de clientèle bancaire",
         "Analyste financier",
-        "Spécialiste en marketing",
-        "Consultant en gestion",
-        "Entrepreneur",
-        "Analyste des données",
-        "Gestionnaire des ressources humaines"
+        "Gestionnaire de patrimoine",
+        "Conseiller en assurances",
+        "Contrôleur des risques",
+        "Gestionnaire de back-office bancaire",
+        "Courtier en valeurs mobilières",
+        "Responsable conformité"
       ]}
       
-      educationDescription="Après avoir obtenu un diplôme en administration des affaires (BBA), de nombreuses possibilités de poursuite d'études s'offrent à vous si vous souhaitez approfondir vos compétences et vos connaissances ou vous spécialiser dans un domaine particulier."
+      educationDescription="Après l'obtention de la licence en Banque, Finances et Assurances, les diplômés peuvent poursuivre leurs études pour se spécialiser davantage et accéder à des postes à plus haute responsabilité dans le secteur financier."
       
       educationOptions={[
-        "Master en Administration des Affaires (MBA)",
         "Master en Finance",
-        "Master en Marketing",
-        "Doctorat en Administration des Affaires (DBA)"
+        "Master en Banque et Marchés Financiers",
+        "Master en Gestion de Patrimoine",
+        "Master en Actuariat et Gestion des Risques",
+        "Master en Fintech et Innovation Financière",
+        "MBA spécialisé en Finance",
+        "Doctorat en Sciences Financières"
       ]}
       
-      licence1Requirements={[
-        "Avoir obtenu le diplôme du baccalauréat.",
-        "Avoir une aisance en mathématiques."
-      ]}
+      licence1Requirements={licence1Requirements}
+      licence2Text={licence2Text}
+      licence3Text={licence3Text}
       
-      licence2Text="Il convient de valider les semestres 1 et 2 de la première année, de posséder des connaissances solides en économie et d'être diplômé d'une école ou d'une université respectant le système LMD."
-      
-      licence3Text="Il est requis d'être en possession d'un diplôme de niveau Bac+2 en sciences ou d'un équivalent. Il est également nécessaire de valider l'ensemble des crédits de la première et de la deuxième année. En outre, il est impératif d'être issu d'une école ou d'une université respectant le système LMD."
-      
-      ctaTitle="Prêt à vous lancer dans l'aventure ?"
-      ctaDescription="Rejoignez notre programme Banque Finances / Banque Assurances et développez les compétences nécessaires pour réussir dans le monde financier."
+      ctaTitle={ctaTitle}
+      ctaDescription="Rejoignez notre programme de Banque, Finances et Assurances et développez les compétences essentielles pour exceller dans le monde financier en constante évolution."
     />
   );
 };
