@@ -28,7 +28,10 @@ const ProgramDetail = () => {
     "business-administration", 
     "marketing-commerce-international", 
     "economie-appliquee", 
-    "economie-internationale"
+    "economie-internationale",
+    "logistique-transports",
+    "banque-finances-assurances",
+    "comptabilite-gestion"
   ];
   
   if (specialProgramIds.includes(program.id)) {

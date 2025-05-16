@@ -58,8 +58,8 @@ const SpecialProgramRenderer = ({ programId }: SpecialProgramRendererProps) => {
           },
           year3: {
             description: "La dernière année vous permet de vous spécialiser davantage en Business Administration et de préparer votre transition vers le monde professionnel. Vous développerez une compréhension plus approfondie des aspects avancés du marketing, de la finance, de la stratégie d'entreprise, de la gestion internationale, et de la gestion des ressources humaines. Les projets de fin d'études et les stages en entreprise fournissent une expérience pratique significative, tout en vous permettant de démontrer votre expertise. Ces semestres vous préparent également à poursuivre des études supérieures en gestion d'entreprise, en MBA (Master of Business Administration) ou dans d'autres domaines connexes.",
-            teachingHours: 405,
-            personalWorkHours: 30,
+            teachingHours: 360,
+            personalWorkHours: 90,
             courses: [
               { course1: { name: "Marketing", credits: 6 }, course2: { name: "Comptabilité des Sociétés", credits: 6 } },
               { course1: { name: "Contrôle de gestion", credits: 6 }, course2: { name: "Fiscalité d'Entreprise", credits: 6 } },
@@ -454,6 +454,348 @@ const SpecialProgramRenderer = ({ programId }: SpecialProgramRendererProps) => {
         
         ctaTitle="Prêt à vous lancer dans l'aventure ?"
         ctaDescription="Rejoignez notre programme d'Économie Internationale et développez les compétences nécessaires pour comprendre et agir dans l'économie mondiale."
+      />
+    );
+  }
+
+  // Logistique et Transports (Supply Chain)
+  if (programId === "logistique-transports") {
+    return (
+      <ProgramContent
+        title="Logistique et Transports (Supply Chain)"
+        subtitle="Licence en Sciences Économiques"
+        description="Formation d'excellence pour maîtriser la gestion des chaînes logistiques et du transport"
+        imageUrl="https://images.unsplash.com/photo-1493946740644-2d8a1f1a6aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+        
+        introductionParagraphs={[
+          "Depuis son ouverture en 2008, l'Institut Universitaire des Hautes Études de Guinée (IUHEG) forme des étudiants passionnés. La gestion logistique et le transport jouent un rôle essentiel dans de nombreuses industries, notamment la distribution, la fabrication, le commerce de détail, la santé, et bien d'autres. Les diplômés de ce domaine sont en demande pour assurer le bon déroulement des opérations et garantir la livraison efficace de biens et de services.",
+          "Une licence en transport et logistique prépare les étudiants à des carrières dans des domaines tels que la gestion de la chaîne d'approvisionnement, la logistique, la gestion des opérations de transport, la gestion des entrepôts, la gestion des stocks, la planification des transports et bien d'autres. Elle constitue également une base solide pour des études supérieures en logistique ou dans des domaines connexes."
+        ]}
+        
+        skills={[
+          "Planification et coordination des opérations logistiques",
+          "Gestion de la chaîne d'approvisionnement",
+          "Gestion des opérations de transport",
+          "Gestion des stocks et de la demande",
+          "Utilisation de la technologie de l'information en logistique",
+          "Gestion de la qualité et de la performance",
+          "Conformité réglementaire en matière de transport",
+          "Analyse des coûts et de l'efficacité des opérations logistiques"
+        ]}
+        
+        curriculum={{
+          year1: {
+            description: "Au cours de la première année, l'objectif est de poser des bases solides en logistique, en gestion des transports et en gestion de la chaîne d'approvisionnement. Les étudiants acquièrent une compréhension des principes fondamentaux, des compétences mathématiques et statistiques, et des bases de la technologie en logistique. Ils commencent également à explorer des aspects liés au commerce international et à la gestion des opérations internationales. Ces semestres jettent les bases nécessaires pour la suite du programme, qui inclura des cours plus avancés, des stages en entreprise et des projets de recherche.",
+            teachingHours: 375,
+            personalWorkHours: 60,
+            courses: [
+              { course1: { name: "Microéconomie", credits: 6 }, course2: { name: "Macroéconomie", credits: 6 } },
+              { course1: { name: "Mathématiques", credits: 6 }, course2: { name: "Statistiques descriptive", credits: 6 } },
+              { course1: { name: "Contexte éco & social", credits: 6 }, course2: { name: "Hist. Faits éco. & soc", credits: 6 } },
+              { course1: { name: "Economie générale", credits: 6 }, course2: { name: "Comptabilité des Sociétés Commerciales", credits: 6 } },
+              { course1: { name: "Comptabilité générale", credits: 6 }, course2: { name: "Droit civil et administratif", credits: 6 } }
+            ]
+          },
+          year2: {
+            description: "Au cours de la deuxième année, le programme vise à approfondir les compétences en gestion des transports, en gestion de la chaîne d'approvisionnement et en logistique. Les étudiants abordent des sujets plus avancés, notamment la durabilité, la qualité, l'automatisation, l'analyse de données et la gestion internationale. Les stages en entreprise offrent une expérience pratique dans le domaine, tandis que les projets de recherche développent des compétences de recherche avancée. Ces semestres préparent les étudiants à des carrières dans des domaines tels que la gestion logistique, la planification des transports, la gestion de la chaîne d'approvisionnement, la gestion des stocks et bien d'autres.",
+            teachingHours: 420,
+            personalWorkHours: 30,
+            courses: [
+              { course1: { name: "Recherche opérationnelle", credits: 6 }, course2: { name: "Entrepreneurship", credits: 6 } },
+              { course1: { name: "Comptabilité analytique d'exploitation", credits: 6 }, course2: { name: "Gestion et analyse financière", credits: 6 } },
+              { course1: { name: "Droit des affaires", credits: 6 }, course2: { name: "Economie et Commerce International", credits: 6 } },
+              { course1: { name: "Gestion des opérations", credits: 6 }, course2: { name: "Introduction à la gestion des ressources humaines", credits: 6 } },
+              { course1: { name: "Marketing", credits: 6 }, course2: { name: "Management", credits: 6 } }
+            ]
+          },
+          year3: {
+            description: "La dernière année est conçue pour approfondir votre expertise dans le domaine de la logistique et du transport, et pour vous préparer à votre carrière professionnelle. La spécialisation vous permet de vous concentrer sur un domaine spécifique de la logistique qui correspond à vos intérêts et à vos objectifs de carrière. Les stages en entreprise vous donnent une expérience pratique et vous aident à établir des contacts professionnels. Les projets de fin d'études démontrent votre capacité à appliquer vos compétences et à résoudre des problèmes logistiques réels. En fin de compte, ces semestres vous préparent à entrer sur le marché du travail en tant que professionnel de la logistique et du transport.",
+            teachingHours: 450,
+            personalWorkHours: 0,
+            courses: [
+              { course1: { name: "Logistique générale", credits: 6 }, course2: { name: "Droit des transports", credits: 6 } },
+              { course1: { name: "Gestion de chaîne d'approvisionnements", credits: 6 }, course2: { name: "Douane et transit", credits: 6 } },
+              { course1: { name: "Gestion d'entrepôts et de plateformes", credits: 6 }, course2: { name: "Transports routiers et ferroviaires de personnes et marchandises", credits: 6 } },
+              { course1: { name: "Hygiène, Santé, Sécurité et Environnement", credits: 6 }, course2: { name: "Transports maritime, fluvial et opérations portuaires", credits: 6 } },
+              { course1: { name: "Gestion de la Production et de la Qualité", credits: 6 }, course2: { name: "Transports aériens de marchandises, de passagers et opérations aéroportuaires", credits: 6 } }
+            ]
+          }
+        }}
+        
+        facultyText="Nos enseignants, qu'ils soient africains ou européens, sont sélectionnés parmi les experts les plus qualifiés de leur domaine. Notre programme de formation, bien qu'il vous permette de comprendre en profondeur les aspects théoriques sous-jacents aux techniques de gestion de données, est principalement axé sur la pratique, garantissant ainsi une employabilité accrue."
+        
+        internshipText="La formation en gestion transport et logistique est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions informatiques pour résoudre des problématiques spécifiques de l'entreprise."
+        
+        seminars={[
+          "Discussions et Débats",
+          "Travail en Groupe",
+          "Analyse Critique",
+          "Thèmes Spécifiques",
+          "Présentations",
+          "Travaux de Recherche"
+        ]}
+        
+        seminarsDescription="Les séminaires sont conçus pour renforcer la compréhension des sujets clés de l'économie internationale, développer des compétences pratiques et encourager la réflexion critique. Ils offrent aux étudiants une opportunité d'interaction plus directe avec le matériel d'apprentissage et de collaborer avec leurs pairs pour résoudre des problèmes du monde réel."
+        
+        careers={[
+          "Responsable Logistique",
+          "Gestionnaire de Chaîne d'Approvisionnement",
+          "Responsable de Transport",
+          "Analyste en Logistique",
+          "Gestionnaire de Stocks",
+          "Consultant en Logistique",
+          "Spécialiste de la Chaîne d'Approvisionnement International",
+          "Gestionnaire de Projet Logistique"
+        ]}
+        
+        educationDescription="Après l'obtention d'une licence en gestion logistique et transport, vous avez plusieurs options pour poursuivre vos études et approfondir vos compétences dans ce domaine."
+        
+        educationOptions={[
+          "Master en Gestion Logistique et Transport",
+          "Master en Administration des Affaires (MBA)",
+          "Master en Ingénierie des Transports",
+          "Master en Gestion de la Chaîne d'Approvisionnement",
+          "Doctorat en Logistique et Transport",
+          "Certifications Professionnelles : Formation Continue et Cours en Ligne"
+        ]}
+        
+        licence1Requirements={[
+          "Avoir obtenu le diplôme du baccalauréat.",
+          "Avoir une aisance en mathématiques."
+        ]}
+        
+        licence2Text="Il convient de valider les semestres 1 et 2 de la première année, de posséder des connaissances solides en économie et d'être diplômé d'une école ou d'une université respectant le système LMD."
+        
+        licence3Text="Il est requis d'être en possession d'un diplôme de niveau Bac+2 en sciences ou d'un équivalent. Il est également nécessaire de valider l'ensemble des crédits de la première et de la deuxième année. En outre, il est impératif d'être issu d'une école ou d'une université respectant le système LMD."
+        
+        ctaTitle="Prêt à vous lancer dans l'aventure ?"
+        ctaDescription="Rejoignez notre programme de Logistique et Transports et développez les compétences nécessaires pour exceller dans la gestion des chaînes d'approvisionnement mondiales."
+      />
+    );
+  }
+
+  // Banque Finances/Banque Assurances
+  if (programId === "banque-finances-assurances") {
+    return (
+      <ProgramContent
+        title="Banque Finances / Banque Assurances"
+        subtitle="Licence en Sciences Économiques"
+        description="Formation d'excellence pour comprendre les mécanismes bancaires et financiers"
+        imageUrl="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+        
+        introductionParagraphs={[
+          "Depuis son ouverture en 2008, l'Institut Universitaire des Hautes Études de Guinée (IUHEG) forme des étudiants passionnés. Une licence en banque et finance est un programme d'études supérieures axé sur les domaines de la banque, de la finance et des services financiers. Ce programme vise à former les étudiants aux principes fondamentaux de la finance, de l'investissement, de la gestion bancaire, de l'analyse financière et d'autres aspects liés à la gestion de l'argent et des ressources financières.",
+          "Les diplômés d'une licence en banque et finance sont préparés à travailler dans des banques, des sociétés de gestion d'actifs, des institutions financières, des sociétés d'investissement, des cabinets d'audit, des entreprises multinationales, ou à poursuivre des études supérieures en finance, en économie ou en gestion. Ce programme offre une base solide pour les carrières liées à la gestion de l'argent et des ressources financières."
+        ]}
+        
+        skills={[
+          "Gestion et leadership",
+          "Compréhension des concepts financiers",
+          "Compétences en marketing et en vente",
+          "Gestion des ressources humaines",
+          "Analyse des données et prise de décision",
+          "Compréhension de la législation et de la réglementation des affaires",
+          "Compétences en communication et en négociation",
+          "Planification stratégique et résolution de problèmes"
+        ]}
+        
+        curriculum={{
+          year1: {
+            description: "Au cours de la première année, l'objectif est de poser des bases solides en gestion d'entreprise. Les étudiants acquièrent une compréhension des principes fondamentaux du marketing, de la comptabilité, de la finance, de la gestion des ressources humaines et de la gestion d'entreprise en général. Les stages en entreprise offrent une expérience pratique précieuse et permettent aux étudiants d'appliquer leurs connaissances dans un contexte professionnel. Ces semestres préparent les étudiants à des cours plus avancés et à des rôles plus spécialisés dans le domaine de la Business Administration.",
+            teachingHours: 305,
+            personalWorkHours: 105,
+            courses: [
+              { course1: { name: "Economie Générale", credits: 6 }, course2: { name: "Finances Publiques", credits: 6 } },
+              { course1: { name: "Microéconomie", credits: 6 }, course2: { name: "Méthodes Statistiques", credits: 6 } },
+              { course1: { name: "Microéconomie", credits: 6 }, course2: { name: "Macroéconomie", credits: 6 } },
+              { course1: { name: "Géographie Economique", credits: 6 }, course2: { name: "Droit Civil et administratif", credits: 6 } },
+              { course1: { name: "Mathématiques", credits: 6 }, course2: { name: "Histoire des faits et de la pensée économiques", credits: 6 } }
+            ]
+          },
+          year2: {
+            description: "Au cours de la deuxième année, le programme vise à préparer les étudiants à des rôles plus avancés en gestion d'entreprise. Vous développerez des compétences plus avancées en marketing, en comptabilité de gestion, en finance d'entreprise, en gestion des opérations, en gestion de projet, en gestion des ressources humaines, et en stratégie d'entreprise. Ces compétences sont essentielles pour des postes de gestionnaire, de consultant en gestion, d'analyste d'entreprise, ou pour la poursuite d'études supérieures en Business Administration. Ces semestres vous permettront d'acquérir une compréhension plus approfondie des concepts et des pratiques liés à la gestion d'entreprise.",
+            teachingHours: 345,
+            personalWorkHours: 105,
+            courses: [
+              { course1: { name: "Théorie et Politique Monétaire", credits: 6 }, course2: { name: "Comptabilité Nationale", credits: 6 } },
+              { course1: { name: "Informatique et Système d'Information", credits: 6 }, course2: { name: "Sociologie Générale", credits: 6 } },
+              { course1: { name: "Programmation Linéaire", credits: 6 }, course2: { name: "Fiscalité générale 1 ou Economie Publique", credits: 6 } },
+              { course1: { name: "Comptabilité Analytique d'Exploitation", credits: 6 }, course2: { name: "Eléments d'économie contemporaine ou Environnement économique et marchés financiers", credits: 6 } },
+              { course1: { name: "Analyse et Evaluation Economique des Projets", credits: 6 }, course2: { name: "Méthodologie de la Recherche ou Economie du travail", credits: 6 } }
+            ]
+          },
+          year3: {
+            description: "La dernière année vous permet de vous spécialiser davantage en Business Administration et de préparer votre transition vers le monde professionnel. Vous développerez une compréhension plus approfondie des aspects avancés du marketing, de la finance, de la stratégie d'entreprise, de la gestion internationale, et de la gestion des ressources humaines. Les projets de fin d'études et les stages en entreprise fournissent une expérience pratique significative, tout en vous permettant de démontrer votre expertise. Ces semestres vous préparent également à poursuivre des études supérieures en gestion d'entreprise, en MBA (Master of Business Administration) ou dans d'autres domaines connexes.",
+            teachingHours: 360,
+            personalWorkHours: 90,
+            courses: [
+              { course1: { name: "Marketing", credits: 6 }, course2: { name: "Comptabilité des Sociétés", credits: 6 } },
+              { course1: { name: "Contrôle de gestion", credits: 6 }, course2: { name: "Fiscalité d'Entreprise", credits: 6 } },
+              { course1: { name: "Droit des Affaires", credits: 6 }, course2: { name: "Economie des ressources humaines ou Economie Financière", credits: 6 } },
+              { course1: { name: "Gestion et Analyse Financière", credits: 6 }, course2: { name: "Econométrie ou Recherche Opérationnelle", credits: 6 } },
+              { course1: { name: "Comptabilité Analytique d'Exploitation", credits: 6 }, course2: { name: "Gestion des opérations ou Analyse des valeurs mobilières", credits: 6 } }
+            ]
+          }
+        }}
+        
+        facultyText="Nos enseignants, qu'ils soient africains ou européens, sont sélectionnés parmi les experts les plus qualifiés de leur domaine. Notre programme de formation, bien qu'il vous permette de comprendre en profondeur les aspects théoriques sous-jacents aux techniques de gestion de données, est principalement axé sur la pratique, garantissant ainsi une employabilité accrue."
+        
+        internshipText="La formation en gestion transport et logistique est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions informatiques pour résoudre des problématiques spécifiques de l'entreprise."
+        
+        seminars={[
+          "Leadership et Gestion de l'Équipe",
+          "Marketing Stratégique",
+          "Gestion Stratégique",
+          "Gestion de Projet",
+          "Négociation d'Affaires",
+          "Entrepreneuriat et Création d'Entreprise",
+          "Éthique des Affaires et Responsabilité Sociale des Entreprises (RSE)"
+        ]}
+        
+        seminarsDescription="Les séminaires sont souvent interactifs, avec des discussions, des exercices pratiques, des études de cas et des projets. Ils visent à préparer les étudiants à des rôles plus spécialisés dans le marketing international et le commerce international, ainsi qu'à les tenir informés des dernières tendances et des meilleures pratiques du secteur. Les séminaires offrent également l'occasion de travailler sur des projets concrets et de mettre en application les compétences acquises dans un contexte professionnel."
+        
+        careers={[
+          "Gestionnaire",
+          "Analyste financier",
+          "Spécialiste en marketing",
+          "Consultant en gestion",
+          "Entrepreneur",
+          "Analyste des données",
+          "Gestionnaire des ressources humaines"
+        ]}
+        
+        educationDescription="Après avoir obtenu un diplôme en administration des affaires (BBA), de nombreuses possibilités de poursuite d'études s'offrent à vous si vous souhaitez approfondir vos compétences et vos connaissances ou vous spécialiser dans un domaine particulier."
+        
+        educationOptions={[
+          "Master en Administration des Affaires (MBA)",
+          "Master en Finance",
+          "Master en Marketing",
+          "Doctorat en Administration des Affaires (DBA)"
+        ]}
+        
+        licence1Requirements={[
+          "Avoir obtenu le diplôme du baccalauréat.",
+          "Avoir une aisance en mathématiques."
+        ]}
+        
+        licence2Text="Il convient de valider les semestres 1 et 2 de la première année, de posséder des connaissances solides en économie et d'être diplômé d'une école ou d'une université respectant le système LMD."
+        
+        licence3Text="Il est requis d'être en possession d'un diplôme de niveau Bac+2 en sciences ou d'un équivalent. Il est également nécessaire de valider l'ensemble des crédits de la première et de la deuxième année. En outre, il est impératif d'être issu d'une école ou d'une université respectant le système LMD."
+        
+        ctaTitle="Prêt à vous lancer dans l'aventure ?"
+        ctaDescription="Rejoignez notre programme Banque Finances / Banque Assurances et développez les compétences nécessaires pour réussir dans le monde financier."
+      />
+    );
+  }
+
+  // Comptabilité et gestion
+  if (programId === "comptabilite-gestion") {
+    return (
+      <ProgramContent
+        title="Comptabilité et Gestion"
+        subtitle="Licence en Sciences Économiques"
+        description="Formation d'excellence pour maîtriser les principes de comptabilité et de gestion d'entreprise"
+        imageUrl="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        
+        introductionParagraphs={[
+          "Depuis son ouverture en 2008, l'Institut Universitaire des Hautes Études de Guinée (IUHEG) forme des étudiants passionnés. Une licence en économie appliquée prépare les étudiants à une variété de carrières dans le secteur public, le secteur privé ou le monde académique. Les diplômés peuvent travailler dans des postes liés à l'analyse économique, à la politique économique, à la recherche économique, à la finance, au conseil, au commerce international et à de nombreux autres domaines. Elle constitue également une base solide pour des études supérieures en économie ou dans des domaines connexes.",
+          "C'est un programme d'études universitaires qui vise à enseigner les principes fondamentaux de l'économie et à montrer comment ces principes peuvent être appliqués dans des contextes du monde réel."
+        ]}
+        
+        skills={[
+          "Compréhension des principes économiques",
+          "Analyse quantitative des données économiques",
+          "Compréhension des politiques économiques",
+          "Compréhension des interactions économiques internationales",
+          "Capacité à évaluer et à résoudre des problèmes économiques réels"
+        ]}
+        
+        curriculum={{
+          year1: {
+            description: "Au cours de la première année, l'objectif est de poser des bases solides en économie et en méthodes d'analyse. Les étudiants acquièrent une compréhension des concepts de base en microéconomie et en macroéconomie, ainsi que des compétences en mathématiques, statistiques et méthodes de recherche. L'introduction à l'économie appliquée les prépare à l'application de ces concepts à des problèmes économiques réels. Ces semestres jettent les bases nécessaires pour la suite du programme, qui inclura des cours plus avancés et des opportunités de spécialisation.",
+            teachingHours: 305,
+            personalWorkHours: 105,
+            courses: [
+              { course1: { name: "Economie Générale", credits: 6 }, course2: { name: "Finances Publiques", credits: 6 } },
+              { course1: { name: "Microéconomie", credits: 6 }, course2: { name: "Méthodes Statistiques", credits: 6 } },
+              { course1: { name: "Microéconomie", credits: 6 }, course2: { name: "Microéconomie", credits: 6 } },
+              { course1: { name: "Géographie Economique", credits: 6 }, course2: { name: "Droit Civil et administratif", credits: 6 } },
+              { course1: { name: "Mathématiques", credits: 6 }, course2: { name: "Histoire des faits et de la pensée économiques", credits: 6 } }
+            ]
+          },
+          year2: {
+            description: "Au cours de la deuxième année, le programme vise à approfondir les compétences en économie appliquée et permettent aux étudiants de se spécialiser davantage dans des domaines spécifiques de leur choix. Les compétences de recherche sont renforcées, et les étudiants apprennent à concevoir, à mener et à présenter des projets de recherche en économie. Les domaines d'études tels que l'économie de la santé, l'économie de l'environnement et l'économie financière offrent des perspectives pratiques sur les applications de l'économie dans des secteurs spécifiques. Ces semestres préparent également les étudiants à leur future carrière professionnelle ou à des études supérieures en économie ou dans des domaines connexes.",
+            teachingHours: 345,
+            personalWorkHours: 105,
+            courses: [
+              { course1: { name: "Théorie et Politique Monétaire", credits: 6 }, course2: { name: "Comptabilité Nationale", credits: 6 } },
+              { course1: { name: "Informatique et Système d'Information", credits: 6 }, course2: { name: "Sociologie Générale", credits: 6 } },
+              { course1: { name: "Programmation Linéaire", credits: 6 }, course2: { name: "Fiscalité générale 1 ou Economie Publique", credits: 6 } },
+              { course1: { name: "Comptabilité Analytique d'Exploitation", credits: 6 }, course2: { name: "Eléments d'économie contemporaine ou Environnement économique et marchés financiers", credits: 6 } },
+              { course1: { name: "Analyse et Evaluation Economique des Projets", credits: 6 }, course2: { name: "Méthodologie de la Recherche ou Economie du travail", credits: 6 } }
+            ]
+          },
+          year3: {
+            description: "La dernière année, le programme vise à approfondir davantage les compétences en économie appliquée, à se spécialiser dans des domaines spécifiques de l'économie appliquée, et à préparer les étudiants à leur carrière future. Les séminaires de recherche avancée permettent aux étudiants de développer une expertise en recherche et d'appliquer leurs connaissances à des projets concrets. Les stages en entreprise offrent une expérience pratique, tandis que les cours spécialisés élargissent la compréhension des applications de l'économie appliquée dans des domaines particuliers. En fin de compte, ces semestres préparent les étudiants à une variété de carrières dans le secteur public, le secteur privé, le monde académique ou à des études supérieures en économie ou dans des domaines connexes.",
+            teachingHours: 375,
+            personalWorkHours: 75,
+            courses: [
+              { course1: { name: "Economie de la Guinée (Contexte Socio-économique de la Guinée)", credits: 6 }, course2: { name: "Analyse et évaluation des Projets de développement", credits: 6 } },
+              { course1: { name: "Econométrie", credits: 6 }, course2: { name: "Economie Publique", credits: 6 } },
+              { course1: { name: "Recherche Opérationnelle", credits: 6 }, course2: { name: "Economie de l'entreprise coopérative", credits: 6 } },
+              { course1: { name: "Statistique Mathématique", credits: 6 }, course2: { name: "Population, Urbanisation, et Développement ou Economie des ressources naturelles", credits: 6 } },
+              { course1: { name: "Economie de l'Environnement", credits: 6 }, course2: { name: "Dynamique économique ou Economie du travail", credits: 6 } }
+            ]
+          }
+        }}
+        
+        facultyText="Nos enseignants, qu'ils soient africains ou européens, sont sélectionnés parmi les experts les plus qualifiés de leur domaine. Notre programme de formation, bien qu'il vous permette de comprendre en profondeur les aspects théoriques sous-jacents aux techniques de gestion de données, est principalement axé sur la pratique, garantissant ainsi une employabilité accrue."
+        
+        internshipText="La formation en économie appliquée est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions informatiques pour résoudre des problématiques spécifiques de l'entreprise."
+        
+        seminars={[
+          "Discussions et Débats",
+          "Travail en Groupe",
+          "Analyse Critique",
+          "Thèmes Spécifiques",
+          "Présentations",
+          "Travaux de Recherche"
+        ]}
+        
+        seminarsDescription="Les séminaires sont conçus pour renforcer la compréhension des sujets clés de l'économie internationale, développer des compétences pratiques et encourager la réflexion critique. Ils offrent aux étudiants une opportunité d'interaction plus directe avec le matériel d'apprentissage et de collaborer avec leurs pairs pour résoudre des problèmes du monde réel."
+        
+        careers={[
+          "Banque et Finance",
+          "Gouvernement et Politiques Publiques",
+          "Entreprise",
+          "Organisations Internationales",
+          "Enseignement et Recherche",
+          "Journalisme Économique"
+        ]}
+        
+        educationDescription="Après l'obtention d'une licence en gestion logistique et transport, vous avez plusieurs options pour poursuivre vos études et approfondir vos compétences dans ce domaine."
+        
+        educationOptions={[
+          "Master en Économie Appliquée",
+          "Master en Économie",
+          "Master en Finance",
+          "Master en Gestion des Affaires (MBA)",
+          "Master en Économétrie",
+          "Doctorat en Économie",
+          "Programmes de Double Diplôme"
+        ]}
+        
+        licence1Requirements={[
+          "Avoir obtenu le diplôme du baccalauréat.",
+          "Avoir une aisance en mathématiques."
+        ]}
+        
+        licence2Text="Il convient de valider les semestres 1 et 2 de la première année, de posséder des connaissances solides en économie et d'être diplômé d'une école ou d'une université respectant le système LMD."
+        
+        licence3Text="Il est requis d'être en possession d'un diplôme de niveau Bac+2 en sciences ou d'un équivalent. Il est également nécessaire de valider l'ensemble des crédits de la première et de la deuxième année. En outre, il est impératif d'être issu d'une école ou d'une université respectant le système LMD."
+        
+        ctaTitle="Prêt à vous lancer dans l'aventure ?"
+        ctaDescription="Rejoignez notre programme de Comptabilité et Gestion et développez les compétences nécessaires pour exceller dans le domaine de la finance et de la gestion d'entreprise."
       />
     );
   }
