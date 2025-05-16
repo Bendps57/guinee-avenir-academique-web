@@ -9,6 +9,16 @@ interface ProgramListProps {
 }
 
 const ProgramList = ({ programs, viewMode }: ProgramListProps) => {
+  const emptyMessage = (
+    <div className="w-full text-center py-12">
+      <p className="text-gray-500 text-lg">Aucune formation trouvée.</p>
+    </div>
+  );
+
+  if (programs.length === 0) {
+    return emptyMessage;
+  }
+
   return (
     <>
       {viewMode === "grid" ? (

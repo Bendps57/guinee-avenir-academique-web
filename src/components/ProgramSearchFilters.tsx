@@ -2,13 +2,25 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { LayoutGrid, List, Search } from "lucide-react";
+import { useState } from "react";
 
 interface ProgramSearchFiltersProps {
   onViewChange: (view: "grid" | "list") => void;
   activeView: "grid" | "list";
+  onSearch?: (query: string) => void;
 }
 
-const ProgramSearchFilters = ({ onViewChange, activeView }: ProgramSearchFiltersProps) => {
+const ProgramSearchFilters = ({ onViewChange, activeView, onSearch }: ProgramSearchFiltersProps) => {
+  const [searchQuery, setSearchQuery] = useState("");
+  
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    if (onSearch) {
+      onSearch(query);
+    }
+  };
+
   return (
     <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
       <div className="relative w-full md:w-auto">
@@ -16,6 +28,8 @@ const ProgramSearchFilters = ({ onViewChange, activeView }: ProgramSearchFilters
         <Input
           placeholder="Rechercher une formation..."
           className="pl-10 w-full md:w-[300px]"
+          value={searchQuery}
+          onChange={handleSearch}
         />
       </div>
       
