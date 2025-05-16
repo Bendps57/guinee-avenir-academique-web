@@ -159,7 +159,7 @@ const ProgramContent = ({
         
         <CallToAction
           title={ctaTitle}
-          ctaDescription={ctaDescription}
+          description={ctaDescription}  /* Changed property name from ctaDescription to description */
         />
       </div>
     </div>
