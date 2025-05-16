@@ -3,10 +3,12 @@ import React from "react";
 import ProgramContent from "../ProgramContent";
 import { generateCommonStandardTexts } from "../utils/programDataUtils";
 import { getMarketingSeminars } from "../utils/seminarUtils";
+import { getMarketingCareers } from "../utils/careerUtils";
 
 const MarketingInternationalRenderer = () => {
   const { facultyText, licence1Requirements, licence2Text, licence3Text, ctaTitle } = generateCommonStandardTexts();
   const { seminars, seminarsDescription } = getMarketingSeminars();
+  const careers = getMarketingCareers();
 
   return (
     <ProgramContent
@@ -76,14 +78,7 @@ const MarketingInternationalRenderer = () => {
       
       seminarsDescription={seminarsDescription}
       
-      careers={[
-        "Responsable Marketing International",
-        "Responsable des Ventes Internationales",
-        "Gestionnaire de la Chaîne d'Approvisionnement Internationale",
-        "Analyste en Commerce International",
-        "Consultant en Marketing International",
-        "Gestionnaire de Produit International"
-      ]}
+      careers={careers}
       
       educationDescription="Après avoir obtenu une licence en marketing et commerce international, vous avez plusieurs options pour la poursuite de vos études, en fonction de vos objectifs de carrière et de vos intérêts."
       

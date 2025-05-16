@@ -1,8 +1,15 @@
 
 import React from "react";
 import ProgramContent from "../ProgramContent";
+import { generateCommonStandardTexts } from "../utils/programDataUtils";
+import { getLogisticsSeminars } from "../utils/seminarUtils";
+import { getLogisticsCareers } from "../utils/careerUtils";
 
 const LogistiqueTransportsRenderer = () => {
+  const { facultyText, licence1Requirements, licence2Text, licence3Text, ctaTitle } = generateCommonStandardTexts();
+  const { seminars, seminarsDescription } = getLogisticsSeminars();
+  const careers = getLogisticsCareers();
+
   return (
     <ProgramContent
       title="Logistique et Transports (Supply Chain)"
@@ -65,31 +72,15 @@ const LogistiqueTransportsRenderer = () => {
         }
       }}
       
-      facultyText="Nos enseignants, qu'ils soient africains ou européens, sont sélectionnés parmi les experts les plus qualifiés de leur domaine. Notre programme de formation, bien qu'il vous permette de comprendre en profondeur les aspects théoriques sous-jacents aux techniques de gestion de données, est principalement axé sur la pratique, garantissant ainsi une employabilité accrue."
+      facultyText={facultyText}
       
       internshipText="La formation en gestion transport et logistique est hautement opérationnelle, offrant des stages en entreprise dès la première année jusqu'à la troisième année. Cette opportunité permet non seulement une immersion précoce dans le monde professionnel, mais également la mise en pratique de solutions informatiques pour résoudre des problématiques spécifiques de l'entreprise."
       
-      seminars={[
-        "Discussions et Débats",
-        "Travail en Groupe",
-        "Analyse Critique",
-        "Thèmes Spécifiques",
-        "Présentations",
-        "Travaux de Recherche"
-      ]}
+      seminars={seminars}
       
-      seminarsDescription="Les séminaires sont conçus pour renforcer la compréhension des sujets clés de l'économie internationale, développer des compétences pratiques et encourager la réflexion critique. Ils offrent aux étudiants une opportunité d'interaction plus directe avec le matériel d'apprentissage et de collaborer avec leurs pairs pour résoudre des problèmes du monde réel."
+      seminarsDescription={seminarsDescription}
       
-      careers={[
-        "Responsable Logistique",
-        "Gestionnaire de Chaîne d'Approvisionnement",
-        "Responsable de Transport",
-        "Analyste en Logistique",
-        "Gestionnaire de Stocks",
-        "Consultant en Logistique",
-        "Spécialiste de la Chaîne d'Approvisionnement International",
-        "Gestionnaire de Projet Logistique"
-      ]}
+      careers={careers}
       
       educationDescription="Après l'obtention d'une licence en gestion logistique et transport, vous avez plusieurs options pour poursuivre vos études et approfondir vos compétences dans ce domaine."
       
@@ -102,16 +93,11 @@ const LogistiqueTransportsRenderer = () => {
         "Certifications Professionnelles : Formation Continue et Cours en Ligne"
       ]}
       
-      licence1Requirements={[
-        "Avoir obtenu le diplôme du baccalauréat.",
-        "Avoir une aisance en mathématiques."
-      ]}
+      licence1Requirements={licence1Requirements}
+      licence2Text={licence2Text}
+      licence3Text={licence3Text}
       
-      licence2Text="Il convient de valider les semestres 1 et 2 de la première année, de posséder des connaissances solides en économie et d'être diplômé d'une école ou d'une université respectant le système LMD."
-      
-      licence3Text="Il est requis d'être en possession d'un diplôme de niveau Bac+2 en sciences ou d'un équivalent. Il est également nécessaire de valider l'ensemble des crédits de la première et de la deuxième année. En outre, il est impératif d'être issu d'une école ou d'une université respectant le système LMD."
-      
-      ctaTitle="Prêt à vous lancer dans l'aventure ?"
+      ctaTitle={ctaTitle}
       ctaDescription="Rejoignez notre programme de Logistique et Transports et développez les compétences nécessaires pour exceller dans la gestion des chaînes d'approvisionnement mondiales."
     />
   );

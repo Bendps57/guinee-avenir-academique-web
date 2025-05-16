@@ -45,3 +45,27 @@ export const getMarketingCareers = () => {
     "Gestionnaire de Produit International"
   ];
 };
+
+export const getBankingCareers = () => {
+  return [
+    "Gestionnaire de Banque",
+    "Analyste financier",
+    "Conseiller Bancaire",
+    "Spécialiste en Crédit",
+    "Gestionnaire de Portefeuille",
+    "Agent d'Assurance",
+    "Analyste de Risques"
+  ];
+};
+
+export const getAccountingCareers = () => {
+  return [
+    "Comptable",
+    "Auditeur",
+    "Contrôleur de Gestion",
+    "Conseiller Fiscal",
+    "Expert-Comptable",
+    "Directeur Financier",
+    "Responsable Administratif et Financier"
+  ];
+};
