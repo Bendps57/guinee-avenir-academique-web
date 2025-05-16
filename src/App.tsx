@@ -1,47 +1,37 @@
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./pages/Index";
-import Programs from "./pages/Programs";
 import About from "./pages/About";
-import International from "./pages/International";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import Preinscription from "./pages/Preinscription";
-import Connexion from "./pages/Connexion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Chatbot from "./components/Chatbot";
+import Programs from "./pages/Programs";
+import ProgramDetail from "./pages/ProgramDetail";
+import International from "./pages/International";
+import Connexion from "./pages/Connexion";
+import Preinscription from "./pages/Preinscription";
+import { Toaster } from "./components/ui/toaster";
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/a-propos" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/formations" element={<Programs />} />
+        <Route path="/formations/:id" element={<ProgramDetail />} />
+        <Route path="/international" element={<International />} />
+        <Route path="/connexion" element={<Connexion />} />
+        <Route path="/preinscription" element={<Preinscription />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
       <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/formations" element={<Programs />} />
-            <Route path="/a-propos" element={<About />} />
-            <Route path="/international" element={<International />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/preinscription" element={<Preinscription />} />
-            <Route path="/connexion" element={<Connexion />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Chatbot />
-        <Footer />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+    </Router>
+  );
+}
 
 export default App;
