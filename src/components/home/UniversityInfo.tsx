@@ -11,20 +11,20 @@ const UniversityInfo = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">L'IUHEG en chiffres</h2>
             <div className="grid grid-cols-2 gap-8">
               <div className="text-center">
-                <p className="text-5xl font-bold text-university-gold">1000+</p>
+                <p className="text-5xl font-bold text-university-gold">3900</p>
                 <p className="mt-2">Étudiants</p>
               </div>
               <div className="text-center">
-                <p className="text-5xl font-bold text-university-gold">50+</p>
-                <p className="mt-2">Professeurs</p>
+                <p className="text-5xl font-bold text-university-gold">1630</p>
+                <p className="mt-2">Étudiants en licence professionnelle</p>
               </div>
               <div className="text-center">
-                <p className="text-5xl font-bold text-university-gold">15+</p>
-                <p className="mt-2">Programmes</p>
+                <p className="text-5xl font-bold text-university-gold">1470</p>
+                <p className="mt-2">Étudiants en licence fondamentale</p>
               </div>
               <div className="text-center">
-                <p className="text-5xl font-bold text-university-gold">10+</p>
-                <p className="mt-2">Partenaires internationaux</p>
+                <p className="text-5xl font-bold text-university-gold">800</p>
+                <p className="mt-2">Étudiants en formation professionnelle (BTS)</p>
               </div>
             </div>
             <div className="mt-8">
