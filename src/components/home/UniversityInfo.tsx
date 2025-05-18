@@ -43,7 +43,7 @@ const UniversityInfo = () => {
             </div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-university-gold rounded-lg shadow-lg flex items-center justify-center">
               <p className="text-university-blue font-bold text-center">
-                <span className="block text-2xl">10</span>
+                <span className="block text-2xl">16</span>
                 <span className="text-sm">Années d'excellence</span>
               </p>
             </div>

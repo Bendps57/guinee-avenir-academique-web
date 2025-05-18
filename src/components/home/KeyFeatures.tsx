@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { University, Globe, Book, MessageSquare } from "lucide-react";
+import { University, Globe, Book, MessageSquare, GraduationCap, Award } from "lucide-react";
 
 const KeyFeatures = () => {
   return (
@@ -9,7 +9,7 @@ const KeyFeatures = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-university-blue mb-4">Pourquoi choisir l'IUHEG</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Découvrez ce qui fait de notre institution un choix privilégié pour votre formation universitaire
+            Une institution universitaire privée d'excellence qui forme les leaders de demain
           </p>
         </div>
         
@@ -17,12 +17,12 @@ const KeyFeatures = () => {
           <Card>
             <CardHeader className="flex flex-col items-center text-center">
               <div className="rounded-full bg-university-blue/10 p-4 mb-4">
-                <University className="h-8 w-8 text-university-blue" />
+                <Award className="h-8 w-8 text-university-blue" />
               </div>
-              <CardTitle className="text-xl">Excellence académique</CardTitle>
+              <CardTitle className="text-xl">Diplômes reconnus</CardTitle>
             </CardHeader>
             <CardContent className="text-center text-gray-600">
-              Des programmes rigoureux dispensés par des professeurs de renom international
+              Des diplômes reconnus au niveau international et répondant aux normes du système LMD
             </CardContent>
           </Card>
           
@@ -41,12 +41,12 @@ const KeyFeatures = () => {
           <Card>
             <CardHeader className="flex flex-col items-center text-center">
               <div className="rounded-full bg-university-blue/10 p-4 mb-4">
-                <Book className="h-8 w-8 text-university-blue" />
+                <GraduationCap className="h-8 w-8 text-university-blue" />
               </div>
-              <CardTitle className="text-xl">Programmes innovants</CardTitle>
+              <CardTitle className="text-xl">Corps professoral qualifié</CardTitle>
             </CardHeader>
             <CardContent className="text-center text-gray-600">
-              Des cursus adaptés aux exigences du marché du travail actuel et futur
+              Des enseignants de haut niveau avec une riche expérience académique et professionnelle
             </CardContent>
           </Card>
           
@@ -55,10 +55,10 @@ const KeyFeatures = () => {
               <div className="rounded-full bg-university-blue/10 p-4 mb-4">
                 <MessageSquare className="h-8 w-8 text-university-blue" />
               </div>
-              <CardTitle className="text-xl">Soutien personnalisé</CardTitle>
+              <CardTitle className="text-xl">Accompagnement personnalisé</CardTitle>
             </CardHeader>
             <CardContent className="text-center text-gray-600">
-              Un accompagnement sur mesure pour la réussite de chaque étudiant
+              Un suivi individuel pour favoriser la réussite académique et l'insertion professionnelle
             </CardContent>
           </Card>
         </div>

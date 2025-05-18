@@ -14,31 +14,31 @@ interface ProgramType {
 }
 
 const FeaturedPrograms = () => {
-  // Mock data for homepage featured programs
+  // Featured programs from IUHEG website
   const featuredPrograms: ProgramType[] = [
     {
-      id: "licence-gestion",
-      title: "Licence en Gestion des Entreprises",
+      id: "business-administration",
+      title: "Business Administration",
       level: "Licence",
       duration: "3 ans",
-      description: "Formation complète en gestion, comptabilité, marketing et ressources humaines pour les futurs managers.",
+      description: "Formation complète en gestion d'entreprise, marketing, finance, et ressources humaines pour les futurs managers.",
       iconName: "Book"
     },
     {
-      id: "licence-informatique",
-      title: "Licence en Informatique",
+      id: "marketing-international",
+      title: "Marketing et Commerce International",
       level: "Licence",
       duration: "3 ans",
-      description: "Formation en programmation, bases de données, réseaux et systèmes d'information pour les métiers du numérique.",
+      description: "Formation en marketing international, commerce mondial et stratégies d'expansion pour réussir dans un environnement commercial mondialisé.",
       iconName: "Book"
     },
     {
-      id: "master-finance",
-      title: "Master en Finance",
-      level: "Master",
-      duration: "2 ans",
-      description: "Spécialisation en finance d'entreprise, analyse financière et gestion de portefeuille pour futurs experts financiers.",
-      iconName: "GraduationCap"
+      id: "banque-finance",
+      title: "Banque, Finance et Assurance",
+      level: "Licence",
+      duration: "3 ans",
+      description: "Spécialisation en finance, services bancaires et assurance pour former les professionnels de la finance de demain.",
+      iconName: "Book"
     }
   ];
 
@@ -48,7 +48,7 @@ const FeaturedPrograms = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-university-blue mb-4">Nos formations phares</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Découvrez nos programmes d'excellence conçus pour répondre aux besoins du marché
+            Découvrez nos programmes d'excellence conçus pour répondre aux exigences du marché du travail
           </p>
         </div>
         
@@ -69,7 +69,7 @@ const FeaturedPrograms = () => {
         <div className="text-center mt-12">
           <Button asChild className="bg-university-blue hover:bg-university-navy">
             <Link to="/formations" className="flex items-center gap-2">
-              Découvrez nos formations
+              Découvrez toutes nos formations
               <Book className="h-4 w-4" />
             </Link>
           </Button>

@@ -10,9 +10,9 @@ const CtaSection = () => {
         <div className="bg-university-blue text-white rounded-lg shadow-xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 lg:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Prêt à rejoindre l'IUHEG ?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Rejoignez l'IUHEG pour une formation d'excellence</h2>
               <p className="text-lg mb-8 opacity-90">
-                Entamez votre parcours académique dans notre université et découvrez un monde d'opportunités pour votre avenir professionnel.
+                Inscrivez-vous dès maintenant et bénéficiez d'un enseignement de qualité et d'un diplôme reconnu au niveau international.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild className="bg-university-gold hover:bg-amber-500 text-university-blue font-medium">
@@ -40,7 +40,7 @@ const CtaSection = () => {
             <div className="hidden lg:block relative">
               <img 
                 src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                alt="Students at IUHEG"
+                alt="Étudiants à l'IUHEG"
                 className="w-full h-full object-cover"
               />
             </div>

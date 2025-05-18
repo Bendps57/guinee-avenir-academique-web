@@ -6,19 +6,19 @@ import { Link } from "react-router-dom";
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Dr. Mamadou Diallo",
-      role: "Président",
+      name: "Dr. Issa Condé",
+      role: "Président-Fondateur",
       imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     },
     {
-      name: "Prof. Fatoumata Barry",
-      role: "Directrice Académique",
-      imageUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      name: "Prof. N'Faly Camara",
+      role: "Directeur des Études",
+      imageUrl: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80",
     },
     {
-      name: "Dr. Ibrahim Touré",
-      role: "Doyen de la Recherche",
-      imageUrl: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80",
+      name: "Dr. Mariama Diallo",
+      role: "Directrice des Relations Internationales",
+      imageUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     }
   ];
 
@@ -28,7 +28,7 @@ const TeamSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-university-blue mb-4">Notre équipe dirigeante</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Découvrez les experts qui guident notre institution vers l'excellence
+            Des professionnels chevronnés dévoués à l'excellence académique et à votre réussite
           </p>
         </div>
         
