@@ -86,7 +86,7 @@ const Hero = ({
         {/* Media (Image or Video) */}
         <div className="lg:w-1/2 z-10">
           {videoUrl ? (
-            <div className="rounded-lg shadow-xl overflow-hidden w-full h-auto lg:h-[500px]">
+            <div className="rounded-lg shadow-xl overflow-hidden w-full h-auto lg:h-[600px] px-10 py-8">
               <video 
                 src={videoUrl}
                 autoPlay
