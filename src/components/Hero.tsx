@@ -92,7 +92,7 @@ const Hero = ({
               muted
               loop
               playsInline
-              className="rounded-lg shadow-xl w-full object-cover h-auto lg:h-[500px]" 
+              className="rounded-lg shadow-xl w-full object-cover h-auto lg:h-[500px] scale-50 origin-center transform-gpu" 
             />
           ) : imageUrl ? (
             <img 
