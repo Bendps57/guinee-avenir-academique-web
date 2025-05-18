@@ -86,14 +86,16 @@ const Hero = ({
         {/* Media (Image or Video) */}
         <div className="lg:w-1/2 z-10">
           {videoUrl ? (
-            <video 
-              src={videoUrl}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="rounded-lg shadow-xl w-full object-cover h-auto lg:h-[500px] scale-50 origin-center transform-gpu" 
-            />
+            <div className="rounded-lg shadow-xl overflow-hidden w-full h-auto lg:h-[500px]">
+              <video 
+                src={videoUrl}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover scale-75" 
+              />
+            </div>
           ) : imageUrl ? (
             <img 
               src={imageUrl} 
