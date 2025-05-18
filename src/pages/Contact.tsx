@@ -14,6 +14,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "", // Nouveau champ pour le numéro de téléphone
     subject: "",
     message: ""
   });
@@ -41,6 +42,7 @@ const Contact = () => {
       setFormData({
         name: "",
         email: "",
+        phone: "",
         subject: "",
         message: ""
       });
@@ -59,7 +61,7 @@ const Contact = () => {
       />
 
       {/* Contact Section */}
-      <section className="py-16">
+      <section id="contact" className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -92,6 +94,17 @@ const Contact = () => {
                           onChange={handleChange}
                         />
                       </div>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Téléphone</Label>
+                      <Input 
+                        id="phone" 
+                        name="phone" 
+                        type="tel" 
+                        placeholder="Votre numéro de téléphone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="subject">Sujet</Label>

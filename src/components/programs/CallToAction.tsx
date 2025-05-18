@@ -16,10 +16,10 @@ const CallToAction = ({ title, description }: CallToActionProps) => {
       </p>
       <div className="flex gap-4 justify-center">
         <Button asChild className="bg-white text-university-blue hover:bg-gray-100">
-          <Link to="/contact">Nous contacter</Link>
+          <Link to="/contact#contact">Nous contacter</Link>
         </Button>
         <Button asChild className="bg-university-gold hover:bg-yellow-600 text-white">
-          <Link to="/preinscription">S'inscrire maintenant</Link>
+          <Link to="/contact#contact">S'inscrire maintenant</Link>
         </Button>
       </div>
     </div>

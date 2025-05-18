@@ -6,7 +6,7 @@ const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // Si nous avons un hash dans l'URL (comme #licences), faisons défiler jusqu'à cet élément
+    // Si nous avons un hash dans l'URL (comme #contact), faisons défiler jusqu'à cet élément
     if (hash) {
       // Petit délai pour s'assurer que la page est chargée
       setTimeout(() => {

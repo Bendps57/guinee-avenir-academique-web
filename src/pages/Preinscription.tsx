@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -69,7 +68,7 @@ const Preinscription = () => {
       />
 
       {/* Preinscription Form */}
-      <section className="py-16">
+      <section id="preinscription" className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           <Card className="border-t-4 border-t-university-gold shadow-lg">
             <CardHeader className="text-center">

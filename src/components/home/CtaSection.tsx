@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail, LogIn } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 
 const CtaSection = () => {
   return (
@@ -16,23 +16,15 @@ const CtaSection = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild className="bg-university-gold hover:bg-amber-500 text-university-blue font-medium">
-                  <Link to="/preinscription" className="flex items-center gap-2">
+                  <Link to="/contact#contact" className="flex items-center gap-2">
                     Préinscrivez-vous maintenant
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" className="bg-transparent border-white hover:bg-white/10 text-white">
-                  <Link to="/contact" className="flex items-center gap-2">
+                  <Link to="/contact#contact" className="flex items-center gap-2">
                     Nous contacter
                     <Mail className="h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              <div className="mt-6">
-                <Button asChild variant="ghost" className="text-white hover:bg-white/10 pl-1">
-                  <Link to="/connexion" className="flex items-center gap-2">
-                    <LogIn className="h-4 w-4" />
-                    Accéder à mon espace étudiant
                   </Link>
                 </Button>
               </div>

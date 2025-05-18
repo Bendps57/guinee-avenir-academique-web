@@ -45,7 +45,7 @@ const TeamSection = () => {
         
         <div className="text-center mt-12">
           <Button asChild className="bg-university-blue hover:bg-university-navy">
-            <Link to="/a-propos#equipe">Voir toute l'équipe</Link>
+            <Link to="/a-propos">Voir toute l'équipe</Link>
           </Button>
         </div>
       </div>
