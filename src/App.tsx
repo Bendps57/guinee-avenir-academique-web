@@ -14,10 +14,12 @@ import Preinscription from "./pages/Preinscription";
 import Confidentialite from "./pages/Confidentialite";
 import MentionsLegales from "./pages/MentionsLegales";
 import { Toaster } from "./components/ui/toaster";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Index />} />
