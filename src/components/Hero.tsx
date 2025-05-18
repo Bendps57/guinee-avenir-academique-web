@@ -93,7 +93,7 @@ const Hero = ({
                 muted
                 loop
                 playsInline
-                className="w-full h-full object-cover scale-75" 
+                className="w-full h-full object-cover" 
               />
             </div>
           ) : imageUrl ? (
