@@ -6,20 +6,20 @@ const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // Si nous avons un hash dans l'URL (comme #contact), faisons défiler jusqu'à cet élément
+    // If we have a hash in the URL (like #contact), scroll to that element
     if (hash) {
-      // Petit délai pour s'assurer que la page est chargée
+      // Small delay to ensure the page is loaded
       setTimeout(() => {
         const element = document.getElementById(hash.substring(1));
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         } else {
-          // Si l'élément avec l'ID spécifié n'existe pas, revenez simplement en haut
+          // If the element with the specified ID doesn't exist, just scroll to top
           window.scrollTo(0, 0);
         }
       }, 100);
     } else {
-      // Pas de hash, donc simplement défiler vers le haut
+      // No hash, so simply scroll to top
       window.scrollTo(0, 0);
     }
   }, [pathname, hash]);
