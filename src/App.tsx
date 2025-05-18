@@ -11,6 +11,8 @@ import ProgramDetail from "./pages/ProgramDetail";
 import International from "./pages/International";
 import Connexion from "./pages/Connexion";
 import Preinscription from "./pages/Preinscription";
+import Confidentialite from "./pages/Confidentialite";
+import MentionsLegales from "./pages/MentionsLegales";
 import { Toaster } from "./components/ui/toaster";
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         <Route path="/international" element={<International />} />
         <Route path="/connexion" element={<Connexion />} />
         <Route path="/preinscription" element={<Preinscription />} />
+        <Route path="/confidentialite" element={<Confidentialite />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
