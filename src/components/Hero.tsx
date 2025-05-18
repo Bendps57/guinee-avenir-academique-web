@@ -6,6 +6,7 @@ interface HeroProps {
   subtitle?: string;
   description?: string;
   imageUrl?: string;
+  videoUrl?: string;
   cta?: {
     primary?: { 
       text: string; 
@@ -25,6 +26,7 @@ const Hero = ({
   subtitle,
   description,
   imageUrl,
+  videoUrl,
   cta,
 }: HeroProps) => {
   return (
@@ -81,16 +83,25 @@ const Hero = ({
           )}
         </div>
         
-        {/* Image */}
-        {imageUrl && (
-          <div className="lg:w-1/2 z-10">
+        {/* Media (Image or Video) */}
+        <div className="lg:w-1/2 z-10">
+          {videoUrl ? (
+            <video 
+              src={videoUrl}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="rounded-lg shadow-xl w-full object-cover h-auto lg:h-[500px]" 
+            />
+          ) : imageUrl ? (
             <img 
               src={imageUrl} 
               alt="IUHEG University"
               className="rounded-lg shadow-xl w-full object-cover h-auto lg:h-[500px]" 
             />
-          </div>
-        )}
+          ) : null}
+        </div>
       </div>
     </div>
   );
