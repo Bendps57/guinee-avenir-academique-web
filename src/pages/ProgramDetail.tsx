@@ -1,6 +1,6 @@
 
 import { useParams } from "react-router-dom";
-import { licensePrograms, masterPrograms, btsPrograms, bachelorPlusFourPrograms } from "@/data/programsData";
+import { licensePrograms, masterPrograms, btsPrograms, bachelorPlusFourPrograms } from "@/data/programs";
 import DefaultProgramDetail from "@/components/programs/DefaultProgramDetail";
 import SpecialProgramRenderer from "@/components/programs/SpecialProgramRenderer";
 import ProgramNotFound from "@/components/programs/ProgramNotFound";

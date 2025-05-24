@@ -5,7 +5,7 @@ import {
   masterPrograms,
   btsPrograms,
   bachelorPlusFourPrograms
-} from "@/data/programsData";
+} from "@/data/programs";
 import ProgramList from "./ProgramList";
 
 interface ProgramTabsProps {

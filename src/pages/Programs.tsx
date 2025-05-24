@@ -1,10 +1,9 @@
-
 import Hero from "@/components/Hero";
 import AdmissionProcess from "@/components/AdmissionProcess";
 import ProgramTabs from "@/components/ProgramTabs";
 import ProgramSearchFilters from "@/components/ProgramSearchFilters";
 import { useState } from "react";
-import { licensePrograms, masterPrograms, btsPrograms, bachelorPlusFourPrograms } from "@/data/programsData";
+import { licensePrograms, masterPrograms, btsPrograms, bachelorPlusFourPrograms } from "@/data/programs";
 
 const Programs = () => {
   const [activeView, setActiveView] = useState<"grid" | "list">("grid");
