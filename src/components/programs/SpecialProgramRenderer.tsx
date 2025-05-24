@@ -7,7 +7,8 @@ import {
   EconomieInternationaleRenderer,
   LogistiqueTransportsRenderer,
   BanqueFinancesRenderer,
-  ComptabiliteGestionRenderer
+  ComptabiliteGestionRenderer,
+  AdministrationFiscaleRenderer
 } from "./programRenderers";
 
 interface SpecialProgramRendererProps {
@@ -37,6 +38,9 @@ const SpecialProgramRenderer = ({ programId }: SpecialProgramRendererProps) => {
       
     case "comptabilite-gestion":
       return <ComptabiliteGestionRenderer />;
+
+    case "administration-fiscale":
+      return <AdministrationFiscaleRenderer />;
       
     default:
       // This shouldn't happen since the parent component already checks for valid program IDs

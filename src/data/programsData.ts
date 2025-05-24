@@ -78,7 +78,7 @@ export const licensePrograms: ProgramType[] = [
     admissionRequirements: "Baccalauréat ou équivalent. Sélection sur dossier et entretien de motivation."
   },
   {
-    id: "marketing-commerce-int",
+    id: "marketing-commerce-international",
     title: "Marketing et Commerce International",
     level: "Licence",
     duration: "3 ans",
@@ -206,7 +206,7 @@ export const licensePrograms: ProgramType[] = [
     admissionRequirements: "Baccalauréat ou équivalent. Sélection sur dossier et entretien de motivation."
   },
   {
-    id: "logistique-transport",
+    id: "logistique-transports",
     title: "Logistiques & Transport (Supply Chain)",
     level: "Licence",
     duration: "3 ans",
@@ -239,7 +239,7 @@ export const licensePrograms: ProgramType[] = [
     admissionRequirements: "Baccalauréat ou équivalent. Sélection sur dossier et entretien de motivation."
   },
   {
-    id: "banque-finance",
+    id: "banque-finances-assurances",
     title: "Banque Finances / Banque Assurances",
     level: "Licence",
     duration: "3 ans",
@@ -889,6 +889,40 @@ export const bachelorPlusFourPrograms: ProgramType[] = [
 
 // Master
 export const masterPrograms: ProgramType[] = [
+  {
+    id: "administration-fiscale",
+    title: "Administration Fiscale",
+    level: "Master",
+    duration: "2 ans",
+    description: "Programme de formation de haut niveau conçu pour former des cadres compétents et éthiques dans le domaine de l'administration fiscale.",
+    iconName: "GraduationCap",
+    modules: [
+      "Droit fiscal général",
+      "Procédure fiscale et contentieux",
+      "Fiscalité des entreprises",
+      "Fiscalité internationale",
+      "Gestion fiscale et informatique",
+      "Finances publiques",
+      "Économie publique",
+      "Méthodologie de recherche"
+    ],
+    objectives: [
+      "Former des spécialistes de haut niveau en administration fiscale",
+      "Développer des capacités d'analyse critique et de résolution de problèmes",
+      "Maîtriser les techniques de gestion fiscale et de contrôle fiscal",
+      "Acquérir des compétences managériales et de communication",
+      "Promouvoir l'éthique dans les professions fiscales"
+    ],
+    careers: [
+      "Inspecteur des impôts",
+      "Contrôleur des impôts",
+      "Chef de service fiscal",
+      "Responsable fiscal d'entreprise",
+      "Consultant fiscal",
+      "Expert en fiscalité internationale"
+    ],
+    admissionRequirements: "Licence en droit, économie, gestion ou équivalent. Sélection sur dossier, tests et entretien."
+  },
   {
     id: "banque-monnaie-finance",
     title: "Banque Monnaie Finance",

@@ -7,3 +7,4 @@ export { default as EconomieInternationaleRenderer } from './EconomieInternation
 export { default as LogistiqueTransportsRenderer } from './LogistiqueTransportsRenderer';
 export { default as BanqueFinancesRenderer } from './BanqueFinancesRenderer';
 export { default as ComptabiliteGestionRenderer } from './ComptabiliteGestionRenderer';
+export { default as AdministrationFiscaleRenderer } from './AdministrationFiscaleRenderer';

@@ -31,7 +31,8 @@ const ProgramDetail = () => {
     "economie-internationale",
     "logistique-transports",
     "banque-finances-assurances",
-    "comptabilite-gestion"
+    "comptabilite-gestion",
+    "administration-fiscale"
   ];
   
   if (specialProgramIds.includes(program.id)) {
