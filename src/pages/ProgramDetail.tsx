@@ -32,7 +32,8 @@ const ProgramDetail = () => {
     "logistique-transports",
     "banque-finances-assurances",
     "comptabilite-gestion",
-    "administration-fiscale"
+    "administration-fiscale",
+    "audit-controle-gestion"
   ];
   
   if (specialProgramIds.includes(program.id)) {

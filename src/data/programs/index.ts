@@ -1,6 +1,6 @@
 
 // Export all program types and collections
-export { ProgramType } from '../types/programTypes';
+export type { ProgramType } from '../types/programTypes';
 export { licensePrograms } from './licensePrograms';
 export { bachelorPlusFourPrograms } from './bachelorPlusFourPrograms';
 export { masterPrograms } from './masterPrograms';
