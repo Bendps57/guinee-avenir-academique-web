@@ -25,15 +25,7 @@ const ProgramDetail = () => {
 
   // Special renderings for specific programs
   const specialProgramIds = [
-    "business-administration", 
-    "marketing-commerce-international", 
-    "economie-appliquee", 
-    "economie-internationale",
-    "logistique-transports",
-    "banque-finances-assurances",
-    "comptabilite-gestion",
-    "administration-fiscale",
-    "audit-controle-gestion"
+    "genie-informatique"
   ];
   
   if (specialProgramIds.includes(program.id)) {
