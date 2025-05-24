@@ -25,7 +25,9 @@ const ProgramDetail = () => {
 
   // Special renderings for specific programs
   const specialProgramIds = [
-    "genie-informatique"
+    "genie-informatique",
+    "administration-fiscale",
+    "audit-controle-gestion"
   ];
   
   if (specialProgramIds.includes(program.id)) {

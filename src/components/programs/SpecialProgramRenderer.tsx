@@ -1,6 +1,8 @@
 
 import { 
-  GenieInformatiqueRenderer
+  GenieInformatiqueRenderer,
+  AdministrationFiscaleRenderer,
+  AuditControleGestionRenderer
 } from './programRenderers';
 
 interface SpecialProgramRendererProps {
@@ -11,6 +13,10 @@ const SpecialProgramRenderer = ({ programId }: SpecialProgramRendererProps) => {
   switch (programId) {
     case "genie-informatique":
       return <GenieInformatiqueRenderer />;
+    case "administration-fiscale":
+      return <AdministrationFiscaleRenderer />;
+    case "audit-controle-gestion":
+      return <AuditControleGestionRenderer />;
     default:
       return null;
   }
