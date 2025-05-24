@@ -38,6 +38,48 @@ export const masterPrograms: ProgramType[] = [
     admissionRequirements: "Licence en droit, économie, gestion ou équivalent. Sélection sur dossier, tests et entretien."
   },
   {
+    id: "audit-controle-gestion",
+    title: "Audit et Contrôle de Gestion",
+    level: "Master",
+    duration: "2 ans",
+    description: "Programme de formation conçu pour répondre aux besoins croissants de professionnels qualifiés dans les domaines de l'audit et du contrôle de gestion. Formation rigoureuse alliant théorie et pratique pour former des cadres compétents en analyse financière, gestion des risques et pilotage de la performance.",
+    iconName: "GraduationCap",
+    modules: [
+      "Comptabilité financière avancée",
+      "Audit interne et externe",
+      "Systèmes d'information de gestion",
+      "Normes comptables et réglementations financières",
+      "Gestion financière",
+      "Gestion des risques",
+      "Fiscalité et réglementation des entreprises",
+      "Gestion de la performance",
+      "Audit financier et comptable",
+      "Contrôle de gestion",
+      "Méthodologie de recherche"
+    ],
+    objectives: [
+      "Analyser et interpréter les données financières pour orienter la prise de décision stratégique",
+      "Mettre en place et piloter des systèmes de contrôle interne garantissant la fiabilité des processus",
+      "Évaluer et optimiser la performance des organisations",
+      "Accompagner les entreprises dans leur conformité réglementaire",
+      "Développer une expertise en finance, management et stratégie",
+      "Intégrer les compétences en digitalisation et gestion des risques"
+    ],
+    careers: [
+      "Auditeur interne ou externe",
+      "Contrôleur de gestion",
+      "Directeur administratif et financier",
+      "Consultant en audit et contrôle",
+      "Risk manager",
+      "Responsable reporting financier",
+      "Analyste financier",
+      "Responsable de la performance",
+      "Consultant en stratégie",
+      "Chef de projet financier"
+    ],
+    admissionRequirements: "Licence en gestion, comptabilité, finance, économie ou équivalent. Expérience professionnelle appréciée. Sélection sur dossier, tests et entretien."
+  },
+  {
     id: "banque-monnaie-finance",
     title: "Banque Monnaie Finance",
     level: "Master",
@@ -102,39 +144,6 @@ export const masterPrograms: ProgramType[] = [
       "Chercheur en économie publique"
     ],
     admissionRequirements: "Licence en droit, économie, gestion ou équivalent. Sélection sur dossier, tests et entretien."
-  },
-  {
-    id: "audit-controle-gestion",
-    title: "Audit Control de Gestion",
-    level: "Master",
-    duration: "2 ans",
-    description: "Formation aux techniques d'audit financier, contrôle de gestion et pilotage de la performance.",
-    iconName: "GraduationCap",
-    modules: [
-      "Audit financier",
-      "Contrôle de gestion approfondi",
-      "Audit interne et opérationnel",
-      "Systèmes d'information pour le contrôle",
-      "Management de la performance",
-      "Normes comptables internationales",
-      "Business intelligence",
-      "Gestion des risques"
-    ],
-    objectives: [
-      "Maîtriser les techniques d'audit et de contrôle de gestion",
-      "Développer des compétences en pilotage de la performance",
-      "Comprendre les enjeux de la gouvernance d'entreprise",
-      "Savoir concevoir et mettre en œuvre des systèmes de contrôle efficaces"
-    ],
-    careers: [
-      "Auditeur interne ou externe",
-      "Contrôleur de gestion",
-      "Directeur administratif et financier",
-      "Consultant en audit et contrôle",
-      "Risk manager",
-      "Responsable reporting financier"
-    ],
-    admissionRequirements: "Licence en comptabilité, finance, gestion ou équivalent. Sélection sur dossier, tests et entretien."
   },
   {
     id: "droit-administration-judiciaire",
