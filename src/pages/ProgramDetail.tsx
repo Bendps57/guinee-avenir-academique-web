@@ -27,7 +27,13 @@ const ProgramDetail = () => {
   const specialProgramIds = [
     "genie-informatique",
     "administration-fiscale",
-    "audit-controle-gestion"
+    "audit-controle-gestion",
+    "business-administration",
+    "banque-finances-assurances",
+    "comptabilite-gestion",
+    "commerce-international",
+    "ressources-humaines",
+    "logistique-transports"
   ];
   
   if (specialProgramIds.includes(program.id)) {

@@ -2,7 +2,13 @@
 import { 
   GenieInformatiqueRenderer,
   AdministrationFiscaleRenderer,
-  AuditControleGestionRenderer
+  AuditControleGestionRenderer,
+  BusinessAdministrationRenderer,
+  BanqueFinancesRenderer,
+  ComptabiliteGestionRenderer,
+  CommerceInternationalRenderer,
+  RessourcesHumainesRenderer,
+  LogistiqueTransportsRenderer
 } from './programRenderers';
 
 interface SpecialProgramRendererProps {
@@ -17,6 +23,18 @@ const SpecialProgramRenderer = ({ programId }: SpecialProgramRendererProps) => {
       return <AdministrationFiscaleRenderer />;
     case "audit-controle-gestion":
       return <AuditControleGestionRenderer />;
+    case "business-administration":
+      return <BusinessAdministrationRenderer />;
+    case "banque-finances-assurances":
+      return <BanqueFinancesRenderer />;
+    case "comptabilite-gestion":
+      return <ComptabiliteGestionRenderer />;
+    case "commerce-international":
+      return <CommerceInternationalRenderer />;
+    case "ressources-humaines":
+      return <RessourcesHumainesRenderer />;
+    case "logistique-transports":
+      return <LogistiqueTransportsRenderer />;
     default:
       return null;
   }
