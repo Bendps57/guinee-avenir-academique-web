@@ -1,4 +1,3 @@
-
 import { Book, GraduationCap, Heart, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -50,71 +49,27 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Book className="h-4 w-4 mr-2 text-university-gold" />
-                <a 
-                  href="/formations#programmes" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = '/formations';
-                    setTimeout(() => {
-                      const licenceTab = document.getElementById('licence');
-                      if (licenceTab) licenceTab.click();
-                    }, 100);
-                  }}
-                  className="text-gray-300 hover:text-university-gold"
-                >
+                <Link to="/formations" className="text-gray-300 hover:text-university-gold">
                   Licences/BAC+3
-                </a>
+                </Link>
               </li>
               <li className="flex items-center">
                 <Book className="h-4 w-4 mr-2 text-university-gold" />
-                <a 
-                  href="/formations#programmes" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = '/formations';
-                    setTimeout(() => {
-                      const bachelor4Tab = document.getElementById('bachelor4');
-                      if (bachelor4Tab) bachelor4Tab.click();
-                    }, 100);
-                  }}
-                  className="text-gray-300 hover:text-university-gold"
-                >
+                <Link to="/formations" className="text-gray-300 hover:text-university-gold">
                   Licences/BAC+4
-                </a>
+                </Link>
               </li>
               <li className="flex items-center">
                 <GraduationCap className="h-4 w-4 mr-2 text-university-gold" />
-                <a 
-                  href="/formations#programmes" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = '/formations';
-                    setTimeout(() => {
-                      const masterTab = document.getElementById('master');
-                      if (masterTab) masterTab.click();
-                    }, 100);
-                  }}
-                  className="text-gray-300 hover:text-university-gold"
-                >
+                <Link to="/formations" className="text-gray-300 hover:text-university-gold">
                   Masters
-                </a>
+                </Link>
               </li>
               <li className="flex items-center">
                 <Book className="h-4 w-4 mr-2 text-university-gold" />
-                <a 
-                  href="/formations#programmes" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = '/formations';
-                    setTimeout(() => {
-                      const btsTab = document.getElementById('bts');
-                      if (btsTab) btsTab.click();
-                    }, 100);
-                  }}
-                  className="text-gray-300 hover:text-university-gold"
-                >
+                <Link to="/formations" className="text-gray-300 hover:text-university-gold">
                   BTS
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
