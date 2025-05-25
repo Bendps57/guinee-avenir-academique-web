@@ -19,7 +19,7 @@ const CtaSection = () => {
                   className="bg-university-gold hover:bg-amber-500 text-university-blue font-medium"
                 >
                   <a 
-                    href="https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
