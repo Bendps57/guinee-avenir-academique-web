@@ -30,11 +30,25 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Créer le mailto link avec toutes les informations
+    const subject = encodeURIComponent(`Contact IUHEG: ${formData.subject}`);
+    const body = encodeURIComponent(`
+Nom: ${formData.name}
+Email: ${formData.email}
+Téléphone: ${formData.phone}
+
+Message:
+${formData.message}
+    `);
+    
+    // Ouvrir le client email avec les données pré-remplies
+    window.location.href = `mailto:secretariat@iuheg.education?subject=${subject}&body=${body}`;
+
+    // Simuler l'envoi pour l'interface utilisateur
     setTimeout(() => {
       toast({
-        title: "Message envoyé",
-        description: "Nous avons bien reçu votre message. Notre équipe vous contactera sous peu.",
+        title: "Message préparé",
+        description: "Votre client email s'est ouvert avec le message pré-rempli. Envoyez-le pour nous contacter.",
       });
       
       setFormData({
@@ -46,7 +60,7 @@ const ContactForm = () => {
       });
       
       setIsSubmitting(false);
-    }, 1500);
+    }, 1000);
   };
 
   return (
@@ -119,7 +133,7 @@ const ContactForm = () => {
               className="w-full bg-university-blue hover:bg-university-navy"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
+              {isSubmitting ? "Préparation..." : "Envoyer le message"}
             </Button>
           </form>
         </CardContent>

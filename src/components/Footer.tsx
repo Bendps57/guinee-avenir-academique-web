@@ -77,7 +77,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-university-gold" />
-                <a href="mailto:info@iuheg.education" className="text-gray-300 hover:text-university-gold">info@iuheg.education</a>
+                <a href="mailto:secretariat@iuheg.education" className="text-gray-300 hover:text-university-gold">secretariat@iuheg.education</a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-university-gold" />

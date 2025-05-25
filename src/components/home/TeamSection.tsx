@@ -6,19 +6,34 @@ import { Link } from "react-router-dom";
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Dr. Issa Condé",
-      role: "Président-Fondateur",
-      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      name: "Makolo Kpoghomou",
+      role: "Recteur",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
     },
     {
-      name: "Prof. N'Faly Camara",
-      role: "Directeur des Études",
-      imageUrl: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80",
+      name: "Amadou Cissoko",
+      role: "Administrateur Général",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
     },
     {
-      name: "Dr. Mariama Diallo",
-      role: "Directrice des Relations Internationales",
-      imageUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      name: "Yuri Diallo",
+      role: "Secrétaire Général",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+    },
+    {
+      name: "Bachir Balde",
+      role: "Directeur IT Multimédia & Innovation",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+    },
+    {
+      name: "Mamadou Fall",
+      role: "Directeur Marketing & Recrutement",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+    },
+    {
+      name: "Ramatoulaye Diallo",
+      role: "Responsable Partenariat",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
     }
   ];
 
@@ -32,7 +47,7 @@ const TeamSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member) => (
             <TeamMember 
               key={member.name}

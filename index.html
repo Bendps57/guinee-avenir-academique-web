@@ -9,6 +9,8 @@
     <meta name="keywords" content="IUHEG, université Guinée, formation supérieure, licence, master, BTS, génie informatique, business administration, comptabilité, banque finance, commerce international, ressources humaines, logistique transport" />
     <meta name="author" content="IUHEG - Institut Universitaire des Hautes Études de Guinée" />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1a365d" />
+    <meta name="color-scheme" content="light" />
     <link rel="canonical" href="https://www.iuheg.education/" />
     <link rel="icon" href="https://i.imgur.com/eIx2JbG.jpeg" type="image/jpeg">
 
@@ -18,6 +20,8 @@
     <meta property="og:title" content="IUHEG - Institut Universitaire des Hautes Études de Guinée" />
     <meta property="og:description" content="Formation supérieure d'excellence en Guinée depuis 16 ans. Licences, Masters et formations professionnelles reconnues internationalement." />
     <meta property="og:image" content="https://i.imgur.com/eIx2JbG.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:site_name" content="IUHEG" />
 
@@ -33,6 +37,10 @@
     <meta name="geo.placename" content="Conakry" />
     <meta name="geo.position" content="9.641185;-13.578401" />
     <meta name="ICBM" content="9.641185, -13.578401" />
+    
+    <!-- Remove Lovable branding for social media sharing -->
+    <meta name="generator" content="" />
+    <meta name="powered-by" content="" />
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -54,7 +62,7 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+224626859387",
-        "email": "info@iuheg.education",
+        "email": "secretariat@iuheg.education",
         "contactType": "Admissions"
       },
       "sameAs": [
@@ -63,6 +71,21 @@
       ]
     }
     </script>
+
+    <!-- Prevent dark mode issues -->
+    <style>
+      html, body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        html, body {
+          background-color: #ffffff !important;
+          color: #000000 !important;
+        }
+      }
+    </style>
   </head>
 
   <body>
