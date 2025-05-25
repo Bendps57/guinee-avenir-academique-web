@@ -241,7 +241,7 @@ const International = () => {
                 <div className="order-1 lg:order-2 space-y-8">
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1595461986118-b9da6b3a76dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" 
+                      src="https://i.imgur.com/W5JkuQI.jpeg" 
                       alt="Étudiants africains en stage" 
                       className="w-full h-64 object-cover"
                     />
@@ -357,7 +357,7 @@ const International = () => {
                 <div className="space-y-6">
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" 
+                      src="https://i.imgur.com/tdFBKmx.jpeg" 
                       alt="Centre de langues africain" 
                       className="w-full h-64 object-cover"
                     />
