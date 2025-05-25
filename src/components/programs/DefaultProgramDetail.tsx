@@ -102,11 +102,11 @@ const DefaultProgramDetail = ({ program }: DefaultProgramDetailProps) => {
               className="border-university-blue text-university-blue hover:bg-university-blue/10"
             >
               <a 
-                href="https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                S'inscrire
+                Candidater maintenant
               </a>
             </Button>
           </div>

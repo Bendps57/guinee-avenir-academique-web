@@ -22,11 +22,11 @@ const CallToAction = ({ title, description }: CallToActionProps) => {
           className="bg-university-gold hover:bg-yellow-600 text-white"
         >
           <a 
-            href="https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view"
             target="_blank"
             rel="noopener noreferrer"
           >
-            S'inscrire maintenant
+            Candidater maintenant
           </a>
         </Button>
       </div>
