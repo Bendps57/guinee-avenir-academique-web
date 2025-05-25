@@ -1,5 +1,5 @@
-
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { ArrowRight, Mail } from "lucide-react";
 
 const CtaSection = () => {
@@ -29,10 +29,10 @@ const CtaSection = () => {
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="bg-transparent border-white hover:bg-white/10 text-white">
-                  <a href="/contact" className="flex items-center gap-2">
+                  <Link to="/contact" className="flex items-center gap-2">
                     Nous contacter
                     <Mail className="h-4 w-4" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>

@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface CallToActionProps {
   title: string;
@@ -15,7 +16,7 @@ const CallToAction = ({ title, description }: CallToActionProps) => {
       </p>
       <div className="flex gap-4 justify-center">
         <Button asChild className="bg-white text-university-blue hover:bg-gray-100">
-          <a href="/contact">Nous contacter</a>
+          <Link to="/contact">Nous contacter</Link>
         </Button>
         <Button 
           asChild 

@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface HeroProps {
   title: string;
@@ -60,10 +61,17 @@ const Hero = ({
                   asChild
                   className="bg-university-gold hover:bg-amber-500 text-university-blue font-semibold px-8 py-6 text-lg"
                 >
-                  <a href={cta.primary.link} className="flex items-center gap-2">
-                    {cta.primary.text}
-                    {cta.primary.icon}
-                  </a>
+                  {cta.primary.link.startsWith('http') ? (
+                    <a href={cta.primary.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      {cta.primary.text}
+                      {cta.primary.icon}
+                    </a>
+                  ) : (
+                    <Link to={cta.primary.link} className="flex items-center gap-2">
+                      {cta.primary.text}
+                      {cta.primary.icon}
+                    </Link>
+                  )}
                 </Button>
               )}
               
@@ -73,10 +81,17 @@ const Hero = ({
                   variant="outline" 
                   className="bg-transparent border-white hover:bg-white/10 text-white px-8 py-6 text-lg"
                 >
-                  <a href={cta.secondary.link} className="flex items-center gap-2">
-                    {cta.secondary.text}
-                    {cta.secondary.icon}
-                  </a>
+                  {cta.secondary.link.startsWith('http') ? (
+                    <a href={cta.secondary.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      {cta.secondary.text}
+                      {cta.secondary.icon}
+                    </a>
+                  ) : (
+                    <Link to={cta.secondary.link} className="flex items-center gap-2">
+                      {cta.secondary.text}
+                      {cta.secondary.icon}
+                    </Link>
+                  )}
                 </Button>
               )}
             </div>
