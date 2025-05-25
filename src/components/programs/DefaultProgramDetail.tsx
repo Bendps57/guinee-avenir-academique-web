@@ -96,8 +96,18 @@ const DefaultProgramDetail = ({ program }: DefaultProgramDetailProps) => {
             <Button asChild className="bg-university-blue hover:bg-university-navy">
               <Link to="/contact">Nous contacter</Link>
             </Button>
-            <Button asChild variant="outline" className="border-university-blue text-university-blue hover:bg-university-blue/10">
-              <Link to="/preinscription">S'inscrire</Link>
+            <Button 
+              asChild 
+              variant="outline" 
+              className="border-university-blue text-university-blue hover:bg-university-blue/10"
+            >
+              <a 
+                href="https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                S'inscrire
+              </a>
             </Button>
           </div>
         </div>

@@ -58,8 +58,17 @@ const Navbar = () => {
 
           {/* Admission Button */}
           <div className="hidden md:block">
-            <Button className="bg-university-blue hover:bg-university-navy text-white">
-              Admission
+            <Button 
+              asChild
+              className="bg-university-blue hover:bg-university-navy text-white"
+            >
+              <a 
+                href="https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Admission
+              </a>
             </Button>
           </div>
 
@@ -92,8 +101,17 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button className="w-full bg-university-blue hover:bg-university-navy text-white">
-                Admission
+              <Button 
+                asChild
+                className="w-full bg-university-blue hover:bg-university-navy text-white"
+              >
+                <a 
+                  href="https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Admission
+                </a>
               </Button>
             </div>
           </div>

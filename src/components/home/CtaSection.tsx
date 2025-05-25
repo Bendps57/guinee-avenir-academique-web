@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowRight, Mail } from "lucide-react";
 
 const CtaSection = () => {
@@ -15,17 +14,25 @@ const CtaSection = () => {
                 Inscrivez-vous dès maintenant et bénéficiez d'un enseignement de qualité et d'un diplôme reconnu au niveau international.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button asChild className="bg-university-gold hover:bg-amber-500 text-university-blue font-medium">
-                  <Link to="/contact#contact" className="flex items-center gap-2">
+                <Button 
+                  asChild 
+                  className="bg-university-gold hover:bg-amber-500 text-university-blue font-medium"
+                >
+                  <a 
+                    href="https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
                     Préinscrivez-vous maintenant
                     <ArrowRight className="h-4 w-4" />
-                  </Link>
+                  </a>
                 </Button>
                 <Button asChild variant="outline" className="bg-transparent border-white hover:bg-white/10 text-white">
-                  <Link to="/contact#contact" className="flex items-center gap-2">
+                  <a href="/contact#contact" className="flex items-center gap-2">
                     Nous contacter
                     <Mail className="h-4 w-4" />
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </div>
