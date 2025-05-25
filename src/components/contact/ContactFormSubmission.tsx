@@ -43,33 +43,53 @@ export const useContactFormSubmission = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    console.log("Envoi du formulaire avec FormSubmit:", formData);
+    console.log("=== DÉBUT DE L'ENVOI DU FORMULAIRE ===");
+    console.log("Données du formulaire:", formData);
+
+    const formSubmitData = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message,
+      _subject: `Nouveau message depuis IUHEG - ${formData.subject}`,
+      _template: "table",
+      _captcha: "false",
+      _next: "https://iuheg.education/contact?success=true"
+    };
+
+    console.log("Données envoyées à FormSubmit:", formSubmitData);
 
     try {
+      console.log("Tentative d'envoi vers FormSubmit...");
+      
       const response = await fetch("https://formsubmit.co/ajax/secretariat@iuheg.education", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          subject: formData.subject,
-          message: formData.message,
-          _subject: `Nouveau message depuis IUHEG - ${formData.subject}`,
-          _template: "table",
-          _captcha: "false"
-        })
+        body: JSON.stringify(formSubmitData)
       });
 
-      console.log("Réponse FormSubmit:", response);
+      console.log("Statut de la réponse:", response.status);
+      console.log("Headers de la réponse:", [...response.headers.entries()]);
+
+      const responseText = await response.text();
+      console.log("Réponse brute:", responseText);
+
+      let result;
+      try {
+        result = JSON.parse(responseText);
+        console.log("Réponse JSON parsée:", result);
+      } catch (parseError) {
+        console.error("Erreur de parsing JSON:", parseError);
+        result = { message: responseText };
+      }
 
       if (response.ok) {
-        const result = await response.json();
-        console.log("Résultat FormSubmit:", result);
-
+        console.log("✅ SUCCÈS - Email envoyé avec succès");
+        
         toast({
           title: "Message envoyé avec succès",
           description: "Votre message a été envoyé à secretariat@iuheg.education. Nous vous répondrons dans les plus brefs délais.",
@@ -77,16 +97,21 @@ export const useContactFormSubmission = () => {
         
         resetForm();
       } else {
-        throw new Error("Erreur lors de l'envoi du message");
+        console.error("❌ ERREUR - Réponse non-OK:", response.status, result);
+        throw new Error(`Erreur ${response.status}: ${result.message || 'Erreur inconnue'}`);
       }
     } catch (error) {
-      console.error("Erreur d'envoi:", error);
+      console.error("❌ ERREUR COMPLÈTE:", error);
+      console.error("Type d'erreur:", typeof error);
+      console.error("Message d'erreur:", error instanceof Error ? error.message : String(error));
+      
       toast({
         title: "Erreur d'envoi",
-        description: "Impossible d'envoyer le message. Veuillez contacter directement secretariat@iuheg.education ou réessayer plus tard.",
+        description: `Impossible d'envoyer le message. Détails: ${error instanceof Error ? error.message : 'Erreur inconnue'}. Veuillez contacter directement secretariat@iuheg.education.`,
         variant: "destructive",
       });
     } finally {
+      console.log("=== FIN DE L'ENVOI DU FORMULAIRE ===");
       setIsSubmitting(false);
     }
   };
