@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import TeamMember from "@/components/TeamMember";
 import { Link } from "react-router-dom";
