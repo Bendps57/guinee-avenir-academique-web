@@ -59,7 +59,8 @@ export const useContactFormSubmission = () => {
           subject: formData.subject,
           message: formData.message,
           _subject: `Nouveau message depuis IUHEG - ${formData.subject}`,
-          _template: "table"
+          _template: "table",
+          _captcha: "false"
         })
       });
 
