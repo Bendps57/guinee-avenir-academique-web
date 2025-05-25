@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -30,10 +29,10 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const form = e.target as HTMLFormElement;
-    const formDataToSend = new FormData(form);
+    console.log("Envoi du formulaire avec les données:", formData);
 
     try {
+      // Première tentative avec l'API AJAX de FormSubmit
       const response = await fetch("https://formsubmit.co/ajax/secretariat@iuheg.education", {
         method: "POST",
         headers: {
@@ -48,18 +47,23 @@ const ContactForm = () => {
           message: formData.message,
           _subject: `Nouveau message depuis IUHEG - ${formData.subject}`,
           _template: "table",
-          _captcha: "false"
+          _captcha: "false",
+          _autoresponse: "Merci pour votre message. Nous vous répondrons dans les plus brefs délais."
         })
       });
 
+      console.log("Statut de la réponse:", response.status);
+      
       const result = await response.json();
+      console.log("Réponse du serveur:", result);
 
-      if (response.ok) {
+      if (response.ok && result.success) {
         toast({
-          title: "Message envoyé",
-          description: "Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",
+          title: "Message envoyé avec succès",
+          description: "Votre message a été envoyé à secretariat@iuheg.education. Vous devriez recevoir une confirmation par email.",
         });
         
+        // Reset du formulaire
         setFormData({
           name: "",
           email: "",
@@ -68,13 +72,48 @@ const ContactForm = () => {
           message: ""
         });
       } else {
-        throw new Error("Erreur lors de l'envoi");
+        console.error("Erreur de FormSubmit:", result);
+        
+        // Tentative de fallback avec une méthode alternative
+        console.log("Tentative avec méthode alternative...");
+        
+        const fallbackResponse = await fetch("https://formspree.io/f/secretariat@iuheg.education", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            subject: formData.subject,
+            message: formData.message,
+            _subject: `Nouveau message depuis IUHEG - ${formData.subject}`
+          })
+        });
+
+        if (fallbackResponse.ok) {
+          toast({
+            title: "Message envoyé (méthode alternative)",
+            description: "Votre message a été envoyé avec succès via une méthode alternative.",
+          });
+          
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: ""
+          });
+        } else {
+          throw new Error("Toutes les méthodes d'envoi ont échoué");
+        }
       }
     } catch (error) {
-      console.error("Erreur d'envoi:", error);
+      console.error("Erreur complète d'envoi:", error);
       toast({
-        title: "Erreur",
-        description: "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.",
+        title: "Erreur d'envoi",
+        description: "Impossible d'envoyer le message. Veuillez contacter directement secretariat@iuheg.education ou réessayer plus tard.",
         variant: "destructive",
       });
     } finally {
@@ -155,6 +194,17 @@ const ContactForm = () => {
               {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
             </Button>
           </form>
+          
+          {/* Contact direct en cas de problème */}
+          <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+            <p className="text-sm text-gray-600">
+              <strong>Problème avec le formulaire ?</strong><br />
+              Contactez-nous directement : 
+              <a href="mailto:secretariat@iuheg.education" className="text-university-blue hover:underline ml-1">
+                secretariat@iuheg.education
+              </a>
+            </p>
+          </div>
         </CardContent>
       </Card>
     </div>
