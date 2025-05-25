@@ -11,12 +11,14 @@ interface TeamMemberProps {
 const TeamMember = ({ name, role, imageUrl, bio }: TeamMemberProps) => {
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg border-none">
-      <div className="aspect-square w-full overflow-hidden bg-gray-100 flex items-center justify-center h-32">
-        <img 
-          src={imageUrl} 
-          alt={name}
-          className="w-16 h-16 object-cover rounded-full"
-        />
+      <div className="w-full overflow-hidden bg-gray-100 flex items-center justify-center h-48">
+        <div className="w-32 h-32 rounded-full overflow-hidden bg-white flex items-center justify-center shadow-md">
+          <img 
+            src="https://i.imgur.com/eIx2JbG.jpeg" 
+            alt="IUHEG Logo"
+            className="w-20 h-20 object-contain"
+          />
+        </div>
       </div>
       <CardContent className="p-4 bg-white">
         <h3 className="text-lg font-semibold text-university-blue">{name}</h3>

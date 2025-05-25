@@ -350,22 +350,22 @@ const About = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img 
-                src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                src="https://i.imgur.com/Xg9XCAv.jpeg" 
                 alt="Vie étudiante à l'IUHEG" 
                 className="rounded-lg shadow-lg w-full h-48 object-cover"
               />
               <img 
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                src="https://i.imgur.com/W5JkuQI.jpeg" 
                 alt="Vie étudiante à l'IUHEG" 
                 className="rounded-lg shadow-lg w-full h-48 object-cover"
               />
               <img 
-                src="https://images.unsplash.com/photo-1529693662653-9d480530a697?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" 
+                src="https://i.imgur.com/VfhpUkC.jpeg" 
                 alt="Vie étudiante à l'IUHEG" 
                 className="rounded-lg shadow-lg w-full h-48 object-cover"
               />
               <img 
-                src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1547&q=80" 
+                src="https://i.imgur.com/tdFBKmx.jpeg" 
                 alt="Vie étudiante à l'IUHEG" 
                 className="rounded-lg shadow-lg w-full h-48 object-cover"
               />
