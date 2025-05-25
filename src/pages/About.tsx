@@ -5,43 +5,43 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import TeamMember from "@/components/TeamMember";
 
 const About = () => {
-  // Mock data for team members
+  // Updated team members
   const teamMembers = [
     {
-      name: "Dr. Mamadou Diallo",
-      role: "Président",
-      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-      bio: "Dr. Diallo a plus de 25 ans d'expérience dans l'éducation et la gestion universitaire."
+      name: "Makolo Kpoghomou",
+      role: "Recteur",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      bio: "M. Kpoghomou dirige l'institution avec une vision stratégique et un engagement pour l'excellence académique."
     },
     {
-      name: "Prof. Fatoumata Barry",
-      role: "Directrice Académique",
-      imageUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-      bio: "Prof. Barry supervise tous les programmes académiques et assure leur excellence."
+      name: "Amadou Cissoko",
+      role: "Administrateur Général",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      bio: "M. Cissoko supervise l'administration générale et les opérations de l'université."
     },
     {
-      name: "Dr. Ibrahim Touré",
-      role: "Doyen de la Recherche",
-      imageUrl: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80",
-      bio: "Dr. Touré dirige les initiatives de recherche et les partenariats académiques."
+      name: "Yuri Diallo",
+      role: "Secrétaire Général",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      bio: "M. Diallo coordonne les activités administratives et assure la liaison entre les différents services."
     },
     {
-      name: "Mme. Aissatou Camara",
-      role: "Directrice Administrative",
-      imageUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=922&q=80",
-      bio: "Mme. Camara gère les opérations quotidiennes et l'administration de l'université."
+      name: "Bachir Balde",
+      role: "Directeur IT Multimédia & Innovation",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      bio: "M. Balde dirige les initiatives technologiques et d'innovation de l'université."
     },
     {
-      name: "M. Ousmane Bah",
-      role: "Directeur des Relations Internationales",
-      imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-      bio: "M. Bah développe et maintient les partenariats internationaux de l'IUHEG."
+      name: "Mamadou Fall",
+      role: "Directeur Marketing & Recrutement",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      bio: "M. Fall développe les stratégies de marketing et supervise le recrutement des étudiants."
     },
     {
-      name: "Dr. Marie Soumah",
-      role: "Doyenne des Étudiants",
-      imageUrl: "https://images.unsplash.com/photo-1534751516642-a1af1ce26603?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=778&q=80",
-      bio: "Dr. Soumah supervise le bien-être des étudiants et les services d'orientation."
+      name: "Ramatoulaye Diallo",
+      role: "Responsable Partenariat",
+      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      bio: "Mme. Diallo développe et maintient les partenariats stratégiques de l'IUHEG."
     },
   ];
 

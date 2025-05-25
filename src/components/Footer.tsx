@@ -50,19 +50,71 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Book className="h-4 w-4 mr-2 text-university-gold" />
-                <Link to="/formations#licences" className="text-gray-300 hover:text-university-gold">Licences/BAC+3</Link>
+                <a 
+                  href="/formations#programmes" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '/formations';
+                    setTimeout(() => {
+                      const licenceTab = document.getElementById('licence');
+                      if (licenceTab) licenceTab.click();
+                    }, 100);
+                  }}
+                  className="text-gray-300 hover:text-university-gold"
+                >
+                  Licences/BAC+3
+                </a>
               </li>
               <li className="flex items-center">
                 <Book className="h-4 w-4 mr-2 text-university-gold" />
-                <Link to="/formations#bachelorPlusFour" className="text-gray-300 hover:text-university-gold">Licences/BAC+4</Link>
+                <a 
+                  href="/formations#programmes" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '/formations';
+                    setTimeout(() => {
+                      const bachelor4Tab = document.getElementById('bachelor4');
+                      if (bachelor4Tab) bachelor4Tab.click();
+                    }, 100);
+                  }}
+                  className="text-gray-300 hover:text-university-gold"
+                >
+                  Licences/BAC+4
+                </a>
               </li>
               <li className="flex items-center">
                 <GraduationCap className="h-4 w-4 mr-2 text-university-gold" />
-                <Link to="/formations#masters" className="text-gray-300 hover:text-university-gold">Masters</Link>
+                <a 
+                  href="/formations#programmes" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '/formations';
+                    setTimeout(() => {
+                      const masterTab = document.getElementById('master');
+                      if (masterTab) masterTab.click();
+                    }, 100);
+                  }}
+                  className="text-gray-300 hover:text-university-gold"
+                >
+                  Masters
+                </a>
               </li>
               <li className="flex items-center">
                 <Book className="h-4 w-4 mr-2 text-university-gold" />
-                <Link to="/formations#bts" className="text-gray-300 hover:text-university-gold">BTS</Link>
+                <a 
+                  href="/formations#programmes" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '/formations';
+                    setTimeout(() => {
+                      const btsTab = document.getElementById('bts');
+                      if (btsTab) btsTab.click();
+                    }, 100);
+                  }}
+                  className="text-gray-300 hover:text-university-gold"
+                >
+                  BTS
+                </a>
               </li>
             </ul>
           </div>

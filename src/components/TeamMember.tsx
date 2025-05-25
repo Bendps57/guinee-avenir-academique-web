@@ -15,7 +15,7 @@ const TeamMember = ({ name, role, imageUrl, bio }: TeamMemberProps) => {
         <img 
           src={imageUrl} 
           alt={name}
-          className="h-16 w-16 object-contain"
+          className="h-8 w-8 object-contain"
         />
       </div>
       <CardContent className="p-4 bg-white">
