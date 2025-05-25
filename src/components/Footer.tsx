@@ -94,16 +94,16 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col items-center space-y-4">
+          <p className="text-gray-400 text-center">
             &copy; {currentYear} IUHEG. Tous droits réservés.
           </p>
+          <a href="https://www.elimyt.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-university-gold text-sm flex items-center">
+            Créé par eLimyt <Heart className="h-3 w-3 ml-1 text-red-500" />
+          </a>
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 items-center">
             <Link to="/mentions-legales" className="text-gray-400 hover:text-university-gold text-sm">Mentions légales</Link>
             <Link to="/confidentialite" className="text-gray-400 hover:text-university-gold text-sm">Politique de confidentialité</Link>
-            <a href="https://www.elimyt.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-university-gold text-sm flex items-center">
-              Créé par eLimyt <Heart className="h-3 w-3 ml-1 text-red-500" />
-            </a>
           </div>
         </div>
       </div>
