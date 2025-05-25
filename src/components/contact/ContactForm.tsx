@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -5,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -29,38 +31,31 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    console.log("Envoi du formulaire avec les données:", formData);
+    console.log("Envoi du formulaire avec EmailJS:", formData);
 
     try {
-      // Première tentative avec l'API AJAX de FormSubmit
-      const response = await fetch("https://formsubmit.co/ajax/secretariat@iuheg.education", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
+      // Configuration EmailJS - vous devrez configurer ces valeurs dans votre compte EmailJS
+      const result = await emailjs.send(
+        'service_iuheg', // Service ID à configurer
+        'template_contact', // Template ID à configurer  
+        {
+          to_email: 'secretariat@iuheg.education',
+          from_name: formData.name,
+          from_email: formData.email,
           phone: formData.phone,
           subject: formData.subject,
           message: formData.message,
-          _subject: `Nouveau message depuis IUHEG - ${formData.subject}`,
-          _template: "table",
-          _captcha: "false",
-          _autoresponse: "Merci pour votre message. Nous vous répondrons dans les plus brefs délais."
-        })
-      });
+          reply_to: formData.email
+        },
+        'your_public_key' // Clé publique à configurer
+      );
 
-      console.log("Statut de la réponse:", response.status);
-      
-      const result = await response.json();
-      console.log("Réponse du serveur:", result);
+      console.log("EmailJS résultat:", result);
 
-      if (response.ok && result.success) {
+      if (result.status === 200) {
         toast({
           title: "Message envoyé avec succès",
-          description: "Votre message a été envoyé à secretariat@iuheg.education. Vous devriez recevoir une confirmation par email.",
+          description: "Votre message a été envoyé à secretariat@iuheg.education. Nous vous répondrons dans les plus brefs délais.",
         });
         
         // Reset du formulaire
@@ -72,30 +67,29 @@ const ContactForm = () => {
           message: ""
         });
       } else {
-        console.error("Erreur de FormSubmit:", result);
+        throw new Error("Erreur lors de l'envoi avec EmailJS");
+      }
+    } catch (error) {
+      console.error("Erreur EmailJS:", error);
+      
+      // Méthode de fallback avec Netlify Forms
+      try {
+        console.log("Tentative avec Netlify Forms...");
         
-        // Tentative de fallback avec une méthode alternative
-        console.log("Tentative avec méthode alternative...");
+        const formElement = e.target as HTMLFormElement;
+        const netlifyFormData = new FormData(formElement);
+        netlifyFormData.append('form-name', 'contact');
         
-        const fallbackResponse = await fetch("https://formspree.io/f/secretariat@iuheg.education", {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            subject: formData.subject,
-            message: formData.message,
-            _subject: `Nouveau message depuis IUHEG - ${formData.subject}`
-          })
+        const netlifyResponse = await fetch('/', {
+          method: 'POST',
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(netlifyFormData as any).toString()
         });
 
-        if (fallbackResponse.ok) {
+        if (netlifyResponse.ok) {
           toast({
-            title: "Message envoyé (méthode alternative)",
-            description: "Votre message a été envoyé avec succès via une méthode alternative.",
+            title: "Message envoyé (Netlify)",
+            description: "Votre message a été envoyé avec succès via Netlify Forms.",
           });
           
           setFormData({
@@ -108,14 +102,14 @@ const ContactForm = () => {
         } else {
           throw new Error("Toutes les méthodes d'envoi ont échoué");
         }
+      } catch (fallbackError) {
+        console.error("Erreur complète d'envoi:", fallbackError);
+        toast({
+          title: "Erreur d'envoi",
+          description: "Impossible d'envoyer le message. Veuillez contacter directement secretariat@iuheg.education ou réessayer plus tard.",
+          variant: "destructive",
+        });
       }
-    } catch (error) {
-      console.error("Erreur complète d'envoi:", error);
-      toast({
-        title: "Erreur d'envoi",
-        description: "Impossible d'envoyer le message. Veuillez contacter directement secretariat@iuheg.education ou réessayer plus tard.",
-        variant: "destructive",
-      });
     } finally {
       setIsSubmitting(false);
     }
@@ -126,7 +120,9 @@ const ContactForm = () => {
       <h2 className="text-2xl md:text-3xl font-bold text-university-blue mb-6">Envoyez-nous un message</h2>
       <Card>
         <CardContent className="p-6">
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6" name="contact" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Nom complet</Label>
@@ -195,8 +191,20 @@ const ContactForm = () => {
             </Button>
           </form>
           
+          {/* Instructions pour EmailJS */}
+          <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-blue-800">
+              <strong>Configuration requise :</strong><br />
+              Pour activer l'envoi d'emails, vous devez configurer EmailJS avec vos clés dans le code.
+              <br />
+              <a href="https://www.emailjs.com/" target="_blank" rel="noopener noreferrer" className="underline">
+                Créez un compte EmailJS gratuit
+              </a>
+            </p>
+          </div>
+          
           {/* Contact direct en cas de problème */}
-          <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+          <div className="mt-4 p-4 bg-gray-50 rounded-lg">
             <p className="text-sm text-gray-600">
               <strong>Problème avec le formulaire ?</strong><br />
               Contactez-nous directement : 
