@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import { Container } from "@/components/ui/container";
 import ContactForm from "@/components/contact/ContactForm";
 import ContactInfo from "@/components/contact/ContactInfo";
-import MapSection from "@/components/contact/MapSection";
 import DepartmentContacts from "@/components/contact/DepartmentContacts";
 
 const Contact = () => {
@@ -28,9 +27,6 @@ const Contact = () => {
           </div>
         </Container>
       </section>
-
-      {/* Map Section */}
-      <MapSection />
 
       {/* Department Contacts */}
       <DepartmentContacts />

@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import InternationalPartner from "@/components/InternationalPartner";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,43 +6,28 @@ import { Button } from "@/components/ui/button";
 import { Check, Globe } from "lucide-react";
 
 const International = () => {
-  // Mock data for international partners
+  // Updated international partners
   const partners = [
     {
-      name: "Université de Paris",
+      name: "HEC Maroc",
+      country: "Maroc",
+      logo: "https://i.imgur.com/pKAb0uH.png",
+      description: "Partenariat stratégique avec l'École des Hautes Études Commerciales du Maroc pour les échanges d'étudiants et la recherche conjointe.",
+      website: "https://www.hec.ac.ma/"
+    },
+    {
+      name: "Brest Business School",
       country: "France",
-      logo: "https://via.placeholder.com/200x80?text=Université+de+Paris",
-      description: "Partenariat pour les échanges d'étudiants et la recherche conjointe en sciences sociales et gestion."
+      logo: "https://i.imgur.com/si5BfMS.jpeg",
+      description: "Collaboration en management et business avec des programmes d'échange et de double diplôme.",
+      website: "https://brest-bs.com/"
     },
     {
-      name: "University of Toronto",
-      country: "Canada",
-      logo: "https://via.placeholder.com/200x80?text=University+of+Toronto",
-      description: "Collaboration en informatique et technologies de l'information, avec programmes de double diplôme."
-    },
-    {
-      name: "London School of Economics",
-      country: "Royaume-Uni",
-      logo: "https://via.placeholder.com/200x80?text=LSE",
-      description: "Partenariat pour les programmes d'économie et de finance, avec opportunités de séminaires conjoints."
-    },
-    {
-      name: "University of Cape Town",
-      country: "Afrique du Sud",
-      logo: "https://via.placeholder.com/200x80?text=UCT",
-      description: "Collaboration régionale sur le développement durable et les études africaines."
-    },
-    {
-      name: "Universidad de Barcelona",
+      name: "CESTE Université",
       country: "Espagne",
-      logo: "https://via.placeholder.com/200x80?text=UB",
-      description: "Échanges dans les domaines du droit, de la gestion et des langues."
-    },
-    {
-      name: "Tsinghua University",
-      country: "Chine",
-      logo: "https://via.placeholder.com/200x80?text=Tsinghua",
-      description: "Partenariat stratégique pour les programmes d'ingénierie et les échanges culturels."
+      logo: "https://i.imgur.com/cVqCkeE.jpeg",
+      description: "Partenariat pour les programmes de gestion, commerce international et technologies.",
+      website: "https://www.ceste.es/"
     }
   ];
 
@@ -186,7 +170,7 @@ const International = () => {
                     <CardContent className="p-6">
                       <h4 className="text-xl font-semibold mb-4">Témoignage</h4>
                       <p className="italic mb-4">
-                        "Mon semestre d'échange à l'Université de Paris a été une expérience transformative. J'ai non seulement amélioré mon français, mais j'ai aussi développé une perspective entièrement nouvelle sur ma discipline et créé un réseau international qui me sera utile dans ma carrière."
+                        "Mon semestre d'échange à Brest Business School a été une expérience transformative. J'ai non seulement amélioré mon français, mais j'ai aussi développé une perspective entièrement nouvelle sur ma discipline et créé un réseau international qui me sera utile dans ma carrière."
                       </p>
                       <p className="font-medium">- Mariama Diallo, Étudiante en 3ème année de Commerce International</p>
                     </CardContent>
