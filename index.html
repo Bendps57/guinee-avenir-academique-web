@@ -10,7 +10,7 @@
     <meta name="author" content="IUHEG - Institut Universitaire des Hautes Études de Guinée" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#1a365d" />
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="light only" />
     <link rel="canonical" href="https://www.iuheg.education/" />
     <link rel="icon" href="https://i.imgur.com/eIx2JbG.jpeg" type="image/jpeg">
 
@@ -96,18 +96,44 @@
     }
     </script>
 
-    <!-- Prevent dark mode issues -->
+    <!-- Force light mode and white background -->
     <style>
-      html, body {
+      /* Force light mode only */
+      html {
+        color-scheme: light only !important;
+      }
+      
+      /* Override any dark mode preferences */
+      html, body, #root {
         background-color: #ffffff !important;
         color: #000000 !important;
       }
       
+      /* Force white background even in Facebook in-app browser */
+      html[data-color-mode="dark"], 
+      html[data-theme="dark"],
+      body[data-color-mode="dark"], 
+      body[data-theme="dark"] {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      
+      /* Override system dark mode preference */
       @media (prefers-color-scheme: dark) {
-        html, body {
+        html, body, #root {
           background-color: #ffffff !important;
           color: #000000 !important;
         }
+      }
+      
+      /* Ensure all main containers stay white */
+      * {
+        color-scheme: light !important;
+      }
+      
+      /* Specific override for Facebook app browser */
+      .fb_reset, .fb_reset > * {
+        background-color: #ffffff !important;
       }
     </style>
   </head>
