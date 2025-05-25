@@ -26,41 +26,44 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Créer le mailto link avec toutes les informations
-    const subject = encodeURIComponent(`Contact IUHEG: ${formData.subject}`);
-    const body = encodeURIComponent(`
-Nom: ${formData.name}
-Email: ${formData.email}
-Téléphone: ${formData.phone}
+    const form = e.target as HTMLFormElement;
+    const formDataToSend = new FormData(form);
 
-Message:
-${formData.message}
-    `);
-    
-    // Ouvrir le client email avec les données pré-remplies
-    window.location.href = `mailto:secretariat@iuheg.education?subject=${subject}&body=${body}`;
+    try {
+      const response = await fetch("https://formsubmit.co/secretariat@iuheg.education", {
+        method: "POST",
+        body: formDataToSend
+      });
 
-    // Simuler l'envoi pour l'interface utilisateur
-    setTimeout(() => {
+      if (response.ok) {
+        toast({
+          title: "Message envoyé",
+          description: "Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",
+        });
+        
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        throw new Error("Erreur lors de l'envoi");
+      }
+    } catch (error) {
       toast({
-        title: "Message préparé",
-        description: "Votre client email s'est ouvert avec le message pré-rempli. Envoyez-le pour nous contacter.",
+        title: "Erreur",
+        description: "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.",
+        variant: "destructive",
       });
-      
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
-      });
-      
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -69,6 +72,11 @@ ${formData.message}
       <Card>
         <CardContent className="p-6">
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* FormSubmit configuration fields */}
+            <input type="hidden" name="_next" value={window.location.href} />
+            <input type="hidden" name="_subject" value="Nouveau message depuis le site IUHEG" />
+            <input type="hidden" name="_template" value="table" />
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Nom complet</Label>
@@ -133,7 +141,7 @@ ${formData.message}
               className="w-full bg-university-blue hover:bg-university-navy"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Préparation..." : "Envoyer le message"}
+              {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
             </Button>
           </form>
         </CardContent>

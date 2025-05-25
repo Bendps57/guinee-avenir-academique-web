@@ -14,8 +14,16 @@ interface ProgramType {
 }
 
 const FeaturedPrograms = () => {
-  // Featured programs from IUHEG website
+  // Featured programs from IUHEG website - Licence Informatique Décisionnelle en première position
   const featuredPrograms: ProgramType[] = [
+    {
+      id: "informatique-decisionnelle",
+      title: "Licence Informatique Décisionnelle",
+      level: "Licence",
+      duration: "3 ans",
+      description: "Formation spécialisée en analyse de données, business intelligence et aide à la décision pour les entreprises modernes.",
+      iconName: "Book"
+    },
     {
       id: "business-administration",
       title: "Business Administration",
@@ -30,14 +38,6 @@ const FeaturedPrograms = () => {
       level: "Licence",
       duration: "3 ans",
       description: "Formation en marketing international, commerce mondial et stratégies d'expansion pour réussir dans un environnement commercial mondialisé.",
-      iconName: "Book"
-    },
-    {
-      id: "banque-finance",
-      title: "Banque, Finance et Assurance",
-      level: "Licence",
-      duration: "3 ans",
-      description: "Spécialisation en finance, services bancaires et assurance pour former les professionnels de la finance de demain.",
       iconName: "Book"
     }
   ];
