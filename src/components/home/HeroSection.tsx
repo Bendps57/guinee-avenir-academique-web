@@ -13,7 +13,7 @@ const HeroSection = () => {
         cta={{
           primary: { 
             text: "Dossier de préinscription", 
-            link: "https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view?usp=drive_link",
+            link: "https://drive.google.com/file/d/1vPCtj0tlkIe6n6QYiy7r6rueqzX7PwOj/view",
             icon: <ArrowRight />
           },
           secondary: { 
