@@ -34,10 +34,25 @@ const ContactForm = () => {
     const formDataToSend = new FormData(form);
 
     try {
-      const response = await fetch("https://formsubmit.co/secretariat@iuheg.education", {
+      const response = await fetch("https://formsubmit.co/ajax/secretariat@iuheg.education", {
         method: "POST",
-        body: formDataToSend
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+          _subject: `Nouveau message depuis IUHEG - ${formData.subject}`,
+          _template: "table",
+          _captcha: "false"
+        })
       });
+
+      const result = await response.json();
 
       if (response.ok) {
         toast({
@@ -56,6 +71,7 @@ const ContactForm = () => {
         throw new Error("Erreur lors de l'envoi");
       }
     } catch (error) {
+      console.error("Erreur d'envoi:", error);
       toast({
         title: "Erreur",
         description: "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.",
@@ -72,11 +88,6 @@ const ContactForm = () => {
       <Card>
         <CardContent className="p-6">
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* FormSubmit configuration fields */}
-            <input type="hidden" name="_next" value={window.location.href} />
-            <input type="hidden" name="_subject" value="Nouveau message depuis le site IUHEG" />
-            <input type="hidden" name="_template" value="table" />
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Nom complet</Label>
