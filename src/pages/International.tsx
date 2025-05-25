@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import InternationalPartner from "@/components/InternationalPartner";
 import { Card, CardContent } from "@/components/ui/card";
@@ -160,7 +161,7 @@ const International = () => {
                 <div className="space-y-8">
                   <div className="rounded-lg overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                      src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" 
                       alt="Étudiants africains en échange" 
                       className="w-full h-64 object-cover"
                     />
@@ -240,7 +241,7 @@ const International = () => {
                 <div className="order-1 lg:order-2 space-y-8">
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" 
+                      src="https://images.unsplash.com/photo-1595461986118-b9da6b3a76dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1024&q=80" 
                       alt="Étudiants africains en stage" 
                       className="w-full h-64 object-cover"
                     />
@@ -356,7 +357,7 @@ const International = () => {
                 <div className="space-y-6">
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                      src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" 
                       alt="Centre de langues africain" 
                       className="w-full h-64 object-cover"
                     />
@@ -480,7 +481,7 @@ const International = () => {
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                src="https://images.unsplash.com/photo-1609013544072-a6e0b63c9e68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" 
                 alt="Étudiants internationaux africains" 
                 className="rounded-lg shadow-xl w-full"
               />
