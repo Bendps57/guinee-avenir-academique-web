@@ -109,7 +109,7 @@ const About = () => {
                 </div>
                 <div className="relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                    src="https://i.imgur.com/zXdwdhF.jpeg" 
                     alt="Histoire de l'IUHEG" 
                     className="rounded-lg shadow-lg w-full"
                   />
@@ -124,7 +124,7 @@ const About = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
                   <img 
-                    src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                    src="https://i.imgur.com/7WKv5Rq.jpeg" 
                     alt="Vision de l'IUHEG" 
                     className="rounded-lg shadow-lg w-full"
                   />

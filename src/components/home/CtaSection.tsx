@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Mail } from "lucide-react";
@@ -38,7 +39,7 @@ const CtaSection = () => {
             </div>
             <div className="hidden lg:block relative">
               <img 
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                src="https://i.imgur.com/JjPNMc3.jpeg" 
                 alt="Étudiants à l'IUHEG"
                 className="w-full h-full object-cover"
               />

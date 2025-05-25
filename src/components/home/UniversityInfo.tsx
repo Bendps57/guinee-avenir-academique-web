@@ -36,7 +36,7 @@ const UniversityInfo = () => {
           <div className="relative">
             <div className="aspect-video overflow-hidden rounded-lg shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                src="https://i.imgur.com/wHxrl2f.jpeg" 
                 alt="IUHEG Campus"
                 className="w-full h-full object-cover"
               />
