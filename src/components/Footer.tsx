@@ -39,7 +39,7 @@ const Footer = () => {
               <li><Link to="/" className="text-gray-300 hover:text-university-gold">Accueil</Link></li>
               <li><Link to="/formations" className="text-gray-300 hover:text-university-gold">Formations</Link></li>
               <li><Link to="/a-propos" className="text-gray-300 hover:text-university-gold">À Propos</Link></li>
-              <li><Link to="/international" className="text-gray-300 hover:text-university-gold">International</Link></li>
+              <li><Link to="/international" className="text-gray-300 hover:text-university-gold">Coopération Internationale</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-university-gold">Contact</Link></li>
             </ul>
           </div>
@@ -125,15 +125,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 text-university-gold mt-1" />
-                <span className="text-gray-300">Boulbinet, Commune de Kaloum - BP: 4979 Conakry - République de Guinée</span>
+                <span className="text-gray-300">Soumanbossia - Commune de Ratoma - Conakry - BP : 1134</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-university-gold" />
-                <a href="mailto:secretariat@iuheg.education" className="text-gray-300 hover:text-university-gold">secretariat@iuheg.education</a>
+                <a href="mailto:contact@iuheg.education" className="text-gray-300 hover:text-university-gold">contact@iuheg.education</a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-university-gold" />
-                <a href="tel:+224626859387" className="text-gray-300 hover:text-university-gold">+224 626 859 387</a>
+                <a href="tel:+224622158404" className="text-gray-300 hover:text-university-gold">+224 622 15 84 04</a>
               </li>
             </ul>
           </div>

@@ -51,7 +51,7 @@ const International = () => {
     {
       title: "Summer Schools internationales",
       description: "Programmes intensifs d'été dans diverses disciplines, offerts par nos partenaires internationaux.",
-      eligibility: "Tous les niveaux d'études."
+      eligibility: "Tous les niveaux d'étudiants."
     }
   ];
 
@@ -83,10 +83,10 @@ const International = () => {
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <Hero 
-        title="Dimension Internationale"
+        title="Coopération Internationale"
         subtitle="Un monde d'opportunités"
         description="Découvrez comment l'IUHEG s'ouvre sur le monde et offre des opportunités internationales à ses étudiants."
-        imageUrl="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        imageUrl="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
       />
 
       {/* Partners Section */}
@@ -160,8 +160,8 @@ const International = () => {
                 <div className="space-y-8">
                   <div className="rounded-lg overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                      alt="Étudiants en échange" 
+                      src="https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                      alt="Étudiants africains en échange" 
                       className="w-full h-64 object-cover"
                     />
                   </div>
@@ -240,8 +240,8 @@ const International = () => {
                 <div className="order-1 lg:order-2 space-y-8">
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                      alt="Stage international" 
+                      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" 
+                      alt="Étudiants africains en stage" 
                       className="w-full h-64 object-cover"
                     />
                   </div>
@@ -356,8 +356,8 @@ const International = () => {
                 <div className="space-y-6">
                   <div className="rounded-lg overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                      alt="Centre de langues" 
+                      src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                      alt="Centre de langues africain" 
                       className="w-full h-64 object-cover"
                     />
                   </div>
@@ -480,8 +480,8 @@ const International = () => {
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                alt="Étudiants internationaux" 
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                alt="Étudiants internationaux africains" 
                 className="rounded-lg shadow-xl w-full"
               />
             </div>

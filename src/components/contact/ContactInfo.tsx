@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Mail } from "lucide-react";
 
@@ -14,8 +13,8 @@ const ContactInfo = () => {
             </div>
             <div>
               <h3 className="font-semibold text-lg mb-1">Adresse</h3>
-              <p className="text-gray-600">Boulbinet, Commune de Kaloum</p>
-              <p className="text-gray-600">BP: 4979 Conakry, Guinée</p>
+              <p className="text-gray-600">Soumanbossia - Commune de Ratoma - Conakry</p>
+              <p className="text-gray-600">BP : 1134</p>
             </div>
           </CardContent>
         </Card>
@@ -23,13 +22,13 @@ const ContactInfo = () => {
         <Card>
           <CardContent className="p-6 flex items-start space-x-4">
             <div className="rounded-full bg-university-blue/10 p-3 flex-shrink-0">
-              <Phone className="h-6 w-6 text-university-blue" />
+              <Phone className="h-5 w-5 text-university-blue" />
             </div>
             <div>
               <h3 className="font-semibold text-lg mb-1">Téléphone</h3>
               <p className="text-gray-600">
-                <a href="tel:+224626859387" className="hover:text-university-blue">
-                  +224 626 859 387
+                <a href="tel:+224622158404" className="hover:text-university-blue">
+                  +224 622 15 84 04
                 </a>
               </p>
             </div>
@@ -44,8 +43,8 @@ const ContactInfo = () => {
             <div>
               <h3 className="font-semibold text-lg mb-1">Email</h3>
               <p className="text-gray-600">
-                <a href="mailto:secretariat@iuheg.education" className="hover:text-university-blue">
-                  secretariat@iuheg.education
+                <a href="mailto:contact@iuheg.education" className="hover:text-university-blue">
+                  contact@iuheg.education
                 </a>
               </p>
             </div>

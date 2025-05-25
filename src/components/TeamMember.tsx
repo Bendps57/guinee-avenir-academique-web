@@ -11,11 +11,11 @@ interface TeamMemberProps {
 const TeamMember = ({ name, role, imageUrl, bio }: TeamMemberProps) => {
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg border-none">
-      <div className="aspect-[3/4] w-full overflow-hidden bg-gray-100 flex items-center justify-center">
+      <div className="aspect-square w-full overflow-hidden bg-gray-100 flex items-center justify-center h-32">
         <img 
           src={imageUrl} 
           alt={name}
-          className="h-8 w-8 object-contain"
+          className="w-16 h-16 object-cover rounded-full"
         />
       </div>
       <CardContent className="p-4 bg-white">

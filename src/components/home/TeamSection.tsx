@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import TeamMember from "@/components/TeamMember";
 import { Link } from "react-router-dom";
@@ -7,32 +8,32 @@ const TeamSection = () => {
     {
       name: "Makolo Kpoghomou",
       role: "Recteur",
-      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
     },
     {
       name: "Amadou Cissoko",
       role: "Administrateur Général",
-      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     },
     {
       name: "Yuri Diallo",
       role: "Secrétaire Général",
-      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      imageUrl: "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     },
     {
       name: "Bachir Balde",
       role: "Directeur IT Multimédia & Innovation",
-      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
     },
     {
       name: "Mamadou Fall",
       role: "Directeur Marketing & Recrutement",
-      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
     },
     {
       name: "Ramatoulaye Diallo",
       role: "Responsable Partenariat",
-      imageUrl: "https://i.imgur.com/eIx2JbG.jpeg",
+      imageUrl: "https://images.unsplash.com/photo-1494790108755-2616b332c5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
     }
   ];
 
