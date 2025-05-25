@@ -15,7 +15,7 @@ const CallToAction = ({ title, description }: CallToActionProps) => {
       </p>
       <div className="flex gap-4 justify-center">
         <Button asChild className="bg-white text-university-blue hover:bg-gray-100">
-          <a href="/contact#contact">Nous contacter</a>
+          <a href="/contact">Nous contacter</a>
         </Button>
         <Button 
           asChild 

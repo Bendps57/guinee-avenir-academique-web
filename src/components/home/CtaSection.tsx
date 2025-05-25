@@ -29,7 +29,7 @@ const CtaSection = () => {
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="bg-transparent border-white hover:bg-white/10 text-white">
-                  <a href="/contact#contact" className="flex items-center gap-2">
+                  <a href="/contact" className="flex items-center gap-2">
                     Nous contacter
                     <Mail className="h-4 w-4" />
                   </a>
