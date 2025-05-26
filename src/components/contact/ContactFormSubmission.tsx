@@ -63,7 +63,7 @@ export const useContactFormSubmission = () => {
     try {
       console.log("Tentative d'envoi vers FormSubmit...");
       
-      const response = await fetch("https://formsubmit.co/ajax/contact@iuheg.education", {
+      const response = await fetch("https://formsubmit.co/ajax/1c863cbce3518e79f8ed6eebbf97bdad", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
