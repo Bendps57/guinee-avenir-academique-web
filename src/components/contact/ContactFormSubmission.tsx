@@ -63,7 +63,7 @@ export const useContactFormSubmission = () => {
     try {
       console.log("Tentative d'envoi vers FormSubmit...");
       
-      const response = await fetch("https://formsubmit.co/ajax/ben.wemmert@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/contact@iuheg.education", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -92,7 +92,7 @@ export const useContactFormSubmission = () => {
         
         toast({
           title: "Message envoyé avec succès",
-          description: "Votre message a été envoyé à ben.wemmert@gmail.com. Nous vous répondrons dans les plus brefs délais.",
+          description: "Votre message a été envoyé à contact@iuheg.education. Nous vous répondrons dans les plus brefs délais.",
         });
         
         resetForm();
@@ -107,7 +107,7 @@ export const useContactFormSubmission = () => {
       
       toast({
         title: "Erreur d'envoi",
-        description: `Impossible d'envoyer le message. Détails: ${error instanceof Error ? error.message : 'Erreur inconnue'}. Veuillez contacter directement ben.wemmert@gmail.com.`,
+        description: `Impossible d'envoyer le message. Détails: ${error instanceof Error ? error.message : 'Erreur inconnue'}. Veuillez contacter directement contact@iuheg.education.`,
         variant: "destructive",
       });
     } finally {
